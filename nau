@@ -1,0 +1,1102 @@
+--<>----<>----<>----<>----<>----<>----<>--
+repeat wait() until game:IsLoaded() wait()
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):ClickButton2(Vector2.new());
+end);
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+pcall(function()
+    for i, v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+        v:Disable();
+    end;
+end);
+--<>----<>----<>----<>----<>----<>----<>--
+--// getgenv
+
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+
+--<>----<>----<>----<>----<>----<>----<>--
+local Workspace = game:GetService('Workspace');
+local ReplicatedStorage = game:GetService('ReplicatedStorage');
+local Players = game:GetService('Players');
+local Client = Players.LocalPlayer;
+local RunService = game:GetService('RunService');
+local Workspace = game:GetService("Workspace");
+local Lighting = game:GetService("Lighting");
+local UIS = game:GetService("UserInputService");
+local Teams = game:GetService("Teams");
+local ScriptContext = game:GetService("ScriptContext");
+local CoreGui = game:GetService("CoreGui");
+local Camera = Workspace.CurrentCamera;
+local Mouse = Client:GetMouse();
+local Terrain = Workspace.Terrain;
+local VirtualUser = game:GetService("VirtualUser");
+
+
+--// Services
+
+local RbxAnylytics = game:GetService("RbxAnalyticsService")
+
+local LocalizationService = game:GetService("LocalizationService")
+
+--// Variables
+
+local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+
+local executor = identifyexecutor and table.concat({ identifyexecutor() }, " ") or "Unknown";
+
+local player = game.Players.LocalPlayer
+local workspace = game.Workspace
+local plr = game.Players.LocalPlayer
+
+local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
+local httpservice = game:GetService('HttpService')
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/baksff/NauHub/master/Loader.lua'))()")
+
+
+--// Tables
+
+
+
+--// Functions
+
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local VirtualUser = game:GetService("VirtualUser")
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
+
+local Player = Players.LocalPlayer
+Player.PlayerGui:WaitForChild("MainGUI")
+repeat
+    wait()
+until game:IsLoaded()
+wait()
+Player.Idled:connect(
+    function()
+        VirtualUser:ClickButton2(Vector2.new())
+    end
+)
+
+local Name = "mm2.json"
+
+Des = {}
+if makefolder then
+    makefolder("NauHub")
+end
+
+local Settings
+
+if
+    not pcall(
+        function()
+            readfile("NauHub//" .. Name)
+        end
+    )
+ then
+    writefile("NauHub//" .. Name, HttpService:JSONEncode(Des))
+end
+
+Settings = HttpService:JSONDecode(readfile("NauHub//" .. Name))
+
+local function Save()
+    writefile("NauHub//" .. Name, HttpService:JSONEncode(Settings))
+end
+
+repeat
+    wait()
+until Player.Character:FindFirstChild("HumanoidRootPart")
+
+for i, v in pairs(Workspace:GetChildren()) do
+    if v:IsA("BasePart") and v.Name ~= "Part" then
+        v.CanCollide = false
+    end
+end
+
+RunService.Stepped:connect(
+    function()
+        for i, v in pairs(ReplicatedStorage.Remotes.Extras.GetPlayerData:InvokeServer()) do
+            if v.Role == "Murderer" then
+                Settings.Murderer = i
+            end
+        end
+
+        for i, v in pairs(ReplicatedStorage.Remotes.Extras.GetPlayerData:InvokeServer()) do
+            if v.Role == "Sheriff" then
+                Settings.Sheriff = i
+            end
+        end
+    end
+)
+
+local KillAll = function(v)
+    if Player.Character:FindFirstChild("Knife") then
+        Player.Character.Knife.Throw:FireServer(
+            CFrame.new(v.Character:GetModelCFrame().Position),
+            v.Character:GetModelCFrame().Position - Vector3.new(0, 1, 0)
+        )
+    end
+    if Player.Backpack:FindFirstChild("Knife") then
+        Player.Backpack.Knife.Throw:FireServer(
+            CFrame.new(v.Character:GetModelCFrame().Position),
+            v.Character:GetModelCFrame().Position - Vector3.new(0, 1, 0)
+        )
+    end
+end
+
+local L = {}
+function GodModeFunc()
+    if Player.Character then
+        if Player.Character:FindFirstChild("Humanoid") then
+            for _, accessory in pairs(Player.Character.Humanoid:GetAccessories()) do
+                table.insert(L, accessory:Clone())
+            end
+            Player.Character.Humanoid.Name = "1"
+        end
+        local l = Player.Character["1"]:Clone()
+        l.Parent = Player.Character
+        l.Name = "Humanoid"
+        wait(0.1)
+        Player.Character["1"]:Destroy()
+        Workspace.CurrentCamera.CameraSubject = Player.Character.Humanoid
+        for _, accessory in pairs(L) do
+            Player.Character.Humanoid:AddAccessory(accessory)
+        end
+        Player.Character.Animate.Disabled = true
+        wait(0.1)
+        Player.Character.Animate.Disabled = false
+        --Tag:
+        local Tag = Instance.new("BoolValue", Player.Character)
+        Tag.Name = "GodMode"
+        Tag.Value = true
+        spawn(
+            function()
+                local Jumping = false
+                local Died = false
+                Player.Character.Humanoid.Died:connect(
+                    function()
+                        Died = true
+                    end
+                )
+                UserInputService.InputBegan:connect(
+                    function(i, v)
+                        if not v and not Died then
+                            Jumping = false
+                            spawn(
+                                function()
+                                    repeat
+                                        RunService.RenderStepped:Wait()
+                                    until not Jumping or Died
+                                end
+                            )
+                        else
+                            repeat
+                                RunService.RenderStepped:Wait()
+                            until not Jumping
+                        end
+                    end
+                )
+                UserInputService.InputEnded:connect(
+                    function(i, v)
+                        if not v and not Died then
+                            Jumping = false
+                        end
+                    end
+                )
+            end
+        )
+    end
+end
+
+function GetClosestCoin()
+    local TargetDistance = 100
+    local Target
+    for i, v in pairs(Workspace:GetChildren()) do
+        if v:IsA("Model") and v:FindFirstChild("CoinContainer") then
+            for i, v in pairs(v.CoinContainer:GetChildren()) do
+                if v.Name == "Coin_Server" and v.Name ~= "CollectedCoin" then
+                    local mag = (Player.Character.HumanoidRootPart.Position - v.Position).magnitude
+                    if mag < TargetDistance then
+                        TargetDistance = mag
+                        CoinTarget = v
+                    end
+                end
+            end
+        end
+    end
+end
+spawn(
+    function()
+        while wait() do
+            pcall(
+                function()
+                    if
+                        Settings.Coin and Player.PlayerGui:WaitForChild("MainGUI").Game.CashBag.Visible and
+                            not Player.PlayerGui:WaitForChild("MainGUI").Game.CashBag.Full.Visible and
+                            Player.Character and
+                            Player.Character:FindFirstChild("HumanoidRootPart")
+                     then
+                        AutoFarming = true
+                        if Settings.GodMode and not Player.Character:FindFirstChild("GodMode") then
+                            GodModeFunc()
+                        end
+                        GetClosestCoin()
+                        if CoinTarget ~= nil then
+                            spawn(
+                                function()
+                                    Player.Character.HumanoidRootPart.CFrame =
+                                        CFrame.new(
+                                        CoinTarget.Position.X,
+                                        CoinTarget.Position.Y + 1.5,
+                                        CoinTarget.Position.Z
+                                    )
+                                    wait()
+                                    firetouchinterest(Player.Character.HumanoidRootPart, CoinTarget, 0)
+                                    firetouchinterest(Player.Character.HumanoidRootPart, CoinTarget, 1)
+                                end
+                            )
+                        end
+                        if Player.Character:FindFirstChild("Knife") or Player.Backpack:FindFirstChild("Knife") then
+                            for i, v in pairs(Players:GetPlayers()) do
+                                if v ~= Player then
+                                    KillAll(v)
+                                end
+                            end
+                        end
+                        wait(2)
+                        CoinTarget = nil
+                        AutoFarming = false
+                    end
+                end
+            )
+        end
+    end
+)
+
+
+RunService.Stepped:connect(
+    function()
+        if Settings.Coin then
+            pcall(
+                function()
+                    Player.Character.Humanoid:ChangeState(11)
+                end
+            )
+        end
+    end
+)
+
+--<>----<>----<>----<>----<>----<>----<>--
+local Modules = ReplicatedStorage.Modules;
+local EmoteModule = Modules.EmoteModule;
+local Emotes = Client.PlayerGui.MainGUI.Game:FindFirstChild("Emotes");
+local EmoteList = {"headless","zombie","zen","ninja","floss","dab"};
+local CanGrab 
+CanGrab = false;
+
+local Origins = {{2,0,0},{-2,0,0},{0,2,0},{0,-2,0},{0,0,1},{0,0,-1}};
+
+local GunHighlight = Instance.new("Highlight");
+local GunHandleAdornment = Instance.new("SphereHandleAdornment");
+
+GunHighlight.FillColor = Color3.fromRGB(248, 241, 174);
+GunHighlight.Adornee = Workspace:FindFirstChild("GunDrop");
+GunHighlight.OutlineTransparency = 1;
+GunHighlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+GunHighlight.RobloxLocked = true;
+
+GunHandleAdornment.Color3 = Color3.fromRGB(248, 241, 174);
+GunHandleAdornment.Transparency = 0.2;
+GunHandleAdornment.Adornee = Workspace:FindFirstChild("GunDrop");
+GunHandleAdornment.AlwaysOnTop = true;
+GunHandleAdornment.AdornCullingMode = Enum.AdornCullingMode.Never;
+GunHandleAdornment.RobloxLocked = true;
+
+GunHighlight.Parent = CoreGui;
+GunHandleAdornment.Parent = CoreGui;
+
+local TeleportDict = {
+    ["Lobby"] = Vector3.new(-121.12338256836, 138.27394104004, 38.946128845215),
+    ["Map"] = Vector3.new(-107.90824127197266, 138.34988403320312, -10.622464179992676),
+};
+local TeleportTable = {}
+for i, v in pairs(TeleportDict) do
+    table.insert(TeleportTable,i);
+end;
+
+local Murderer, Sheriff = nil, nil;
+
+function GetMurderer()
+    for i,v in pairs(Players:GetChildren()) do 
+        if v.Backpack:FindFirstChild("Knife") or v.Character:FindFirstChild("Knife") and v.Name == "Tool" then
+            return v.Name;
+        end;
+    end;
+    return nil;
+end;
+
+function GetSheriff()
+    for i,v in pairs(Players:GetChildren()) do 
+        if v.Backpack:FindFirstChild("Gun") or v.Character:FindFirstChild("Gun") and v.Name == "Tool" then
+            return v.Name;
+        end;
+        return nil;
+    end;
+end;
+--<>----<>----<>----<>----<>----<>----<>--
+local Character = nil;
+local RootPart = nil;
+local Humanoid = nil;
+
+getgenv().WS = 16
+getgenv().JP = 50
+function SetCharVars()
+	Character = Client.Character;
+	Humanoid = Character:FindFirstChild("Humanoid") or Character:WaitForChild("Humanoid");
+	RootPart = Character:FindFirstChild("HumanoidRootPart") or Character:WaitForChild("HumanoidRootPart");
+	if getgenv().Speed then
+		Humanoid.WalkSpeed = getgenv().WS;
+	end;
+	Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+		if getgenv().Speed then
+			Humanoid.WalkSpeed = getgenv().WS;
+		end;
+	end);
+    if getgenv().Jump then
+		Humanoid.WalkSpeed = getgenv().JP;
+	end;
+	Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+		if getgenv().Jump then
+			Humanoid.WalkSpeed = getgenv().JP;
+		end;
+	end);
+end;
+SetCharVars();
+Client.CharacterAdded:Connect(SetCharVars);
+
+local Ws;
+Ws = hookmetamethod(game, "__index", function(self, Value)
+    if tostring(self) == "Humanoid" and tostring(Value) == "WalkSpeed" then
+        return 16;
+    end;
+    return Ws(self, Value);
+end);
+
+local Jp;
+Jp = hookmetamethod(game, "__index", function(self, Value)
+    if tostring(self) == "Humanoid" and tostring(Value) == "WalkSpeed" then
+        return 16;
+    end;
+    return Jp(self, Value);
+end);
+
+--<>----<>----<>----<>----<>----<>----<>--
+
+
+--// Library Setup
+local gname = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name -- Get Game Name
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "NauHub | "..gname,
+	LoadingTitle = "Welcome to NauHub Murder Mystery 2, "..player.Name,
+	LoadingSubtitle = "by NauHub",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = "NauHub File", -- Create a custom folder for your hub/game
+		FileName = "NauHub Murder Mystery 2"
+	},
+        Discord = {
+        	Enabled = true,
+        	Invite = "https://discord.gg/XHrQ6DPzcb", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Sirius Hub",
+		Subtitle = "Key System",
+		Note = "Join the discord (discord.gg/sirius)",
+		FileName = "SiriusKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Hello"
+	}
+})
+
+--// Player Info Tab
+
+local PITab = Window:CreateTab("Player Info",4335480896)
+local PISection = PITab:CreateSection("Player Info")
+PITab:CreateLabel("Executor: "..executor)
+PITab:CreateLabel("Name: "..player.Name)
+PITab:CreateLabel("DisplayName:  "..player.DisplayName)
+PITab:CreateLabel("Account Age: "..player.AccountAge.." days")
+PITab:CreateLabel("UserId: "..player.UserId)
+PITab:CreateLabel("SystemLocaleId: "..LocalizationService.SystemLocaleId)
+PITab:CreateLabel("LocaleId: "..LocalizationService.RobloxLocaleId)
+
+--// Combat Tab
+
+local CombatTab = Window:CreateTab("Combat",4370319235)
+
+local CombatTabSection = CombatTab:CreateSection("Murder")
+
+local Toggle = CombatTab:CreateToggle({
+	Name = "Murder Silent Aim",
+	CurrentValue = Settings.SilentAim,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(State)
+        Settings.SilentAim = State
+
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+        local Mouse = LocalPlayer:GetMouse()
+        function ClosestPlayerToCurser()
+            local MaxDistance, Closest = math.huge
+            for i,v in pairs(Players.GetPlayers(Players)) do
+                if v ~= LocalPlayer and v.Character then
+                    local H = v.Character.FindFirstChild(v.Character, "Head")
+                    if H then 
+                        local Pos, Vis = Workspace.CurrentCamera.WorldToScreenPoint(Workspace.CurrentCamera, H.Position)
+                        if Vis then
+                            local A1, A2 = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+                            local Dist = (A2 - A1).Magnitude
+                            if Dist < MaxDistance and Dist <= math.huge then
+                                MaxDistance = Dist
+                                Closest = v
+                            end
+                        end
+                    end
+                end
+            end
+            return Closest
+        end
+        local OldNameCall = nil
+        OldNameCall = hookmetamethod(game, "__namecall", function(self,...)
+            local Args = {...}
+            if getnamecallmethod() == "FindPartOnRayWithIgnoreList" and not checkcaller() and  Settings.SilentAim then
+                local GivemeHead = ClosestPlayerToCurser()
+                if GivemeHead and GivemeHead.Character and GivemeHead.Character.FindFirstChild(GivemeHead.Character, "UpperTorso") then
+                    Args[1] = Ray.new(Workspace.CurrentCamera.CFrame.Position, (GivemeHead.Character.UpperTorso.Position - Workspace.CurrentCamera.CFrame.Position).Unit * 1000)
+                    return OldNameCall(self, unpack(Args))
+                end
+            end
+            return OldNameCall(self, ...)
+        end)
+	end,
+})
+
+local Toggle = CombatTab:CreateToggle({
+	Name = "Kill aura",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(State)
+        getgenv().KnifeAura = state;
+	end,
+})
+
+local Slider = CombatTab:CreateSlider({
+	Name = "Knife Range",
+	Range = {5, 250},
+	Increment = 1,
+	Suffix = "Accuracy Value",
+	CurrentValue = 25,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(val)
+        getgenv().KnifeRange = tonumber(val) or 25;
+	end,
+})
+
+local lastAttack = tick();
+RunService.Heartbeat:Connect(function()
+   if (tick() - lastAttack) < 0.1 then
+       return;
+   end;
+    pcall(function()
+        local Knife = Client.Backpack:FindFirstChild("Knife") or Client.Character:FindFirstChild("Knife");
+        if Knife and Knife:IsA("Tool") then
+            for i, v in ipairs(Players:GetPlayers()) do
+                if v ~= Client and v.Character ~= nil and not table.find(getgenv().Whitelisted,v.Name) then
+                    local EnemyRoot = v.Character.HumanoidRootPart;
+                    local EnemyPosition = EnemyRoot.Position;
+                    local Distance = (EnemyPosition - RootPart.Position).Magnitude;
+                    if (Distance <= getgenv().KnifeRange) then
+                        VirtualUser:ClickButton1(Vector2.new());
+                        firetouchinterest(EnemyRoot, Knife.Handle, 1);
+                        firetouchinterest(EnemyRoot, Knife.Handle, 0);
+                        lastAttack = tick();
+                    end;
+                end;
+            end;
+        end;
+    end);
+end);
+
+
+local GameOver = nil;
+local Blocked = nil;
+
+local Keybind = CombatTab:CreateKeybind({
+	Name = "Kill all",
+	CurrentKeybind = "K",
+	HoldToInteract = false,
+	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function()
+        pcall(function()
+            local Knife = Client.Backpack:FindFirstChild("Knife") or Client.Character:FindFirstChild("Knife");
+            if Knife.Parent.Name == "Backpack" then
+                Humanoid:EquipTool(Knife);
+            end;
+            if Knife then
+                if Knife:IsA("Tool") then
+                    for i, v in ipairs(Players:GetPlayers()) do
+                        if v ~= Client and v.Character ~= nil and not table.find(getgenv().Whitelisted,v.Name) then
+                            local EnemyRoot = v.Character.HumanoidRootPart;
+                            local EnemyPosition = EnemyRoot.Position;
+                            VirtualUser:ClickButton1(Vector2.new());
+                            firetouchinterest(EnemyRoot, Knife.Handle, 1);
+                            firetouchinterest(EnemyRoot, Knife.Handle, 0);
+                            lastAttack = tick();
+                        end;
+                    end;
+                end;
+            end;
+        end);
+	end,
+})
+
+local CombatTabSection = CombatTab:CreateSection("Sheriff")
+
+local Toggle = CombatTab:CreateToggle({
+	Name = "Sheriff Silent Aim",
+	CurrentValue = Settings.SilentAim1,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(State)
+        Settings.SilentAim1 = State
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+        local Mouse = LocalPlayer:GetMouse()
+        function ClosestPlayerToCurser()
+            local MaxDistance, Closest = math.huge
+            for i,v in pairs(Players.GetPlayers(Players)) do
+                if v ~= LocalPlayer and v.Name == getgenv().Murder and v.Character then
+                    local H = v.Character.FindFirstChild(v.Character, "Head")
+                    if H then 
+                        local Pos, Vis = Workspace.CurrentCamera.WorldToScreenPoint(Workspace.CurrentCamera, H.Position)
+                        if Vis then
+                            local A1, A2 = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+                            local Dist = (A2 - A1).Magnitude
+                            if Dist < MaxDistance and Dist <= math.huge then
+                                MaxDistance = Dist
+                                Closest = v
+                            end
+                        end
+                    end
+                end
+            end
+            return Closest
+        end
+        local OldNameCall = nil
+        OldNameCall = hookmetamethod(game, "__namecall", function(self,...)
+            local Args = {...}
+            if getnamecallmethod() == "FindPartOnRayWithIgnoreList" and not checkcaller() and  Settings.SilentAim1  then
+                local GivemeHead = ClosestPlayerToCurser()
+                if GivemeHead and GivemeHead.Character and GivemeHead.Character.FindFirstChild(GivemeHead.Character, "UpperTorso") then
+                    Args[1] = Ray.new(Workspace.CurrentCamera.CFrame.Position, (GivemeHead.Character.UpperTorso.Position - Workspace.CurrentCamera.CFrame.Position).Unit * 1000)
+                    return OldNameCall(self, unpack(Args))
+                end
+            end
+            return OldNameCall(self, ...)
+        end)
+	end,
+})
+
+local Slider = CombatTab:CreateSlider({
+	Name = "Accuracy",
+	Range = {0, 100},
+	Increment = 1,
+	Suffix = "Accuracy Value",
+	CurrentValue = 25,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(val)
+        getgenv().GunAccuracy = tonumber(val) or 25;
+	end,
+})
+
+local Keybind = CombatTab:CreateKeybind({
+	Name = "Get gun",
+	CurrentKeybind = "Y",
+	HoldToInteract = false,
+	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function()
+        if not CanGrab then return end
+        local gundrop = Workspace:FindFirstChild("GunDrop");
+        if gundrop and not lastCFrame then
+            lastCFrame = RootPart.CFrame;
+            pcall(function()
+                repeat
+                    RootPart.CFrame = gundrop.CFrame;
+                    RunService.Stepped:Wait();
+                until not gundrop:IsDescendantOf(Workspace);
+                RootPart.CFrame = lastCFrame;
+                lastCFrame = false;
+            end);
+        end;
+	end,
+})
+
+coroutine.wrap(function()
+    repeat wait()
+        pcall(function()
+            Murderer = GetMurderer();
+            Sheriff = GetSheriff();
+        end);
+    until Murderer and Sheriff;
+end)();
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+ReplicatedStorage.UpdatePlayerData.OnClientEvent:Connect(function()
+    CanGrab = false;
+end);
+
+local GunHook
+GunHook = hookmetamethod(game, "__namecall", function(self, ...)
+	local method = getnamecallmethod()
+	local args = { ... }
+	if not checkcaller() then
+		if typeof(self) == "Instance" then
+			if self.Name == "ShootGun" and method == "InvokeServer" then
+				if getgenv().SheriffAim and getgenv().GunAccuracy then
+					if Murderer then
+						local Root = Players[tostring(Murderer)].Character.PrimaryPart;
+						local Veloc = Root.AssemblyLinearVelocity;
+						local Pos = Root.Position + (Veloc * Vector3.new(getgenv().GunAccuracy / 200, 0, getgenv().GunAccuracy/ 200));
+						args[2] = Pos;
+					end;
+				end;
+			end;
+		end;
+	end;
+	return GunHook(self, unpack(args));
+end);
+
+local __namecall
+__namecall = hookmetamethod(game, "__namecall", function(self, ...)
+	local method = getnamecallmethod();
+	local args = { ... };
+	if not checkcaller() then
+        if tostring(method) == "InvokeServer" and tostring(self) == "GetChance" then
+            wait(13);
+            Murderer = GetMurderer();
+            Sheriff = GetSheriff();
+            CanGrab = true;
+        end;
+	end;
+	return __namecall(self, unpack(args));
+end);
+
+--// Auto Farm Tab
+
+local AutoFarmTab = Window:CreateTab("Auto Farm",4370345701)
+
+local AutoFarmSection = AutoFarmTab:CreateSection("Auto Farm Method")
+
+local Toggle = AutoFarmTab:CreateToggle({
+	Name = "Autofarm",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+        getgenv().Autofarm = state;
+        if not getgenv().AutofarmMethod then return end;
+        if getgenv().AutofarmMethod == "Coins" then
+            while getgenv().Autofarm do
+                task.wait();
+                local CoinContainer = Workspace:FindFirstChild("CoinContainer", true);
+                if CoinContainer and Client.PlayerGui.MainGUI.Game.CashBag.Visible == true then
+                    local coin = CoinContainer:FindFirstChild("Coin_Server");
+                    if coin then
+                        repeat
+                            RootPart.CFrame = CFrame.new(coin.Position - Vector3.new(0, 2.5, 0)) * CFrame.Angles(0, 0, math.rad(180));
+                            RunService.Stepped:Wait();
+                            if not getgenv().Autofarm then break end;
+                        until not coin:IsDescendantOf(Workspace) or coin.Name ~= "Coin_Server";
+                        task.wait(1.8);
+                    end;
+                else
+                    task.wait(1.5);
+                end;
+            end;
+        else
+            while getgenv().Autofarm do
+                wait();
+                if Client.PlayerGui.MainGUI.Game.CashBag.Visible == true then
+                    RootPart.CFrame = CFrame.new(-121.12338256836, 138.27394104004, 38.946128845215);
+                end;
+            end;
+        end;
+	end,
+})
+
+local Dropdown = AutoFarmTab:CreateDropdown({
+	Name = "Autofarm method",
+	Options = {"XP","Coins"},
+	CurrentOption = "Option 1",
+	Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(val)
+        getgenv().AutofarmMethod = val;
+	end,
+})
+
+--// Visual Tab
+
+local VisualTab = Window:CreateTab("Visual",4370345701)
+
+local VisualSection = VisualTab:CreateSection("Visual")
+
+local folder = Instance.new("Folder",CoreGui);
+folder.Name = "ESP Holder";
+	
+local function AddBillboard(player)
+    local billboard = Instance.new("BillboardGui",folder);
+    billboard.Name = player.Name;
+    billboard.AlwaysOnTop = true;
+    billboard.Size = UDim2.fromOffset(200,50);
+    billboard.ExtentsOffset = Vector3.new(0,3,0);
+
+    local textLabel = Instance.new("TextLabel",billboard);
+    textLabel.TextSize = 20;
+    textLabel.Text = player.Name;
+    textLabel.Font = Enum.Font.SourceSans;
+    textLabel.BackgroundTransparency = 1;
+    textLabel.Size = UDim2.fromScale(1,1);
+
+    if getgenv().AllEsp then
+        billboard.Enabled = true
+    end
+    repeat
+        wait()
+        pcall(function()
+            billboard.Adornee = player.Character.Head;
+            if player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife") then
+                textLabel.TextColor3 = Color3.new(1,0,0);
+                if not billboard.Enabled and getgenv().MurderEsp then
+                    billboard.Enabled = true
+                end
+            elseif player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun") then
+                textLabel.TextColor3 = Color3.new(0,0,1);
+                if not billboard.Enabled and getgenv().SheriffEsp then
+                    billboard.Enabled = true
+                end
+            else
+                textLabel.TextColor3 = Color3.new(0,1,0);
+            end;
+        end);
+    until not player.Parent;
+end;
+
+for _,player in pairs(Players:GetPlayers()) do
+    if player ~= Client then
+        coroutine.wrap(AddBillboard)(player);
+    end;
+end;
+Players.PlayerAdded:Connect(AddBillboard);
+
+Players.PlayerRemoving:Connect(function(player)
+    folder[player.Name]:Destroy();
+end);
+
+local Toggle = VisualTab:CreateToggle({
+	Name = "Player ESP",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+        getgenv().AllEsp = state;
+        for i, v in pairs(folder:GetChildren()) do
+            if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                if getgenv().AllEsp then
+                    v.Enabled = true;
+                else
+                    v.Enabled = false;
+                end;
+            end;
+        end;
+	end,
+})
+
+local Toggle = VisualTab:CreateToggle({
+	Name = "Murderer ESP",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+        getgenv().MurderEsp = state;
+        while getgenv().MurderEsp do
+            wait()
+            pcall(function()
+                for i, v in pairs(folder:GetChildren()) do
+                    if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                        if Players[tostring(v.Name)].Character:FindFirstChild("Knife") or Players[tostring(v.Name)].Backpack:FindFirstChild("Knife")  then
+                            if getgenv().MurderEsp then
+                                v.Enabled = true;
+                            else
+                                v.Enabled = false;
+                            end;
+                        end
+                    end;
+                end;
+            end);
+        end;
+	end,
+})
+
+local Toggle = VisualTab:CreateToggle({
+	Name = "Sheriff ESP",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+        getgenv().SheriffEsp = state;
+        while getgenv().SheriffEsp do
+            wait()
+            pcall(function()
+                for i, v in pairs(folder:GetChildren()) do
+                    if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                        if Players[tostring(v.Name)].Character:FindFirstChild("Gun") or Players[tostring(v.Name)].Backpack:FindFirstChild("Gun")  then
+                            if getgenv().SheriffEsp then
+                                v.Enabled = true;
+                            else
+                                v.Enabled = false;
+                            end;
+                        end
+                    end;
+                end;
+            end);
+        end;
+	end,
+})
+
+local Toggle = VisualTab:CreateToggle({
+	Name = "Gun ESP",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+        getgenv().GunESP = state;
+	end,
+})
+
+--// Supported Game Tab
+local SupportedGameTab = Window:CreateTab("Supported Game",4370344717)
+
+local SupportedSection = SupportedGameTab:CreateSection("Supported Game")
+
+SupportedGameTab:CreateButton({
+	Name = "Tapping Legends",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(8750997647) 
+	end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Evade",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(9872472334) 
+	end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "The Obby Elevator",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(7044096177) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Ninja Legends",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(3956818381) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Mining Simulator 2",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(9551640993) 
+    end,
+})
+
+
+SupportedGameTab:CreateButton({
+	Name = "Rarity Factory Tycoon",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(10919241870) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Prison Life",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(155615604) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Tapping Simulator",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(9498006165) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Word Bomb",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(2653064683) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Raise A Floppa 2",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(9772878203) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Tower Of Hell",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(1962086868) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Arsenal",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(286090429) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "DOORS",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(6516141723) 
+    end,
+})
+
+SupportedGameTab:CreateButton({
+	Name = "Murder Mystery 2",
+	Callback = function()
+    game:GetService("TeleportService"):Teleport(142823291) 
+    end,
+})
+
+-- Notification Loaded
+
+Rayfield:Notify({
+	Title = "Nau Hub Loaded!",
+	Content = "NauHub | "..gname,
+	Duration = 4,
+	Image = 4384403532,
+  })
+
+-- Notification Loaded
+
+Rayfield:Notify({
+	Title = "NauHub Loaded!",
+	Content = "NauHub | "..gname,
+	Duration = 4,
+	Image = 6031302926,
+  })
+
+--// Credits Tab
+
+local CTab = Window:CreateTab("Credits",3944676934)
+local CSection = CTab:CreateSection("Credits")
+CTab:CreateButton({
+	Name = "Made by Nau#4866 (click to copy)",
+	Callback = function()
+		setclipboard("Nau#4866")
+		Rayfield:Notify({
+			Title = "NauHub Owner",
+			Content = "NauHub Discord Tag Owner Has Been Copied",
+			Duration = 4,
+			Image = 6034287519,
+		  })
+	end,
+})
+CTab:CreateButton({
+	Name = "UI: Rayfield Interface Suite (click to copy)",
+	Callback = function()
+		setclipboard("https://v3rmillion.net/showthread.php?tid=1191985")
+		Rayfield:Notify({
+			Title = "Ui Library",
+			Content = "Ui Library Has Been Copied",
+			Duration = 4,
+			Image = 6026660083,
+		  })
+	end,
+})
+
+CTab:CreateButton({
+	Name = "NauHub Icons Kit",
+	Callback = function()
+		setclipboard("https://scriptblox.com/script/Universal-Script-NauHub-Material-Icons-Kit-7311")
+		Rayfield:Notify({
+			Title = "NauHub Icons Kit",
+			Content = "NauHub Icons Kit Has Been Copied",
+			Duration = 4,
+			Image = 6031225809,
+		  })
+	end,
+})
+
+CTab:CreateButton({
+	Name = "Our discord server (click to join)",
+	Callback = function()
+		Module.Join("XHrQ6DPzcb")
+		Rayfield:Notify({
+			Title = "NauHub Discord Link",
+			Content = "NauHub Discord Link Has Been Copied",
+			Duration = 4,
+			Image = 6031302926,
+		  })
+	end,
+})
+
+coroutine.wrap(function()
+    RunService.RenderStepped:Connect(function()
+        pcall(function()
+            if getgenv().GunESP then
+                local gundrop = Workspace:FindFirstChild("GunDrop");
+                GunHighlight.Adornee = gundrop;
+                GunHandleAdornment.Adornee = gundrop;
+                if gundrop then 
+                    GunHandleAdornment.Size = gundrop.Size + Vector3.new(0.05, 0.05, 0.05) ;
+                end;
+        
+                GunHighlight.Enabled = getgenv().GunESP;
+                GunHandleAdornment.Visible = getgenv().GunESP;
+            end;
+        end);
+    end);
+end)();
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+
+function XrayOn(obj)
+    for _,v in pairs(obj:GetChildren()) do
+        if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+            v.LocalTransparencyModifier = 0.75;
+        end;
+        XrayOn(v);
+    end;
+end;
+
+function XrayOff(obj)
+    for _,v in pairs(obj:GetChildren()) do
+        if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+            v.LocalTransparencyModifier = 0;
+        end ;
+        XrayOff(v);
+    end;
+end;

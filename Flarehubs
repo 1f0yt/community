@@ -1,0 +1,85 @@
+-- Hello, if you steal this script I will DMCA you.
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Fruit Battlegrounds | Flare Hub | Made By 1_F0", "Sentinel")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Auto Farms")
+
+
+    MainSection:NewButton("Auto Farm EXP + Gems", "OPness", function()
+getgenv().Stamina   =  10
+getgenv().AutoFarm  =  true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sunexn/FruitBattlegrounds/main/FruitBattlegrounds.lua",true))()
+	end)
+    
+    MainSection:NewButton("Auto Attack Players", "Don't move", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/JumbleBumble/Scripts/main/FruitBattlegrounds.lua"))()
+    end)
+    
+    MainSection:NewButton("Bypass Anticheat", "USE THIS BEFORE ANYTHING ELSE", function()
+-- fixing
+    end)
+    
+    MainSection:NewButton("ESP Players", "Fruit, Level and more!", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/CRjaHssZ"))()
+    end)
+
+
+    local FunSection = Main:NewSection("Fun")
+
+    FunSection:NewButton("Back/Front Flip | Z & X", "Makes you do gymnastics", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    end)
+
+    FunSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+
+    local Other = Window:NewTab("Others")
+    local OtherSection = Other:NewSection("Misc. Section")
+
+    OtherSection:NewButton("Redeem ALL Codes", "Very Cool Free", function()
+for _, k in pairs(game.Players:GetChildren()) do
+print(k.Name)
+print("------------------------------------")
+for _, v in pairs(k["MAIN_DATA"].Codes:GetChildren()) do
+print(v.Value)
+local ohString1 = "Codes"
+local ohString2 = "Redeem"
+local ohTable3 = {
+["Code"] = v.Value,
+}
+
+game:GetService("ReplicatedStorage").Replicator:InvokeServer(ohString1, ohString2, ohTable3)
+end
+end
+    end)
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Local Player")
+    local PlayerSection = Player:NewSection("Player | Keep Moving While Changing These")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Credits
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits: 1_F0 & Jumble")
