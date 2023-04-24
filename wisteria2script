@@ -1,0 +1,103 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Flare Hub | Wisteria 2 | Made By 1_F0", "Sentinel")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("OP Features")
+
+
+	MainSection:NewButton("INFINITE MONEY + EXP", "OPness", function()
+		getgenv().farm = true
+
+while farm do task.wait()
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Mita,
+        ["Path"] = "Accept"
+    })
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer({
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs:FindFirstChild("Saru Kenshi"),
+        ["Path"] = "SetSpawn"
+    })
+end
+	end)
+
+	MainSection:NewButton("infinite spins", "OPness", function()
+getgenv().auto_spin = {
+   clans_wanted = {'Kamado'} -- Must be the exact identical names stored in their servers.
+} -- Leave that on auto-execute must be in game start menu
+loadstring(game:HttpGet('https://gamefraud.lol/muz/scripts/ingame_infspin.lua'))()
+	end)
+
+    MainSection:NewButton("Get Breathing Skill", "OPness", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-924.617188,41.4878235,-357.747345,1,0,0,0,1,0,0,0,1)wait(1)function tense()local a={["Type"]="Continue",["Npc"]=workspace.Npcs.Osiris,["Path"]="Fight3"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)local a={["Type"]="Continue",["Npc"]=workspace.Npcs.Osiris,["Path"]="Fight4"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)local a={["Type"]="End",["Npc"]=workspace.Npcs.Osiris,["Path"]="Fight5"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)local a={["Type"]="Continue",["Npc"]=workspace.Npcs.Matsui,["Path"]="Path1"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)local a={["Type"]="Continue",["Npc"]=workspace.Npcs.Matsui,["Path"]="Path2"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)local a={["Type"]="End",["Npc"]=workspace.Npcs.Matsui,["Path"]="LesserVigor2"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)end;function strength()local a={["Type"]="End",["Npc"]=workspace.Npcs.Matsui,["Path"]="LesserStrength2"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)end;function battlespirit()local a={["Type"]="End",["Npc"]=workspace.Npcs.Matsui,["Path"]="LesserSpar2"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)end;function agility()local a={["Type"]="End",["Npc"]=workspace.Npcs.Matsui,["Path"]="LesserAgility2"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)end;function getbreathing()local a={["Type"]="Continue",["Npc"]=workspace.Npcs.Matsui,["Path"]="Path3"}game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(a)end;tense()strength()battlespirit()agility()getbreathing()
+	end)
+    
+    MainSection:NewButton("God Mode", "Don't move", function()
+		game:GetService("Players").LocalPlayer.Character.Effects.Attackers:Destroy()
+    end)
+
+        local MainSection = Main:NewSection("Extra Stuff")
+
+    MainSection:NewButton("Go To Final Selection", "Don't move", function()
+		game:GetService("Players").LocalPlayer.Character.Effects.Attackers:Destroy()
+    end)
+
+
+	MainSection:NewButton("No Sun Burn", "OPness", function()
+		game:GetService("ReplicatedStorage").Events.SunlightBurn:Destroy()
+	end)
+
+    MainSection:NewButton("Bypass Anticheat", "USE THIS", function()
+-- fixing
+    end)
+    
+    MainSection:NewButton("ESP", "Level and more!", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/CRjaHssZ"))()
+    end)
+
+
+    local FunSection = Main:NewSection("Fun")
+
+    FunSection:NewButton("Back/Front Flip | Z & X", "Makes you do gymnastics", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    end)
+
+    FunSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+
+    local Other = Window:NewTab("Others")
+    local OtherSection = Other:NewSection("Misc. Section")
+
+    OtherSection:NewButton("Redeem ALL Codes", "Very Cool Free", function()
+		-- fixing
+    end)
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Local Player")
+    local PlayerSection = Player:NewSection("Player | Keep Moving While Changing These")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Credits
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits: 1_F0")
