@@ -1,0 +1,64 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Flare Hub | JAILBREAK | Made By 1_F0", "Sentinel")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("OP Features")
+
+    MainSection:NewButton("AUTO ARREST", "Don't move", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/NukeVsCity/Scripts2022/main/panzerONE'))()
+    end)
+
+
+    MainSection:NewButton("Bypass Anticheat", "USE THIS", function()
+		-- fixing
+    end)
+    
+    MainSection:NewButton("ESP", "Level and more!", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/CRjaHssZ"))()
+    end)
+
+
+    local FunSection = Main:NewSection("Fun")
+
+    FunSection:NewButton("Back/Front Flip | Z & X", "Makes you do gymnastics", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    end)
+
+    FunSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+
+
+    local Other = Window:NewTab("Others")
+    local OtherSection = Other:NewSection("Misc. Section")
+
+    OtherSection:NewButton("Redeem ALL Codes", "Very Cool Free", function()
+		-- fixing
+    end)
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Local Player")
+    local PlayerSection = Player:NewSection("Player | Keep Moving While Changing These")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Credits
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits: 1_F0")
