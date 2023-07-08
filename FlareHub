@@ -1,0 +1,87 @@
+local OrionLib = (loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
+_G.Key = "U@(soccer)*jn2928n2skjnsOW)2@(OINNaAI&&"
+_G.keyinput = "Shitty"
+local Window =
+    OrionLib:MakeWindow(
+    {
+        Name = "Key System",
+        HidePremium = false,
+        SaveConfig = false,
+        ConfigFolder = "OrionTest"
+    }
+)
+local Tab =
+    Window:MakeTab(
+    {
+        Name = "Key",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    }
+)
+
+local Section =
+    Tab:AddSection(
+    {
+        Name = "Key Section"
+    }
+)
+Tab:AddTextbox(
+    {
+        Name = "Put Key Here",
+        Default = "Key Goes Here",
+        TextDisappear = false,
+        Callback = function(Value)
+         
+            _G.keyinput = Value
+        end
+    }
+)
+Tab:AddButton(
+    {
+        Name = "Verify Your Key",
+        Callback = function()
+            if _G.Key == _G.keyinput then
+                OrionLib:MakeNotification(
+                    {
+                        Name = "Notification",
+                        Content = "Correct Key. Enjoy!!!",
+                        Image = "rbxassetid://4483345998",
+                        Time = 5
+                    }
+                )
+                task.wait(2)
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/Bebo-Mods/Scripts/master/1FOgame.lua'))()
+                OrionLib:Destroy()
+            else
+                OrionLib:MakeNotification(
+                    {
+                        Name = "Notification",
+                        Content = "Wrong Key",
+                        Image = "rbxassetid://4483345998",
+                        Time = 5
+                    }
+                )
+            end
+        end
+    }
+)
+Tab:AddButton(
+    {
+        Name = "Get Key Link",
+        Callback = function()
+            setclipboard("tinyurl.com/flarehub")
+            OrionLib:MakeNotification(
+                {
+                    Name = "Key Link",
+                    Content = "https://tinyurl.com/flarehub",
+                    Image = "rbxassetid://4483345998",
+                    Time = 15
+                }
+            )
+        end
+    }
+)
+Tab:AddLabel("Go To This Link For The KEY tinyurl.com/flarehub")
+Tab:AddLabel("Go To This Link For The KEY tinyurl.com/flarehub")
+Tab:AddLabel("Go To This Link For The KEY tinyurl.com/flarehub")
+Tab:AddLabel("Go To This Link For The KEY tinyurl.com/flarehub")
