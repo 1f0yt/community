@@ -1,0 +1,1187 @@
+-- VERSION 2.2.BRAT
+-- FOR BRAT UPDATE
+-- formatting: 3 line breaks between buttons, 5 between tabs
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shidemuri/scripts/main/ui_lib.lua"))() -- defining the gui library
+
+local Pendulum = Library:New("dress to impress fucker")
+
+
+
+
+
+
+local Exploit1 = Pendulum:NewTab("exploits")
+
+
+
+Exploit1:NewButton("toggle rainbow skin", "makes your skin flash rainbow", function()
+
+-- original script is from https://pastebin.com/bKmeynqv
+
+getgenv().lmao = not getgenv().lmao
+task.spawn(function()
+    while true do
+        task.wait()
+        if not getgenv().lmao then
+            break
+        end
+        local args = {
+            [1] = "Change Skintone",
+            [2] = Color3.new(math.random(), math.random(), math.random())
+        }
+    
+        game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+    end
+end)
+
+end)
+
+
+
+Exploit1:NewButton("obstruct camera/runway", "gives you a ton of hair to block others on the runway", function()
+    
+    
+-- hair
+loadstring(game:HttpGet("https://pastefy.app/KjfFN9Wh/raw", true))()
+
+-- create platform
+local partName = "SSSSSSSSSSSSSSSSSSSS"
+local platformSize = Vector3.new(200, 1, 200)
+local platformOffset = 0.28 -- default negative y offset
+
+local function createInvisiblePlatform()
+    local runway = workspace:FindFirstChild("! Maps") and workspace:FindFirstChild("! Maps"):FindFirstChild("! Runway")
+    if not runway then return end
+
+    -- Check for "untitled" model to set offset
+    platformOffset = runway:FindFirstChild("untitled") and 0.46 or 0.28
+    print("map 2 detected. offset 0.46" or "map 1 detected. offset 0.28")
+
+    local targetPart = runway:FindFirstChild(partName)
+    if targetPart then
+        local platform = Instance.new("Part")
+        platform.Size = platformSize
+        platform.Position = targetPart.Position - Vector3.new(0, targetPart.Size.Y / 2 + platformSize.Y / 2 + platformOffset, 0)
+        platform.Anchored = true
+        platform.CanCollide = true
+        platform.BrickColor = BrickColor.new("White")
+        platform.Material = Enum.Material.SmoothPlastic
+        platform.Transparency = 1
+        platform.Parent = workspace
+    end
+end
+
+createInvisiblePlatform()
+
+-- cancollide off
+local function disableCanCollideForAllChildren()
+    local design = workspace:FindFirstChild("! Maps") and workspace:FindFirstChild("! Maps"):FindFirstChild("! Runway"):FindFirstChild("Design")
+    if not design then return end
+
+    local targetFolder = design:GetChildren()[20]
+    if targetFolder then
+        for _, child in ipairs(targetFolder:GetChildren()) do
+            if child:IsA("BasePart") then
+                child.CanCollide = false
+            end
+        end
+    end
+end
+
+disableCanCollideForAllChildren()
+
+-- tp
+local x, y, z = -227, 16, -409
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(x, y, z)
+
+
+end)
+
+
+
+Exploit1:NewButton("autofarm money", "all money that spawns will be remotely collected", function()
+
+local player = game.Players.LocalPlayer
+
+while wait(1) do
+    local MoneyFolder = workspace:FindFirstChild("CollectibleMoney") and workspace.CollectibleMoney:FindFirstChild("Money")
+    local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+
+    if MoneyFolder and humanoidRootPart then
+        for _, moneyPart in ipairs(MoneyFolder:GetChildren()) do
+            if moneyPart:IsA("BasePart") then
+                local cheems = player.Character:FindFirstChildWhichIsA("BasePart")
+                firetouchinterest(moneyPart, cheems, 0)
+                firetouchinterest(moneyPart, cheems, 1)
+            end
+        end
+    else
+        warn("Money folder or player's HumanoidRootPart not found!")
+    end
+end
+
+end)
+
+
+
+Exploit1:NewButton("equip scare tool (made by glowxfy)", "lets you jumpscare ppl during voting", function()
+    
+    
+    
+local player = game.Players.LocalPlayer
+local tool = Instance.new("Tool", player.Backpack)
+tool.RequiresHandle = false
+tool.Name = "scare em(Equip to scare them)"
+
+tool.Activated:Connect(function()
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local humanoid = character:WaitForChild("Humanoid")
+    local animator = humanoid:WaitForChild("Animator")
+
+    -- Load and play new walk animation
+    local walkAnimation = Instance.new("Animation", character)
+    walkAnimation.AnimationId = "rbxassetid://1083216690"
+    local walkTrack = animator:LoadAnimation(walkAnimation)
+
+    humanoid.Running:Connect(function(speed)
+        if speed > 0 then walkTrack:Play() else walkTrack:Stop() end
+    end)
+
+    -- Execute teleport and walk
+    humanoidRootPart.CFrame = CFrame.new(Vector3.new(-157.32, 15.54, -408.16))
+    humanoid.WalkSpeed = 50
+    humanoid:MoveTo(Vector3.new(-234.14, 15.54, -409.33))
+    humanoid.MoveToFinished:Wait()
+    humanoid.WalkSpeed = 16
+end)
+
+
+
+end)
+
+
+
+Exploit1:NewButton("enable dyno walk", "gives you a silly walk animation", function()
+    
+    
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local humanoid = character:WaitForChild("Humanoid")
+    local animator = humanoid:WaitForChild("Animator")
+
+    -- Load and play new walk animation
+    local walkAnimation = Instance.new("Animation", character)
+    walkAnimation.AnimationId = "rbxassetid://1083216690"
+    local walkTrack = animator:LoadAnimation(walkAnimation)
+
+    humanoid.Running:Connect(function(speed)
+        if speed > 0 then walkTrack:Play() else walkTrack:Stop() end
+    end)
+
+
+
+end)
+
+
+
+Exploit1:NewLabel("YOU MUST RESET YOUR CHARACTER TO UNEQUIP DYNO WALK")
+
+
+
+Exploit1:NewButton("reset character (you will lose your outfit)", "this is the only way to disable dyno walk", function()
+    
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Dead)
+    
+end)
+
+
+
+
+
+local Exploit2 = Pendulum:NewTab("better exploits")
+
+
+
+Exploit2:NewButton("unlock all items", "click anything to equip, this also destroys vip door and purchase prompts", function()
+    
+    
+    
+local userInputService = game:GetService("UserInputService")
+local camera = workspace.CurrentCamera
+local replicatedStorage = game:GetService("ReplicatedStorage")
+
+local function onClick(input, gameProcessedEvent)
+    if gameProcessedEvent or (input.UserInputType ~= Enum.UserInputType.MouseButton1 and input.UserInputType ~= Enum.UserInputType.Touch) then
+        return
+    end
+
+    local ray = camera:ScreenPointToRay(input.Position.X, input.Position.Y)
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+    raycastParams.FilterDescendantsInstances = {workspace:FindFirstChildOfClass("Players")}
+    raycastParams.IgnoreWater = true
+
+    local result = workspace:Raycast(ray.Origin, ray.Direction * 1000, raycastParams)
+    if result and result.Instance:IsA("Part") then
+        local hitObject = result.Instance
+        local parentName = hitObject.Parent and hitObject.Parent.Name
+        print("Clicked on model: " .. hitObject.Name)
+        print("Parent of clicked object: " .. parentName)
+
+        local remoteEvent = replicatedStorage:WaitForChild("Dress Up"):WaitForChild("RemoteEvent")
+        remoteEvent:FireServer("Equip", parentName)
+    else
+        print(result and "Hit object is not a model: " .. result.Instance.Name or "Raycast did not hit anything.")
+    end
+end
+
+userInputService.InputBegan:Connect(onClick)
+
+-- Cleanup
+for _, obj in pairs({
+    workspace:FindFirstChild("VIP Door") and workspace["VIP Door"]:FindFirstChild("Part"),
+    game:GetService("CoreGui"):FindFirstChild("PurchasePrompt"),
+    game.Players.LocalPlayer.PlayerGui:FindFirstChild("Shopping")
+}) do
+    if obj then obj:Destroy() end
+end
+
+
+
+end)
+
+
+
+local copyoutfit = Exploit2:NewTextBar("user/display name (can shorten)", "user/display name (can shorten)", "", function()
+    end)
+    
+
+
+Exploit2:NewButton("copy outfit", "copy the outfit of player above (wont copy patterns)", function()
+
+
+
+loadstring(game:HttpGet("https://pastefy.app/lMNQKGxK/raw",true))() -- clear
+
+wait(0.01)
+
+-- get the player
+
+local Players = game:GetService("Players")
+
+local function findPlayer(input)
+    local inputLower = string.lower(input)
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        local displayName = player.DisplayName
+        local username = player.Name
+
+        -- Check full display name
+        if string.lower(displayName) == inputLower then
+            return player
+        end
+
+        -- Check shortened display name
+        for i = 1, #displayName do
+            if string.lower(string.sub(displayName, 1, i)) == inputLower then
+                return player
+            end
+        end
+
+        -- Check full username
+        if string.lower(username) == inputLower then
+            return player
+        end
+
+        -- Check shortened username
+        for i = 1, #username do
+            if string.lower(string.sub(username, 1, i)) == inputLower then
+                return player
+            end
+        end
+    end
+
+    return nil
+end
+
+-- Example usage
+local input = copyoutfit.Text  -- Replace with the input you want to search for
+local foundPlayer = findPlayer(input)
+
+if foundPlayer then
+    print("Found player: " .. foundPlayer.Name)
+else
+    print("Player not found")
+end
+
+
+
+
+-- Function to convert Color3 to hex with lowercase letters
+local function colorToHex(color)
+    return string.format("%02x%02x%02x", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+end
+
+-- Get the player and their EquippedAccessories folder
+local playerName = foundPlayer.Name
+local player = workspace:FindFirstChild(playerName)
+
+if player then
+    print("Player found: " .. playerName)
+    
+    local equippedAccessories = player:FindFirstChild("EquippedAccessories")
+    if equippedAccessories then
+        print("EquippedAccessories folder found for player: " .. playerName)
+        
+        for _, item in ipairs(equippedAccessories:GetChildren()) do
+            -- Print the item name
+            print("Item found: " .. item.Name)
+
+            -- Prepare the arguments for the first RemoteEvent (Equip)
+            local equipArgs = {
+                [1] = "Equip",
+                [2] = item.Name
+            }
+
+            -- Fire the first RemoteEvent (Equip)
+            game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(equipArgs))
+            print("RemoteEvent (Equip) fired with args: ")
+            print("local args = {")
+            print("    [1] = \"" .. equipArgs[1] .. "\",")
+            print("    [2] = \"" .. equipArgs[2] .. "\"")
+            print("}")
+            
+            -- Find the first folder within the item
+            local firstFolder = nil
+            for _, child in ipairs(item:GetChildren()) do
+                if child:IsA("Folder") then
+                    firstFolder = child
+                    break
+                end
+            end
+            
+            if firstFolder then
+                print("Folder found for item: " .. item.Name .. ", Folder name: " .. firstFolder.Name)
+                -- Iterate through parts 1 to 5 in the folder
+                for partNumber = 1, 5 do
+                    local part = firstFolder:FindFirstChild(tostring(partNumber))
+                    if part then
+                        -- Use the part's Color directly
+                        local color = part.Color
+
+                        -- Prepare the arguments for the first RemoteEvent (Color Accessory)
+                        local colorArgs = {
+                            [1] = "Color Accessory",
+                            [2] = item.Name,
+                            [3] = tostring(partNumber),
+                            [4] = Color3.new(color.R, color.G, color.B)
+                        }
+
+                        -- Print the exact RemoteEvent code for debugging
+                        print("RemoteEvent (Color Accessory) fired with args: ")
+                        print("local args = {")
+                        print("    [1] = \"" .. colorArgs[1] .. "\",")
+                        print("    [2] = \"" .. colorArgs[2] .. "\",")
+                        print("    [3] = \"" .. colorArgs[3] .. "\",")
+                        print("    [4] = Color3.new(" .. colorArgs[4].R .. ", " .. colorArgs[4].G .. ", " .. colorArgs[4].B .. ")")
+                        print("}")
+
+                        -- Fire the first RemoteEvent (Color Accessory)
+                        game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(colorArgs))
+                        print("RemoteEvent (Color Accessory) fired for item: " .. item.Name .. ", part: " .. partNumber)
+                        
+                        -- If the item name contains "hair", fire the RemoteEvent again with hex color
+                        if string.find(string.lower(item.Name), "hair") then
+                            local hexColor = colorToHex(color)
+                            local hexColorArgs = {
+                                [1] = "ColoringViaTexture",
+                                [2] = item.Name,
+                                [3] = tostring(partNumber),
+                                [4] = hexColor
+                            }
+
+                            -- Print the exact RemoteEvent code for debugging
+                            print("RemoteEvent (Color Accessory with hex) fired with args: ")
+                            print("local args = {")
+                            print("    [1] = \"" .. hexColorArgs[1] .. "\",")
+                            print("    [2] = \"" .. hexColorArgs[2] .. "\",")
+                            print("    [3] = \"" .. hexColorArgs[3] .. "\",")
+                            print("    [4] = \"" .. hexColorArgs[4] .. "\"")
+                            print("}")
+
+                            -- Fire the second RemoteEvent (Color Accessory) with hex color
+                            game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(hexColorArgs))
+                            print("RemoteEvent (Color Accessory with hex) fired for item: " .. item.Name .. ", part: " .. partNumber)
+                        end
+                    else
+                        print("No part found with name: " .. tostring(partNumber) .. " in folder of item: " .. item.Name)
+                    end
+                end
+            else
+                warn("No folder found for item: " .. item.Name)
+            end
+        end
+    else
+        warn("EquippedAccessories folder not found for player: " .. playerName)
+    end
+    
+    -- Get the player's head part and change the skintone
+    local head = player:FindFirstChild("Head")
+    if head then
+        local headColor = head.Color
+
+        local skinToneArgs = {
+            [1] = "Change Skintone",
+            [2] = Color3.new(headColor.R, headColor.G, headColor.B)
+        }
+
+        -- Print the exact RemoteEvent code for debugging
+        print("RemoteEvent (Change Skintone) fired with args: ")
+        print("local args = {")
+        print("    [1] = \"" .. skinToneArgs[1] .. "\",")
+        print("    [2] = Color3.new(" .. skinToneArgs[2].R .. ", " .. skinToneArgs[2].G .. ", " .. skinToneArgs[2].B .. ")")
+        print("}")
+
+        -- Fire the RemoteEvent (Change Skintone)
+        game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(skinToneArgs))
+        print("RemoteEvent (Change Skintone) fired for player: " .. playerName .. ", Head color: " .. tostring(headColor))
+        
+        -- Get the player's face decal and change its texture
+        local face = head:FindFirstChild("face")
+        if face and face:IsA("Decal") then
+            local faceTexture = face.Texture
+
+            local faceArgs = {
+                [1] = "Classic Makeup",
+                [2] = faceTexture
+            }
+
+            -- Print the exact RemoteEvent code for debugging
+            print("RemoteEvent (Classic Makeup) fired with args: ")
+            print("local args = {")
+            print("    [1] = \"" .. faceArgs[1] .. "\",")
+            print("    [2] = \"" .. faceArgs[2] .. "\"")
+            print("}")
+
+            -- Fire the RemoteEvent (Classic Makeup)
+            game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(faceArgs))
+            print("RemoteEvent (Classic Makeup) fired for player: " .. playerName .. ", Face texture: " .. faceTexture)
+        else
+            warn("Face decal not found for player: " .. playerName)
+        end
+    else
+        warn("Head part not found for player: " .. playerName)
+    end
+
+    -- Get the Nails accessory and find part '1'
+    local nails = player:FindFirstChild("Nails")
+    if nails then
+        local part1 = nails:FindFirstChild("1")
+        if part1 then
+            local part1Color = part1.Color
+
+            local nailsColorArgs = {
+                [1] = "Color Accessory",
+                [2] = "Nails",
+                [3] = "1",
+                [4] = Color3.new(part1Color.R, part1Color.G, part1Color.B)
+            }
+
+            -- Print the exact RemoteEvent code for debugging
+            print("RemoteEvent (Color Accessory for Nails) fired with args: ")
+            print("local args = {")
+            print("    [1] = \"" .. nailsColorArgs[1] .. "\",")
+            print("    [2] = \"" .. nailsColorArgs[2] .. "\",")
+            print("    [3] = \"" .. nailsColorArgs[3] .. "\",")
+            print("    [4] = Color3.new(" .. nailsColorArgs[4].R .. ", " .. nailsColorArgs[4].G .. ", " .. nailsColorArgs[4].B .. ")")
+            print("}")
+
+            -- Fire the RemoteEvent (Color Accessory for Nails)
+            game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(nailsColorArgs))
+            print("RemoteEvent (Color Accessory for Nails) fired for Nails part '1', Color: " .. tostring(part1Color))
+        else
+            warn("Part '1' not found in Nails accessory for player: " .. playerName)
+        end
+    else
+        warn("Nails accessory not found for player: " .. playerName)
+    end
+else
+    warn("Player not found: " .. playerName)
+end
+
+
+end)
+
+
+
+Exploit2:NewButton("save current outfit", "copies your outfit to your clipboard in form of code", function()
+
+local function colorToHex(color)
+    return string.format("%02x%02x%02x", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+end
+
+-- Create a table to store all remote event calls
+local outfitfinal = {}
+
+-- Helper function to add remote events to the table
+local function addRemoteEvent(remoteName, args)
+    table.insert(outfitfinal, string.format(
+        'game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(%s)',
+        table.concat(args, ", ")
+    ))
+end
+
+-- Helper function to serialize the outfitfinal table into a string
+local function serializeTable(tbl)
+    return table.concat(tbl, "\n")
+end
+
+-- Get the player and their EquippedAccessories folder
+local playerName = game.Players.LocalPlayer.Name
+local player = workspace:FindFirstChild(playerName)
+
+if player then
+    print("Player found: " .. playerName)
+    
+    local equippedAccessories = player:FindFirstChild("EquippedAccessories")
+    if equippedAccessories then
+        print("EquippedAccessories folder found for player: " .. playerName)
+        
+        for _, item in ipairs(equippedAccessories:GetChildren()) do
+            -- Print the item name
+            print("Item found: " .. item.Name)
+
+            -- Prepare the arguments for the first RemoteEvent (Equip)
+            local equipArgs = {
+                string.format('"%s"', "Equip"),
+                string.format('"%s"', item.Name)
+            }
+
+            -- Add the Equip RemoteEvent to the table
+            addRemoteEvent("Equip", equipArgs)
+            
+            -- Find the first folder within the item
+            local firstFolder = nil
+            for _, child in ipairs(item:GetChildren()) do
+                if child:IsA("Folder") then
+                    firstFolder = child
+                    break
+                end
+            end
+            
+            if firstFolder then
+                print("Folder found for item: " .. item.Name .. ", Folder name: " .. firstFolder.Name)
+                -- Iterate through parts 1 to 5 in the folder
+                for partNumber = 1, 5 do
+                    local part = firstFolder:FindFirstChild(tostring(partNumber))
+                    if part then
+                        -- Use the part's Color directly
+                        local color = part.Color
+
+                        -- Prepare the arguments for the first RemoteEvent (Color Accessory)
+                        local colorArgs = {
+                            string.format('"%s"', "Color Accessory"),
+                            string.format('"%s"', item.Name),
+                            string.format('"%s"', tostring(partNumber)),
+                            string.format('Color3.new(%f, %f, %f)', color.R, color.G, color.B)
+                        }
+
+                        -- Add the Color Accessory RemoteEvent to the table
+                        addRemoteEvent("Color Accessory", colorArgs)
+
+                        -- If the item name contains "hair", fire the RemoteEvent again with hex color
+                        if string.find(string.lower(item.Name), "hair") then
+                            local hexColor = colorToHex(color)
+                            local hexColorArgs = {
+                                string.format('"%s"', "ColoringViaTexture"),
+                                string.format('"%s"', item.Name),
+                                string.format('"%s"', tostring(partNumber)),
+                                string.format('"%s"', hexColor)
+                            }
+
+                            -- Add the hex color RemoteEvent to the table
+                            addRemoteEvent("ColoringViaTexture", hexColorArgs)
+                        end
+                    else
+                        print("No part found with name: " .. tostring(partNumber) .. " in folder of item: " .. item.Name)
+                    end
+                end
+            else
+                warn("No folder found for item: " .. item.Name)
+            end
+        end
+    else
+        warn("EquippedAccessories folder not found for player: " .. playerName)
+    end
+
+    -- Get the player's head part and change the skintone
+    local head = player:FindFirstChild("Head")
+    if head then
+        local headColor = head.Color
+
+        local skinToneArgs = {
+            string.format('"%s"', "Change Skintone"),
+            string.format('Color3.new(%f, %f, %f)', headColor.R, headColor.G, headColor.B)
+        }
+
+        -- Add the Change Skintone RemoteEvent to the table
+        addRemoteEvent("Change Skintone", skinToneArgs)
+
+        -- Get the player's face decal and change its texture
+        local face = head:FindFirstChild("face")
+        if face and face:IsA("Decal") then
+            local faceTexture = face.Texture
+
+            local faceArgs = {
+                string.format('"%s"', "Classic Makeup"),
+                string.format('"%s"', faceTexture)
+            }
+
+            -- Add the Classic Makeup RemoteEvent to the table
+            addRemoteEvent("Classic Makeup", faceArgs)
+        else
+            warn("Face decal not found for player: " .. playerName)
+        end
+    else
+        warn("Head part not found for player: " .. playerName)
+    end
+
+    -- Get the Nails accessory and find part '1'
+    local nails = player:FindFirstChild("Nails")
+    if nails then
+        local part1 = nails:FindFirstChild("1")
+        if part1 then
+            local part1Color = part1.Color
+
+            local nailsColorArgs = {
+                string.format('"%s"', "Color Accessory"),
+                string.format('"%s"', "Nails"),
+                string.format('"%s"', "1"),
+                string.format('Color3.new(%f, %f, %f)', part1Color.R, part1Color.G, part1Color.B)
+            }
+
+            -- Add the Color Accessory for Nails RemoteEvent to the table
+            addRemoteEvent("Color Accessory", nailsColorArgs)
+        else
+            warn("Part '1' not found in Nails accessory for player: " .. playerName)
+        end
+    else
+        warn("Nails accessory not found for player: " .. playerName)
+    end
+
+    -- Serialize the outfitfinal table to a string and copy to clipboard
+    local serializedData = serializeTable(outfitfinal)
+    setclipboard(serializedData)
+    print("Serialized data copied to clipboard.")
+else
+    warn("Player not found: " .. playerName)
+end
+
+
+end)
+
+
+
+Exploit2:NewLabel("this wont save patterns! execute the code to equip the outfit.")
+
+Exploit2:NewButton("custom makeup gamepass", "this will let you use the custom makeup gamepass without buying it", function()
+loadstring(game:HttpGet("https://www.mycompiler.io/download/0pVb09y38PO",true))()
+end)
+
+Exploit2:NewButton("run faster gamepass", "this will let you use the tun faster gamepass without buying it", function()
+loadstring(game:HttpGet("https://www.mycompiler.io/download/CTdQqigURML",true))()
+end)
+
+
+
+
+
+local Universals = Pendulum:NewTab("universals")
+
+
+
+Universals:NewButton("inf yield", "yep", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",true))()
+end)
+
+
+
+
+
+local face = Pendulum:NewTab("face customization")
+
+
+
+face:NewButton("shove it into runway camera", "positions you so your face decal covers the runway cam", function()
+
+-- Create platform
+local function createPlatform()
+    local runway = workspace:FindFirstChild("! Maps") and workspace["! Maps"]:FindFirstChild("! Runway")
+    if not runway then return end
+    
+    local offset = runway:FindFirstChild("untitled") and 0.46 or 0.28
+    local targetPart = runway:FindFirstChild("SSSSSSSSSSSSSSSSSSSS")
+    if targetPart then
+        local platform = Instance.new("Part")
+        platform.Size = Vector3.new(200, 1, 200)
+        platform.Position = targetPart.Position - Vector3.new(0, targetPart.Size.Y / 2 + platform.Size.Y / 2 + offset, 0)
+        platform.Anchored = true
+        platform.CanCollide = true
+        platform.BrickColor = BrickColor.new("White")
+        platform.Material = Enum.Material.SmoothPlastic
+        platform.Transparency = 1
+        platform.Parent = workspace
+    end
+end
+
+createPlatform()
+workspace["! Maps"]["! Runway"].SSSSSSSSSSSSSSSSSSSS.CanCollide = false
+
+-- Prevent falling
+local player = game.Players.LocalPlayer
+local function preventFalling()
+    local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+    if humanoid then
+        humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+        humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+        humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, false)
+    end
+end
+
+preventFalling()
+player.CharacterAdded:Connect(function(char)
+    char:WaitForChild("Humanoid").SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+end)
+
+-- Teleport
+local function teleport(x, y, z)
+    local hrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    if hrp then
+        hrp.CFrame = CFrame.new(x, y, z)
+    end
+end
+
+teleport(-227.1, 16, -408.6)
+
+-- Face camera
+local function faceCamera()
+    local hrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    local cam = workspace.CurrentCamera
+    if hrp and cam then
+        hrp.CFrame = CFrame.lookAt(hrp.Position, cam.CFrame.Position)
+    end
+end
+
+faceCamera()
+
+-- Freeze player
+local function setAnchored(anchored)
+    local char = player.Character
+    if char then
+        for _, part in ipairs(char:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Anchored = anchored
+            end
+        end
+    end
+end
+
+setAnchored(true)
+wait(0.5)
+setAnchored(false)
+
+
+end)
+
+
+
+face:NewLabel("⬆️ only use this during the rating stage of the runway ⬆️")
+
+
+
+local face2 = face:NewTextBar("asset id for your face", "asset id for your face", "", function()
+    end)
+    
+
+
+face:NewButton("apply to face", "places the asset id from above onto your face", function()
+    
+    
+local assetId = face2.Text
+
+local args = {
+    [1] = "Classic Makeup",
+    [2] = "http://www.roblox.com/asset/?id=" .. assetId
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+
+
+end)
+
+
+
+face:NewLabel("wanna know how to get image IDs? join our discord!")
+
+
+
+face:NewLabel("⤵️ FACE VIDEOS ⤵️ credits to glowxfy and ixurt for inspo")
+
+
+
+-- stuff
+
+
+
+function stopallloops()
+    
+    kittying = false
+    sheeping = false
+    twerking = false
+    eyeing = false
+    
+end
+
+
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local dressUpEvent = ReplicatedStorage:FindFirstChild("Dress Up").RemoteEvent
+
+kittying = false
+sheeping = false
+twerking = false
+
+
+
+face:NewButton("kitty smooch :3", "by glowxfy", function()
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local dressUpEvent = ReplicatedStorage:FindFirstChild("Dress Up").RemoteEvent
+
+local assets = {"114167066111116", "74015457096686", "115624539646855", "79935153399704", "130532869978744", "99257475708262", "72145978042452", "112393726467705", "109212705640366", "72941119066459", "73365495116994", "119290555919658", "133713227048133", "113847350372914", "90445158921057", "74315543582440", "71290687226112"}
+
+stopallloops()
+wait(0.1)
+kittying = true
+
+spawn(function()
+    while kittying do
+        for _, assetId in ipairs(assets) do
+            if not kittying then break end
+            dressUpEvent:FireServer("Classic Makeup", "http://www.roblox.com/asset/?id=" .. assetId)
+            wait(0.1)
+        end
+    end
+end)
+
+end)
+
+
+
+face:NewButton("sheep anal", "ugh", function()
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local dressUpEvent = ReplicatedStorage:FindFirstChild("Dress Up").RemoteEvent
+
+local assets = {"132244364373324", "120071613129414", "91835857062747", "140091348740853", "90007829200174", "103210036893110", "74548929766567", "91385121507171"}
+
+stopallloops()
+wait(0.1)
+sheeping = true
+
+spawn(function()
+    while sheeping do
+        for _, assetId in ipairs(assets) do
+            if not sheeping then break end
+            dressUpEvent:FireServer("Classic Makeup", "http://www.roblox.com/asset/?id=" .. assetId)
+            wait(0.1)
+        end
+    end
+end)
+
+end)
+
+
+
+face:NewButton("roblox twerk", "shake dat", function()
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local dressUpEvent = ReplicatedStorage:FindFirstChild("Dress Up").RemoteEvent
+
+local assets = {"133007918005537", "137330973265015", "139692703144029", "112294186197294", "82879694721517", "98613981813137", "138457970568966", "93177281896313", "88795536094548", "125163115839406", "95181694101881", "95294065486209", "84549443190175", "75584771805678", "126514989282283", "137940933904133", "104077914887105", "89036811044993", "97247342181218", "135780376397881", "102935034260275", "124068476205359", "82024805222497", "75992645811249", "93706692597688", "129670355767722", "106961817457196", "114602753103573", "80678256500670", "139598271949603", "96969588821957", "117287769780391", "77195105921417", "100409636226558", "80086617768343", "80012704825680", "99736409021635"}
+
+stopallloops()
+wait(0.1)
+twerking = true
+
+spawn(function()
+    while twerking do
+        for _, assetId in ipairs(assets) do
+            if not twerking then break end
+            dressUpEvent:FireServer("Classic Makeup", "http://www.roblox.com/asset/?id=" .. assetId)
+            wait(0.1)
+        end
+    end
+end)
+
+end)
+
+
+
+face:NewButton("scary ass eye", "AHAHDJSAFHJASDH", function()
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local dressUpEvent = ReplicatedStorage:FindFirstChild("Dress Up").RemoteEvent
+
+local assets = {"96144095335520", "127681599141481", "134735864173190", "120488206994941", "112759383765281", "104454752457695", "71059652940755", "120441159009731", "100026351822848", "137695109068807", "76614652334798", "133929570541325", "100880155066454", "90411920745581", "96433999436438", "140259142796191", "76436461079099", "83685240808754", "105152557240991", "82143449856473", "126692369920241", "77131254226215", "137877660654005", "120333744921174", "140185359046927", "81204175184926", "73681940362305", "132887743450008", "105123738474327", "125902118607960", "115127059601679", "86714810094493", "93657607068501", "130552682927568", "88386502717705", "94998048436827", "128859838653740", "119524772952887"}
+
+stopallloops()
+wait(0.1)
+eyeing = true
+
+spawn(function()
+    while eyeing do
+        for _, assetId in ipairs(assets) do
+            if not eyeing then break end
+            dressUpEvent:FireServer("Classic Makeup", "http://www.roblox.com/asset/?id=" .. assetId)
+            wait(0.1)
+        end
+    end
+end)
+
+end)
+
+
+
+face:NewButton("STOP ALL VIDEOS", "yuh", function()
+    
+    stopallloops()
+    
+end)
+
+
+
+face:NewLabel("⤵️ FACE PRESETS ⤵️")
+
+
+
+local function createButton(face, name, description, uwu)
+    face:NewButton(name, description, function()
+        stopallloops()
+        local args = {
+            [1] = "Classic Makeup",
+            [2] = "http://www.roblox.com/asset/?id=" .. uwu
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+    end)
+end
+
+-- scary
+createButton(face, "scary ass face", "AHHH", "16144684694")
+createButton(face, "scary ass face 2", "jeff the killer", "668614178")
+createButton(face, "scary ass face 3", "lmao", "18762395037")
+createButton(face, "scary ahh face 4", "heart attack", "18761871297")
+createButton(face, "scary ahh face 5", "camping monster", "1243374078")
+createButton(face, "dark entity", "sleep with your door closed tonight", "7255938903")
+createButton(face, "possessing eyes", "they are watching you", "7713734473")
+createButton(face, "fent", "fent", "6889590510")
+
+-- faces
+createButton(face, "glue face", "lmao", "18762697427")
+createButton(face, "meme face", "bruh", "6074793689")
+createButton(face, "man face", "for glowxfy", "13468798521")
+createButton(face, "junya", "goofy looking guy", "18197724641")
+createButton(face, "trollface", "trololololololol", "7120897383")
+createButton(face, "goku drool", "slurp", "15530072543")
+createButton(face, "skibi tolet", "dop dop dop yes yes", "14488881421")
+
+-- meme
+createButton(face, "freakbob call", "freakybob!!", "18137084951")
+createButton(face, "john pork is calling", "pick up. now.", "13013958424")
+createButton(face, "bald guy stare", "we dont know the name okay", "15883784987")
+createButton(face, "1000 yard stare", "homework is due tomorrow", "16000183847")
+createButton(face, "minion", "gru", "10866099644")
+createButton(face, "nuggie", "gedagedigedagedao", "16852555041")
+createButton(face, "freaky", "freaky", "18371796935")
+createButton(face, "diddy", "diddy do it", "17759742879")
+createButton(face, "wise tree", "wisdom", "11012215782")
+
+-- other
+createButton(face, "c00lkidd face", "team c00lkid join today !!1", "10560525674")
+createButton(face, "rickroll", "never gonna give you up", "6403436054")
+createButton(face, "honkai star rail person, forgot her name but hot asf", "SMASH SMASH SMASH", "16738948400")
+createButton(face, "drake", "protect your little sister", "2156741281")
+createButton(face, "miku", "hiding in your wifi", "17423440483")
+createButton(face, "pepsi chip", "why is this here", "1949962997")
+
+-- car
+createButton(face, "stare cat", ":3", "7488932274")
+createButton(face, "silly cat", "silly", "16583833020")
+createButton(face, "chonk cat", "ball", "11104447788")
+createButton(face, "freaky cat", "mweh", "18412608499")
+
+-- button template:
+-- createButton(face, "", "", "")
+
+
+
+
+
+local Tp = Pendulum:NewTab("teleports")
+
+
+
+Tp:NewButton("teleport to lobby", "the place with the obby and shit", function()
+    
+local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+hrp.CFrame = CFrame.new(-493, 15, -559)
+
+end)
+
+
+
+Tp:NewButton("teleport to runway", "same position as obstructer without the hair", function()
+
+local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+hrp.CFrame = CFrame.new(-229, 16, -408.8)
+
+end)
+
+
+
+Tp:NewButton("teleport to dressing room", "teleports you to the dressing room", function()
+
+local hrp = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+hrp.CFrame = CFrame.new(-262, 2, 70)
+
+end)
+
+
+
+
+local Outfit = Pendulum:NewTab("outfits")
+    
+    
+
+Outfit:NewButton("unequip all", "unequips all accessories", function()
+    
+
+local player = game.Players.LocalPlayer
+local equippedAccessories = workspace:WaitForChild(player.Name):WaitForChild("EquippedAccessories")
+
+local function unequipAccessory(name)
+    game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Unequip", name)
+end
+
+for _, item in ipairs(equippedAccessories:GetChildren()) do
+    unequipAccessory(item.Name)
+end
+
+
+end)
+
+
+
+Outfit:NewButton("naked with dildo", "makes you naked and gives you a dildo", function()
+loadstring(game:HttpGet("https://pastefy.app/lMNQKGxK/raw",true))() -- clear
+
+wait(0.01)
+
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Starter")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Long-Sleeve")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Long-Sleeve", "1", Color3.new(0.933333, 0.690196, 0.576471))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Leggings")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Leggings", "1", Color3.new(0.933333, 0.690196, 0.576471))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Microphone")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Microphone", "1", Color3.new(0.968627, 0.121569, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Microphone", "2", Color3.new(0.968627, 0.121569, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Change Skintone", Color3.new(0.933333, 0.690196, 0.576471))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Classic Makeup", "rbxassetid://18727678781")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Nails", "1", Color3.new(0.474510, 0.058824, 0.058824))
+
+end)
+
+
+
+Outfit:NewButton("scary creature", "its described in the name", function()
+loadstring(game:HttpGet("https://pastefy.app/lMNQKGxK/raw",true))() -- clear
+
+wait(0.01)
+
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Starter")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Change Skintone", Color3.new(0.000000, 0.000000, 0.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Classic Makeup", "http://www.roblox.com/asset/?id=1243374078")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Nails", "1", Color3.new(0.474510, 0.058824, 0.058824))
+
+end)
+
+
+
+Outfit:NewButton("hatsune miku", "smash", function()
+loadstring(game:HttpGet("https://pastefy.app/lMNQKGxK/raw",true))() -- clear
+
+wait(0.01)
+
+-- this shit looks intimidating but its just the outfit details LOL
+
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Starter")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Miko Top")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Top", "1", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Top", "2", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Top", "3", Color3.new(0.000000, 0.000000, 0.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Top", "4", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Miko Boots")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Boots", "1", Color3.new(0.000000, 0.000000, 0.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Boots", "2", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Miko Boots", "3", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "- Hair IBella")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "- Hair IBella", "1", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("ColoringViaTexture", "- Hair IBella", "1", "11bccd")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "- Hair IBella", "2", Color3.new(0.066667, 0.737255, 0.803922))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("ColoringViaTexture", "- Hair IBella", "2", "11bccd")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Change Skintone", Color3.new(0.933333, 0.690196, 0.576471))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Classic Makeup", "rbxassetid://17434554178")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Nails", "1", Color3.new(0.474510, 0.058824, 0.058824))
+
+end)
+
+
+
+Outfit:NewButton("bloody lana", "by vier69420", function()
+loadstring(game:HttpGet("https://pastefy.app/lMNQKGxK/raw",true))() -- clear
+
+wait(0.01)
+
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Starter")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Long-Sleeve")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Long-Sleeve", "1", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Magic Girl Gloves")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Magic Girl Gloves", "1", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Magic Girl Gloves", "2", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Simple T-Shirt")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Simple T-Shirt", "1", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Top Diesel")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Top Diesel", "1", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Top Diesel", "2", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Jeans F: Skinny")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Jeans F: Skinny", "1", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Jeans F: Skinny", "2", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Classic Heels")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Classic Heels", "1", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Classic Heels", "2", Color3.new(1.000000, 1.000000, 1.000000))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Jeans F: Capris")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Jeans F: Capris", "1", Color3.new(0.411765, 0.047059, 0.054902))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Jeans F: Capris", "2", Color3.new(0.509804, 0.529412, 0.549020))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "- Hair 2")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "- Hair 2", "1", Color3.new(0.419608, 0.254902, 0.160784))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("ColoringViaTexture", "- Hair 2", "1", "6b4129")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Equip", "Stud Belt Y2K")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Stud Belt Y2K", "1", Color3.new(0.749020, 0.749020, 0.749020))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Stud Belt Y2K", "2", Color3.new(0.749020, 0.749020, 0.749020))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Change Skintone", Color3.new(0.933333, 0.690196, 0.576471))
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Classic Makeup", "rbxassetid://15306185957")
+game:GetService("ReplicatedStorage"):WaitForChild("Dress Up"):WaitForChild("RemoteEvent"):FireServer("Color Accessory", "Nails", "1", Color3.new(1.000000, 1.000000, 1.000000))
+
+end)
