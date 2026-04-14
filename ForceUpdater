@@ -1,0 +1,80 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local GKD = Instance.new("ScreenGui")
+local ForceUpdatingBanner = Instance.new("Frame")
+local TextNotif = Instance.new("TextLabel")
+local CopyWebsiteURL = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+GKD.Name = "GKD"
+GKD.Parent = gethui()
+GKD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ForceUpdatingBanner.Name = "ForceUpdatingBanner"
+ForceUpdatingBanner.Parent = GKD
+ForceUpdatingBanner.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+ForceUpdatingBanner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ForceUpdatingBanner.BorderSizePixel = 0
+ForceUpdatingBanner.Position = UDim2.new(0, 0, 0, -60)
+ForceUpdatingBanner.Size = UDim2.new(1, 0, 1, 60)
+ForceUpdatingBanner.Visible = true
+ForceUpdatingBanner.ZIndex = 100
+
+TextNotif.Name = "TextNotif"
+TextNotif.Parent = ForceUpdatingBanner
+TextNotif.AnchorPoint = Vector2.new(0.5, 0.5)
+TextNotif.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextNotif.BackgroundTransparency = 1.000
+TextNotif.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextNotif.BorderSizePixel = 0
+TextNotif.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextNotif.Size = UDim2.new(0, 400, 0, 200)
+TextNotif.ZIndex = 101
+TextNotif.Font = Enum.Font.Gotham
+TextNotif.Text = "Hello, this version of Vega X has been outdated. Please go to vegax.gg to install the latest version. Thank you very much.\n\n-1_F0 & Ruiwen"
+TextNotif.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextNotif.TextScaled = true
+TextNotif.TextSize = 14.000
+TextNotif.TextWrapped = true
+
+CopyWebsiteURL.Name = "CopyWebsiteURL"
+CopyWebsiteURL.Parent = ForceUpdatingBanner
+CopyWebsiteURL.Active = false
+CopyWebsiteURL.AnchorPoint = Vector2.new(0.5, 1)
+CopyWebsiteURL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CopyWebsiteURL.BorderSizePixel = 0
+CopyWebsiteURL.Position = UDim2.new(0.5, 0, 0.5, 150)
+CopyWebsiteURL.Size = UDim2.new(0, 342, 0, 40)
+CopyWebsiteURL.ZIndex = 101
+CopyWebsiteURL.Font = Enum.Font.GothamBold
+CopyWebsiteURL.Text = "Copy the Website URL"
+CopyWebsiteURL.TextColor3 = Color3.fromRGB(195, 57, 57)
+CopyWebsiteURL.TextSize = 16.000
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = CopyWebsiteURL
+
+-- Scripts:
+
+local function EJKQ_fake_script() -- ForceUpdatingBanner.LocalScript 
+	local script = Instance.new('LocalScript', ForceUpdatingBanner)
+
+	-- Update Forcing --
+	
+	if game.CoreGui:FindFirstChild("VegaXAndroidUI") then
+		game.CoreGui:FindFirstChild("VegaXAndroidUI"):Destroy()
+	end
+	
+	
+	script.Parent.CopyWebsiteURL.MouseButton1Click:connect(function()
+		setclipboard("https://vegax.gg")
+		script.Parent.Visible = false
+		game.Players.LocalPlayer:Kick("请访问 Vega X 网站继续使用 Vega X，谢谢。\nPlease visit the Vega X website to continue using Vega X, thank you.")
+	end)
+end
+coroutine.wrap(EJKQ_fake_script)()
