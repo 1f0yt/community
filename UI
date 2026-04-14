@@ -1,0 +1,5 @@
+if not arceus.isarceusfile("wisewang") then
+	executecode(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/VegaX-KeyedEdition"))
+else
+	executecode(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/VegaX-KeylessEdition"))
+end
