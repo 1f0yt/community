@@ -1,0 +1,3390 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local VegaXAndroidUI = {
+	VegaXAndroidUI = Instance.new("ScreenGui"),
+	SettingsWindow = Instance.new("Frame"),
+	WindowMainTitle = Instance.new("TextLabel"),
+	CloseB = Instance.new("ImageButton"),
+	ScrollingFrame = Instance.new("ScrollingFrame"),
+	UIListLayout = Instance.new("UIListLayout"),
+	S0 = Instance.new("Frame"),
+	Title = Instance.new("TextLabel"),
+	SubTitle = Instance.new("TextLabel"),
+	UICorner = Instance.new("UICorner"),
+	UIGradient = Instance.new("UIGradient"),
+	VegaXLogo = Instance.new("ImageLabel"),
+	S1 = Instance.new("Frame"),
+	Title_2 = Instance.new("TextLabel"),
+	SubTitle_2 = Instance.new("TextLabel"),
+	UICorner_2 = Instance.new("UICorner"),
+	AccentColorPreview = Instance.new("Frame"),
+	UICorner_3 = Instance.new("UICorner"),
+	SubmitAccent = Instance.new("ImageButton"),
+	UICorner_4 = Instance.new("UICorner"),
+	AccentTextBox = Instance.new("TextBox"),
+	UICorner_5 = Instance.new("UICorner"),
+	S2 = Instance.new("Frame"),
+	Title_3 = Instance.new("TextLabel"),
+	SubTitle_3 = Instance.new("TextLabel"),
+	UICorner_6 = Instance.new("UICorner"),
+	SubmitFPS = Instance.new("ImageButton"),
+	UICorner_7 = Instance.new("UICorner"),
+	FPSTextBox = Instance.new("TextBox"),
+	UICorner_8 = Instance.new("UICorner"),
+	ResetFPS = Instance.new("ImageButton"),
+	UICorner_9 = Instance.new("UICorner"),
+	S3 = Instance.new("Frame"),
+	Title_4 = Instance.new("TextLabel"),
+	SubTitle_4 = Instance.new("TextLabel"),
+	UICorner_10 = Instance.new("UICorner"),
+	SubmitCode = Instance.new("ImageButton"),
+	UICorner_11 = Instance.new("UICorner"),
+	InjectCodeTextbox = Instance.new("TextBox"),
+	UICorner_12 = Instance.new("UICorner"),
+	ResetCode = Instance.new("ImageButton"),
+	UICorner_13 = Instance.new("UICorner"),
+	S4 = Instance.new("Frame"),
+	Title_5 = Instance.new("TextLabel"),
+	SubTitle_5 = Instance.new("TextLabel"),
+	UICorner_14 = Instance.new("UICorner"),
+	ToggleBTN = Instance.new("TextButton"),
+	UICorner_15 = Instance.new("UICorner"),
+	ScriptHubWindow = Instance.new("Frame"),
+	WindowMainTitle_2 = Instance.new("TextLabel"),
+	CloseB_2 = Instance.new("ImageButton"),
+	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
+	S1_2 = Instance.new("Frame"),
+	Execute = Instance.new("ImageButton"),
+	UICorner_16 = Instance.new("UICorner"),
+	UICorner_17 = Instance.new("UICorner"),
+	ImageLabel = Instance.new("ImageLabel"),
+	UICorner_18 = Instance.new("UICorner"),
+	SubTitle_6 = Instance.new("TextLabel"),
+	Title_6 = Instance.new("TextLabel"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	SearchBox = Instance.new("TextBox"),
+	UICorner_19 = Instance.new("UICorner"),
+	SearchButton = Instance.new("ImageButton"),
+	WindowSubTitle = Instance.new("TextLabel"),
+	PaginationFrame = Instance.new("Frame"),
+	UICorner_20 = Instance.new("UICorner"),
+	LeftPage = Instance.new("ImageButton"),
+	RightPage = Instance.new("ImageButton"),
+	PageLabel = Instance.new("TextLabel"),
+	SidebarFrame = Instance.new("Frame"),
+	Banner = Instance.new("Frame"),
+	HappyGuy = Instance.new("ImageLabel"),
+	VegaXLogo_2 = Instance.new("ImageLabel"),
+	TitleLabel = Instance.new("TextLabel"),
+	ScrollingFrame_3 = Instance.new("ScrollingFrame"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
+	UsernamePlace = Instance.new("Frame"),
+	Title_7 = Instance.new("TextLabel"),
+	Icon = Instance.new("Frame"),
+	UICorner_21 = Instance.new("UICorner"),
+	ProfileImage = Instance.new("ImageLabel"),
+	UICorner_22 = Instance.new("UICorner"),
+	Choice1 = Instance.new("Frame"),
+	Title_8 = Instance.new("TextLabel"),
+	C1EB = Instance.new("TextButton"),
+	UICorner_23 = Instance.new("UICorner"),
+	Icon_2 = Instance.new("Frame"),
+	UICorner_24 = Instance.new("UICorner"),
+	ImageLabel_2 = Instance.new("ImageLabel"),
+	Choice2 = Instance.new("Frame"),
+	Title_9 = Instance.new("TextLabel"),
+	C2EB = Instance.new("TextButton"),
+	UICorner_25 = Instance.new("UICorner"),
+	Icon_3 = Instance.new("Frame"),
+	UICorner_26 = Instance.new("UICorner"),
+	ImageLabel_3 = Instance.new("ImageLabel"),
+	Choice3 = Instance.new("Frame"),
+	Title_10 = Instance.new("TextLabel"),
+	C3EB = Instance.new("TextButton"),
+	UICorner_27 = Instance.new("UICorner"),
+	Icon_4 = Instance.new("Frame"),
+	UICorner_28 = Instance.new("UICorner"),
+	ImageLabel_4 = Instance.new("ImageLabel"),
+	Choice4 = Instance.new("Frame"),
+	Title_11 = Instance.new("TextLabel"),
+	C4EB = Instance.new("TextButton"),
+	UICorner_29 = Instance.new("UICorner"),
+	Icon_5 = Instance.new("Frame"),
+	UICorner_30 = Instance.new("UICorner"),
+	ImageLabel_5 = Instance.new("ImageLabel"),
+	VegaXMenuToggleFrame = Instance.new("Frame"),
+	UICorner_31 = Instance.new("UICorner"),
+	VegaXMenuToggle = Instance.new("TextButton"),
+	UICorner_32 = Instance.new("UICorner"),
+	ImageLabel_6 = Instance.new("ImageLabel"),
+	DragTouch = Instance.new("ImageLabel"),
+	KeySystem = Instance.new("Frame"),
+	CloseB_3 = Instance.new("ImageButton"),
+	MainParent = Instance.new("Frame"),
+	ButtonParent = Instance.new("Frame"),
+	UIListLayout_4 = Instance.new("UIListLayout"),
+	ApproveKeyB = Instance.new("TextButton"),
+	UICorner_33 = Instance.new("UICorner"),
+	GetKeyB = Instance.new("TextButton"),
+	UICorner_34 = Instance.new("UICorner"),
+	JoinDiscordB = Instance.new("TextButton"),
+	UICorner_35 = Instance.new("UICorner"),
+	BannerParent = Instance.new("Frame"),
+	MainBanner = Instance.new("Frame"),
+	VegaXLogo_3 = Instance.new("ImageLabel"),
+	UICorner_36 = Instance.new("UICorner"),
+	HappyGuy_2 = Instance.new("ImageLabel"),
+	TitleLabel_2 = Instance.new("TextLabel"),
+	PremiumBanner = Instance.new("Frame"),
+	VegaXLogo_4 = Instance.new("ImageLabel"),
+	UICorner_37 = Instance.new("UICorner"),
+	TitleLabel_3 = Instance.new("TextLabel"),
+	TitleLabel_4 = Instance.new("TextLabel"),
+	CopyWebsiteURL = Instance.new("TextButton"),
+	UICorner_38 = Instance.new("UICorner"),
+	UISizeConstraint = Instance.new("UISizeConstraint"),
+	TextBox = Instance.new("TextBox"),
+	UICorner_39 = Instance.new("UICorner"),
+	EULALabel = Instance.new("TextLabel"),
+	SubTitle_7 = Instance.new("TextLabel"),
+	MainTitle = Instance.new("TextLabel"),
+	UIListLayout_5 = Instance.new("UIListLayout"),
+	KSMenuToggleFrame = Instance.new("Frame"),
+	UICorner_40 = Instance.new("UICorner"),
+	VegaXKSToggle = Instance.new("TextButton"),
+	UICorner_41 = Instance.new("UICorner"),
+	ImageLabel_7 = Instance.new("ImageLabel"),
+	IntroFrame = Instance.new("Frame"),
+	BackgroundFrame = Instance.new("Frame"),
+	R1 = Instance.new("Frame"),
+	R2 = Instance.new("Frame"),
+	R3 = Instance.new("Frame"),
+	R4 = Instance.new("Frame"),
+	R5 = Instance.new("Frame"),
+	R6 = Instance.new("Frame"),
+	R7 = Instance.new("Frame"),
+	R8 = Instance.new("Frame"),
+	R9 = Instance.new("Frame"),
+	R10 = Instance.new("Frame"),
+	R11 = Instance.new("Frame"),
+	R12 = Instance.new("Frame"),
+	R13 = Instance.new("Frame"),
+	R14 = Instance.new("Frame"),
+	R15 = Instance.new("Frame"),
+	R16 = Instance.new("Frame"),
+	R17 = Instance.new("Frame"),
+	R18 = Instance.new("Frame"),
+	R19 = Instance.new("Frame"),
+	R20 = Instance.new("Frame"),
+	VegaXLogo_5 = Instance.new("ImageLabel"),
+	ScriptListWindow = Instance.new("Frame"),
+	WindowMainTitle_3 = Instance.new("TextLabel"),
+	CloseB_4 = Instance.new("ImageButton"),
+	ScriptListFrame = Instance.new("ScrollingFrame"),
+	UIListLayout_6 = Instance.new("UIListLayout"),
+	AddB = Instance.new("TextButton"),
+	UICorner_42 = Instance.new("UICorner"),
+	CancelAddB = Instance.new("TextButton"),
+	UICorner_43 = Instance.new("UICorner"),
+	AddingFrame = Instance.new("Frame"),
+	ScrollingBox = Instance.new("ScrollingFrame"),
+	TextBox_2 = Instance.new("TextBox"),
+	Line = Instance.new("TextLabel"),
+	UICorner_44 = Instance.new("UICorner"),
+	NameInput = Instance.new("TextBox"),
+	ExecutorWindow = Instance.new("Frame"),
+	ExecuteB = Instance.new("TextButton"),
+	UICorner_45 = Instance.new("UICorner"),
+	PasteandExecuteB = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	CloseB_5 = Instance.new("ImageButton"),
+	ScrollingBox_2 = Instance.new("ScrollingFrame"),
+	TextBox_3 = Instance.new("TextBox"),
+	Line_2 = Instance.new("TextLabel"),
+	UICorner_47 = Instance.new("UICorner"),
+	TabbingSystem = Instance.new("Frame"),
+	ScriptPage = Instance.new("TextLabel"),
+	NextPage = Instance.new("TextButton"),
+	LastPage = Instance.new("TextButton"),
+	UICorner_48 = Instance.new("UICorner"),
+	EditTabName = Instance.new("ImageButton"),
+	EditTabBox = Instance.new("TextBox"),
+	WindowMainTitle_4 = Instance.new("TextLabel"),
+	ClearB = Instance.new("TextButton"),
+	UICorner_49 = Instance.new("UICorner"),
+	DevModeB = Instance.new("TextButton"),
+	UICorner_50 = Instance.new("UICorner"),
+}
+
+--Properties:
+
+VegaXAndroidUI.VegaXAndroidUI.Name = "VegaXAndroidUI"
+VegaXAndroidUI.VegaXAndroidUI.Parent = gethui()
+
+VegaXAndroidUI.SettingsWindow.Name = "SettingsWindow"
+VegaXAndroidUI.SettingsWindow.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.SettingsWindow.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.SettingsWindow.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VegaXAndroidUI.SettingsWindow.BorderColor3 = Color3.fromRGB(30, 30, 30)
+VegaXAndroidUI.SettingsWindow.BorderSizePixel = 0
+VegaXAndroidUI.SettingsWindow.Position = UDim2.new(1, 200, 0.5, -30)
+VegaXAndroidUI.SettingsWindow.Size = UDim2.new(1, -200, 1, 60)
+
+VegaXAndroidUI.WindowMainTitle.Name = "WindowMainTitle"
+VegaXAndroidUI.WindowMainTitle.Parent = VegaXAndroidUI.SettingsWindow
+VegaXAndroidUI.WindowMainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle.BackgroundTransparency = 1.000
+VegaXAndroidUI.WindowMainTitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.WindowMainTitle.BorderSizePixel = 0
+VegaXAndroidUI.WindowMainTitle.Position = UDim2.new(0, 7, 0, 52)
+VegaXAndroidUI.WindowMainTitle.Size = UDim2.new(0, 200, 0, 21)
+VegaXAndroidUI.WindowMainTitle.Font = Enum.Font.GothamBold
+VegaXAndroidUI.WindowMainTitle.Text = "Settings"
+VegaXAndroidUI.WindowMainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle.TextSize = 18.000
+VegaXAndroidUI.WindowMainTitle.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.WindowMainTitle.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.CloseB.Name = "CloseB"
+VegaXAndroidUI.CloseB.Parent = VegaXAndroidUI.SettingsWindow
+VegaXAndroidUI.CloseB.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.CloseB.BackgroundTransparency = 1.000
+VegaXAndroidUI.CloseB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CloseB.BorderSizePixel = 0
+VegaXAndroidUI.CloseB.LayoutOrder = 6
+VegaXAndroidUI.CloseB.Position = UDim2.new(1, -5, 0, 45)
+VegaXAndroidUI.CloseB.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.CloseB.ZIndex = 2
+VegaXAndroidUI.CloseB.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.CloseB.ImageRectOffset = Vector2.new(884, 284)
+VegaXAndroidUI.CloseB.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.ScrollingFrame.Parent = VegaXAndroidUI.SettingsWindow
+VegaXAndroidUI.ScrollingFrame.Active = true
+VegaXAndroidUI.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ScrollingFrame.BackgroundTransparency = 1.000
+VegaXAndroidUI.ScrollingFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScrollingFrame.BorderSizePixel = 0
+VegaXAndroidUI.ScrollingFrame.Position = UDim2.new(0, 0, 0, 78)
+VegaXAndroidUI.ScrollingFrame.Size = UDim2.new(1, 0, 1, -78)
+VegaXAndroidUI.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.5, 0)
+VegaXAndroidUI.ScrollingFrame.ScrollBarThickness = 0
+
+VegaXAndroidUI.UIListLayout.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout.Padding = UDim.new(0, 5)
+
+VegaXAndroidUI.S0.Name = "S0"
+VegaXAndroidUI.S0.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.S0.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.S0.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S0.BorderSizePixel = 0
+VegaXAndroidUI.S0.Size = UDim2.new(1, -10, 0, 75)
+
+VegaXAndroidUI.Title.Name = "Title"
+VegaXAndroidUI.Title.Parent = VegaXAndroidUI.S0
+VegaXAndroidUI.Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title.BorderSizePixel = 0
+VegaXAndroidUI.Title.Position = UDim2.new(0, 87, 0, 0)
+VegaXAndroidUI.Title.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.Title.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title.Text = "Vega X 4.0"
+VegaXAndroidUI.Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title.TextSize = 19.000
+VegaXAndroidUI.Title.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.SubTitle.Name = "SubTitle"
+VegaXAndroidUI.SubTitle.Parent = VegaXAndroidUI.S0
+VegaXAndroidUI.SubTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle.Position = UDim2.new(0, 87, 0.5, 0)
+VegaXAndroidUI.SubTitle.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.SubTitle.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle.Text = "Developed by 1 F0 & Rudy"
+VegaXAndroidUI.SubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle.TextSize = 14.000
+VegaXAndroidUI.SubTitle.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner.Parent = VegaXAndroidUI.S0
+
+VegaXAndroidUI.UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(195, 57, 57)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 85, 88))}
+VegaXAndroidUI.UIGradient.Parent = VegaXAndroidUI.S0
+
+VegaXAndroidUI.VegaXLogo.Name = "VegaXLogo"
+VegaXAndroidUI.VegaXLogo.Parent = VegaXAndroidUI.S0
+VegaXAndroidUI.VegaXLogo.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.VegaXLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.VegaXLogo.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXLogo.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXLogo.BorderSizePixel = 0
+VegaXAndroidUI.VegaXLogo.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.VegaXLogo.Size = UDim2.new(0, 52, 0, 52)
+VegaXAndroidUI.VegaXLogo.ZIndex = 21
+VegaXAndroidUI.VegaXLogo.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.S1.Name = "S1"
+VegaXAndroidUI.S1.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.S1.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.S1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S1.BorderSizePixel = 0
+VegaXAndroidUI.S1.Size = UDim2.new(1, -10, 0, 75)
+
+VegaXAndroidUI.Title_2.Name = "Title"
+VegaXAndroidUI.Title_2.Parent = VegaXAndroidUI.S1
+VegaXAndroidUI.Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_2.BorderSizePixel = 0
+VegaXAndroidUI.Title_2.Position = UDim2.new(0, 25, 0, 0)
+VegaXAndroidUI.Title_2.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.Title_2.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title_2.Text = "Change UI Accent Color"
+VegaXAndroidUI.Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_2.TextSize = 19.000
+VegaXAndroidUI.Title_2.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title_2.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.SubTitle_2.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_2.Parent = VegaXAndroidUI.S1
+VegaXAndroidUI.SubTitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_2.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_2.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.SubTitle_2.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.SubTitle_2.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_2.Text = "Change Vega X  Button Colors."
+VegaXAndroidUI.SubTitle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_2.TextSize = 14.000
+VegaXAndroidUI.SubTitle_2.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle_2.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_2.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_2.Parent = VegaXAndroidUI.S1
+
+VegaXAndroidUI.AccentColorPreview.Name = "AccentColorPreview"
+VegaXAndroidUI.AccentColorPreview.Parent = VegaXAndroidUI.S1
+VegaXAndroidUI.AccentColorPreview.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.AccentColorPreview.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.AccentColorPreview.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.AccentColorPreview.Position = UDim2.new(1, -20, 0.5, 0)
+VegaXAndroidUI.AccentColorPreview.Size = UDim2.new(0, 34, 0, 34)
+
+VegaXAndroidUI.UICorner_3.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_3.Parent = VegaXAndroidUI.AccentColorPreview
+
+VegaXAndroidUI.SubmitAccent.Name = "SubmitAccent"
+VegaXAndroidUI.SubmitAccent.Parent = VegaXAndroidUI.S1
+VegaXAndroidUI.SubmitAccent.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.SubmitAccent.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.SubmitAccent.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubmitAccent.BorderSizePixel = 0
+VegaXAndroidUI.SubmitAccent.LayoutOrder = 10
+VegaXAndroidUI.SubmitAccent.Position = UDim2.new(1, -59, 0.5, 0)
+VegaXAndroidUI.SubmitAccent.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.SubmitAccent.ZIndex = 2
+VegaXAndroidUI.SubmitAccent.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.SubmitAccent.ImageRectOffset = Vector2.new(124, 924)
+VegaXAndroidUI.SubmitAccent.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_4.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_4.Parent = VegaXAndroidUI.SubmitAccent
+
+VegaXAndroidUI.AccentTextBox.Name = "AccentTextBox"
+VegaXAndroidUI.AccentTextBox.Parent = VegaXAndroidUI.S1
+VegaXAndroidUI.AccentTextBox.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.AccentTextBox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+VegaXAndroidUI.AccentTextBox.BackgroundTransparency = 0.200
+VegaXAndroidUI.AccentTextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.AccentTextBox.BorderSizePixel = 0
+VegaXAndroidUI.AccentTextBox.Position = UDim2.new(1, -98, 0.5, 0)
+VegaXAndroidUI.AccentTextBox.Size = UDim2.new(0.200000003, 0, 0, 34)
+VegaXAndroidUI.AccentTextBox.ClearTextOnFocus = false
+VegaXAndroidUI.AccentTextBox.Font = Enum.Font.Gotham
+VegaXAndroidUI.AccentTextBox.MultiLine = true
+VegaXAndroidUI.AccentTextBox.PlaceholderText = "Hex Value"
+VegaXAndroidUI.AccentTextBox.Text = ""
+VegaXAndroidUI.AccentTextBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+VegaXAndroidUI.AccentTextBox.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_5.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_5.Parent = VegaXAndroidUI.AccentTextBox
+
+VegaXAndroidUI.S2.Name = "S2"
+VegaXAndroidUI.S2.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.S2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.S2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S2.BorderSizePixel = 0
+VegaXAndroidUI.S2.Size = UDim2.new(1, -10, 0, 75)
+
+VegaXAndroidUI.Title_3.Name = "Title"
+VegaXAndroidUI.Title_3.Parent = VegaXAndroidUI.S2
+VegaXAndroidUI.Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_3.BorderSizePixel = 0
+VegaXAndroidUI.Title_3.Position = UDim2.new(0, 25, 0, 0)
+VegaXAndroidUI.Title_3.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.Title_3.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title_3.Text = "FPS Limit"
+VegaXAndroidUI.Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_3.TextSize = 19.000
+VegaXAndroidUI.Title_3.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title_3.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.SubTitle_3.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_3.Parent = VegaXAndroidUI.S2
+VegaXAndroidUI.SubTitle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_3.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_3.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.SubTitle_3.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.SubTitle_3.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_3.Text = "Set Max FPS for the Game."
+VegaXAndroidUI.SubTitle_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_3.TextSize = 14.000
+VegaXAndroidUI.SubTitle_3.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle_3.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_6.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_6.Parent = VegaXAndroidUI.S2
+
+VegaXAndroidUI.SubmitFPS.Name = "SubmitFPS"
+VegaXAndroidUI.SubmitFPS.Parent = VegaXAndroidUI.S2
+VegaXAndroidUI.SubmitFPS.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.SubmitFPS.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.SubmitFPS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubmitFPS.BorderSizePixel = 0
+VegaXAndroidUI.SubmitFPS.LayoutOrder = 10
+VegaXAndroidUI.SubmitFPS.Position = UDim2.new(1, -59, 0.5, 0)
+VegaXAndroidUI.SubmitFPS.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.SubmitFPS.ZIndex = 2
+VegaXAndroidUI.SubmitFPS.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.SubmitFPS.ImageRectOffset = Vector2.new(124, 924)
+VegaXAndroidUI.SubmitFPS.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_7.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_7.Parent = VegaXAndroidUI.SubmitFPS
+
+VegaXAndroidUI.FPSTextBox.Name = "FPSTextBox"
+VegaXAndroidUI.FPSTextBox.Parent = VegaXAndroidUI.S2
+VegaXAndroidUI.FPSTextBox.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.FPSTextBox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+VegaXAndroidUI.FPSTextBox.BackgroundTransparency = 0.200
+VegaXAndroidUI.FPSTextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.FPSTextBox.BorderSizePixel = 0
+VegaXAndroidUI.FPSTextBox.Position = UDim2.new(1, -98, 0.5, 0)
+VegaXAndroidUI.FPSTextBox.Size = UDim2.new(0.200000003, 0, 0, 34)
+VegaXAndroidUI.FPSTextBox.ClearTextOnFocus = false
+VegaXAndroidUI.FPSTextBox.Font = Enum.Font.Gotham
+VegaXAndroidUI.FPSTextBox.MultiLine = true
+VegaXAndroidUI.FPSTextBox.PlaceholderText = "Max FPS"
+VegaXAndroidUI.FPSTextBox.Text = ""
+VegaXAndroidUI.FPSTextBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+VegaXAndroidUI.FPSTextBox.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_8.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_8.Parent = VegaXAndroidUI.FPSTextBox
+
+VegaXAndroidUI.ResetFPS.Name = "ResetFPS"
+VegaXAndroidUI.ResetFPS.Parent = VegaXAndroidUI.S2
+VegaXAndroidUI.ResetFPS.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.ResetFPS.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.ResetFPS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ResetFPS.BorderSizePixel = 0
+VegaXAndroidUI.ResetFPS.LayoutOrder = 10
+VegaXAndroidUI.ResetFPS.Position = UDim2.new(1, -20, 0.5, 0)
+VegaXAndroidUI.ResetFPS.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.ResetFPS.ZIndex = 2
+VegaXAndroidUI.ResetFPS.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.ResetFPS.ImageRectOffset = Vector2.new(404, 84)
+VegaXAndroidUI.ResetFPS.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_9.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_9.Parent = VegaXAndroidUI.ResetFPS
+
+VegaXAndroidUI.S3.Name = "S3"
+VegaXAndroidUI.S3.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.S3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.S3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S3.BorderSizePixel = 0
+VegaXAndroidUI.S3.Size = UDim2.new(1, -10, 0, 75)
+
+VegaXAndroidUI.Title_4.Name = "Title"
+VegaXAndroidUI.Title_4.Parent = VegaXAndroidUI.S3
+VegaXAndroidUI.Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_4.BorderSizePixel = 0
+VegaXAndroidUI.Title_4.Position = UDim2.new(0, 25, 0, 0)
+VegaXAndroidUI.Title_4.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.Title_4.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title_4.Text = "Dev Mode"
+VegaXAndroidUI.Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_4.TextSize = 19.000
+VegaXAndroidUI.Title_4.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title_4.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.SubTitle_4.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_4.Parent = VegaXAndroidUI.S3
+VegaXAndroidUI.SubTitle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_4.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_4.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.SubTitle_4.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.SubTitle_4.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_4.Text = "Allow Vega X Cross Platform Connection with the Windows UI."
+VegaXAndroidUI.SubTitle_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_4.TextSize = 14.000
+VegaXAndroidUI.SubTitle_4.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle_4.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_10.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_10.Parent = VegaXAndroidUI.S3
+
+VegaXAndroidUI.SubmitCode.Name = "SubmitCode"
+VegaXAndroidUI.SubmitCode.Parent = VegaXAndroidUI.S3
+VegaXAndroidUI.SubmitCode.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.SubmitCode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.SubmitCode.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubmitCode.BorderSizePixel = 0
+VegaXAndroidUI.SubmitCode.LayoutOrder = 10
+VegaXAndroidUI.SubmitCode.Position = UDim2.new(1, -59, 0.5, 0)
+VegaXAndroidUI.SubmitCode.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.SubmitCode.ZIndex = 2
+VegaXAndroidUI.SubmitCode.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.SubmitCode.ImageRectOffset = Vector2.new(124, 924)
+VegaXAndroidUI.SubmitCode.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_11.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_11.Parent = VegaXAndroidUI.SubmitCode
+
+VegaXAndroidUI.InjectCodeTextbox.Name = "InjectCodeTextbox"
+VegaXAndroidUI.InjectCodeTextbox.Parent = VegaXAndroidUI.S3
+VegaXAndroidUI.InjectCodeTextbox.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.InjectCodeTextbox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+VegaXAndroidUI.InjectCodeTextbox.BackgroundTransparency = 0.200
+VegaXAndroidUI.InjectCodeTextbox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.InjectCodeTextbox.BorderSizePixel = 0
+VegaXAndroidUI.InjectCodeTextbox.Position = UDim2.new(1, -98, 0.5, 0)
+VegaXAndroidUI.InjectCodeTextbox.Size = UDim2.new(0.200000003, 0, 0, 34)
+VegaXAndroidUI.InjectCodeTextbox.ClearTextOnFocus = false
+VegaXAndroidUI.InjectCodeTextbox.Font = Enum.Font.Gotham
+VegaXAndroidUI.InjectCodeTextbox.MultiLine = true
+VegaXAndroidUI.InjectCodeTextbox.PlaceholderText = "Inject Code"
+VegaXAndroidUI.InjectCodeTextbox.Text = ""
+VegaXAndroidUI.InjectCodeTextbox.TextColor3 = Color3.fromRGB(220, 220, 220)
+VegaXAndroidUI.InjectCodeTextbox.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_12.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_12.Parent = VegaXAndroidUI.InjectCodeTextbox
+
+VegaXAndroidUI.ResetCode.Name = "ResetCode"
+VegaXAndroidUI.ResetCode.Parent = VegaXAndroidUI.S3
+VegaXAndroidUI.ResetCode.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.ResetCode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.ResetCode.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ResetCode.BorderSizePixel = 0
+VegaXAndroidUI.ResetCode.LayoutOrder = 10
+VegaXAndroidUI.ResetCode.Position = UDim2.new(1, -20, 0.5, 0)
+VegaXAndroidUI.ResetCode.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.ResetCode.ZIndex = 2
+VegaXAndroidUI.ResetCode.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.ResetCode.ImageRectOffset = Vector2.new(644, 724)
+VegaXAndroidUI.ResetCode.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_13.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_13.Parent = VegaXAndroidUI.ResetCode
+
+VegaXAndroidUI.S4.Name = "S4"
+VegaXAndroidUI.S4.Parent = VegaXAndroidUI.ScrollingFrame
+VegaXAndroidUI.S4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.S4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S4.BorderSizePixel = 0
+VegaXAndroidUI.S4.Size = UDim2.new(1, -10, 0, 75)
+VegaXAndroidUI.S4.Visible = false
+
+VegaXAndroidUI.Title_5.Name = "Title"
+VegaXAndroidUI.Title_5.Parent = VegaXAndroidUI.S4
+VegaXAndroidUI.Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_5.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_5.BorderSizePixel = 0
+VegaXAndroidUI.Title_5.Position = UDim2.new(0, 25, 0, 0)
+VegaXAndroidUI.Title_5.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.Title_5.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title_5.Text = "禁用介绍动画"
+VegaXAndroidUI.Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_5.TextSize = 19.000
+VegaXAndroidUI.Title_5.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title_5.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.SubTitle_5.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_5.Parent = VegaXAndroidUI.S4
+VegaXAndroidUI.SubTitle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_5.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_5.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_5.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.SubTitle_5.Size = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.SubTitle_5.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_5.Text = "立即跳转到 Vega X"
+VegaXAndroidUI.SubTitle_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_5.TextSize = 14.000
+VegaXAndroidUI.SubTitle_5.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle_5.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_14.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_14.Parent = VegaXAndroidUI.S4
+
+VegaXAndroidUI.ToggleBTN.Name = "ToggleBTN"
+VegaXAndroidUI.ToggleBTN.Parent = VegaXAndroidUI.S4
+VegaXAndroidUI.ToggleBTN.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.ToggleBTN.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.ToggleBTN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.ToggleBTN.BorderSizePixel = 0
+VegaXAndroidUI.ToggleBTN.Position = UDim2.new(1, -20, 0.5, 0)
+VegaXAndroidUI.ToggleBTN.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.ToggleBTN.Font = Enum.Font.SourceSans
+VegaXAndroidUI.ToggleBTN.Text = ""
+VegaXAndroidUI.ToggleBTN.TextColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.ToggleBTN.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_15.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_15.Parent = VegaXAndroidUI.ToggleBTN
+
+VegaXAndroidUI.ScriptHubWindow.Name = "ScriptHubWindow"
+VegaXAndroidUI.ScriptHubWindow.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.ScriptHubWindow.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.ScriptHubWindow.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VegaXAndroidUI.ScriptHubWindow.BorderColor3 = Color3.fromRGB(30, 30, 30)
+VegaXAndroidUI.ScriptHubWindow.BorderSizePixel = 0
+VegaXAndroidUI.ScriptHubWindow.Position = UDim2.new(1, 200, 0.5, -30)
+VegaXAndroidUI.ScriptHubWindow.Size = UDim2.new(1, -200, 1, 60)
+
+VegaXAndroidUI.WindowMainTitle_2.Name = "WindowMainTitle"
+VegaXAndroidUI.WindowMainTitle_2.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.WindowMainTitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.WindowMainTitle_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.WindowMainTitle_2.BorderSizePixel = 0
+VegaXAndroidUI.WindowMainTitle_2.Position = UDim2.new(0, 7, 0, 52)
+VegaXAndroidUI.WindowMainTitle_2.Size = UDim2.new(0, 309, 0, 21)
+VegaXAndroidUI.WindowMainTitle_2.Font = Enum.Font.GothamBold
+VegaXAndroidUI.WindowMainTitle_2.Text = "Script Hub"
+VegaXAndroidUI.WindowMainTitle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_2.TextSize = 18.000
+VegaXAndroidUI.WindowMainTitle_2.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.WindowMainTitle_2.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.CloseB_2.Name = "CloseB"
+VegaXAndroidUI.CloseB_2.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.CloseB_2.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.CloseB_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.CloseB_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CloseB_2.BorderSizePixel = 0
+VegaXAndroidUI.CloseB_2.LayoutOrder = 6
+VegaXAndroidUI.CloseB_2.Position = UDim2.new(1, -5, 0, 45)
+VegaXAndroidUI.CloseB_2.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.CloseB_2.ZIndex = 2
+VegaXAndroidUI.CloseB_2.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.CloseB_2.ImageRectOffset = Vector2.new(884, 284)
+VegaXAndroidUI.CloseB_2.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.ScrollingFrame_2.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.ScrollingFrame_2.Active = true
+VegaXAndroidUI.ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ScrollingFrame_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScrollingFrame_2.BorderSizePixel = 0
+VegaXAndroidUI.ScrollingFrame_2.Position = UDim2.new(0, 0, 0, 136)
+VegaXAndroidUI.ScrollingFrame_2.Size = UDim2.new(1, 0, 1, -126)
+VegaXAndroidUI.ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 1, 0)
+VegaXAndroidUI.ScrollingFrame_2.ScrollBarThickness = 0
+
+VegaXAndroidUI.S1_2.Name = "S1"
+VegaXAndroidUI.S1_2.Parent = VegaXAndroidUI.ScrollingFrame_2
+VegaXAndroidUI.S1_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.S1_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.S1_2.BorderSizePixel = 0
+VegaXAndroidUI.S1_2.Size = UDim2.new(1, -10, 0, 80)
+VegaXAndroidUI.S1_2.Visible = false
+
+VegaXAndroidUI.Execute.Name = "Execute"
+VegaXAndroidUI.Execute.Parent = VegaXAndroidUI.S1_2
+VegaXAndroidUI.Execute.AnchorPoint = Vector2.new(1, 0.5)
+VegaXAndroidUI.Execute.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+VegaXAndroidUI.Execute.BackgroundTransparency = 0.400
+VegaXAndroidUI.Execute.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Execute.BorderSizePixel = 0
+VegaXAndroidUI.Execute.LayoutOrder = 10
+VegaXAndroidUI.Execute.Position = UDim2.new(1, -23, 0.5, 0)
+VegaXAndroidUI.Execute.Size = UDim2.new(0, 34, 0, 34)
+VegaXAndroidUI.Execute.ZIndex = 2
+VegaXAndroidUI.Execute.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.Execute.ImageRectOffset = Vector2.new(764, 244)
+VegaXAndroidUI.Execute.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.UICorner_16.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_16.Parent = VegaXAndroidUI.Execute
+
+VegaXAndroidUI.UICorner_17.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_17.Parent = VegaXAndroidUI.S1_2
+
+VegaXAndroidUI.ImageLabel.Parent = VegaXAndroidUI.S1_2
+VegaXAndroidUI.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+VegaXAndroidUI.ImageLabel.Image = "http://www.roblox.com/asset/?id=11716682263"
+VegaXAndroidUI.ImageLabel.ScaleType = Enum.ScaleType.Crop
+
+VegaXAndroidUI.UICorner_18.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_18.Parent = VegaXAndroidUI.ImageLabel
+
+VegaXAndroidUI.SubTitle_6.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_6.Parent = VegaXAndroidUI.S1_2
+VegaXAndroidUI.SubTitle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_6.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_6.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_6.Position = UDim2.new(0, 25, 0.5, 0)
+VegaXAndroidUI.SubTitle_6.Size = UDim2.new(1, -93, 0.5, 0)
+VegaXAndroidUI.SubTitle_6.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_6.Text = "MM2 Aim Trainer 🎯 "
+VegaXAndroidUI.SubTitle_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_6.TextSize = 14.000
+VegaXAndroidUI.SubTitle_6.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.SubTitle_6.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.Title_6.Name = "Title"
+VegaXAndroidUI.Title_6.Parent = VegaXAndroidUI.S1_2
+VegaXAndroidUI.Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_6.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_6.BorderSizePixel = 0
+VegaXAndroidUI.Title_6.Position = UDim2.new(0, 25, 0, 0)
+VegaXAndroidUI.Title_6.Size = UDim2.new(1, -93, 0.5, 0)
+VegaXAndroidUI.Title_6.Font = Enum.Font.GothamBold
+VegaXAndroidUI.Title_6.Text = "Silent"
+VegaXAndroidUI.Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_6.TextSize = 19.000
+VegaXAndroidUI.Title_6.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.Title_6.TextYAlignment = Enum.TextYAlignment.Bottom
+
+VegaXAndroidUI.UIListLayout_2.Parent = VegaXAndroidUI.ScrollingFrame_2
+VegaXAndroidUI.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout_2.Padding = UDim.new(0, 5)
+
+VegaXAndroidUI.SearchBox.Name = "SearchBox"
+VegaXAndroidUI.SearchBox.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.SearchBox.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.SearchBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SearchBox.BorderSizePixel = 0
+VegaXAndroidUI.SearchBox.Position = UDim2.new(0, 5, 0, 91)
+VegaXAndroidUI.SearchBox.Size = UDim2.new(1, -115, 0, 40)
+VegaXAndroidUI.SearchBox.Font = Enum.Font.Gotham
+VegaXAndroidUI.SearchBox.PlaceholderText = "Search for a Script Here"
+VegaXAndroidUI.SearchBox.Text = ""
+VegaXAndroidUI.SearchBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+VegaXAndroidUI.SearchBox.TextSize = 14.000
+VegaXAndroidUI.SearchBox.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.UICorner_19.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_19.Parent = VegaXAndroidUI.SearchBox
+
+VegaXAndroidUI.SearchButton.Name = "SearchButton"
+VegaXAndroidUI.SearchButton.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.SearchButton.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.SearchButton.BackgroundTransparency = 1.000
+VegaXAndroidUI.SearchButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SearchButton.LayoutOrder = 1
+VegaXAndroidUI.SearchButton.Position = UDim2.new(1, -115, 0, 99)
+VegaXAndroidUI.SearchButton.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.SearchButton.ZIndex = 2
+VegaXAndroidUI.SearchButton.AutoButtonColor = false
+VegaXAndroidUI.SearchButton.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.SearchButton.ImageRectOffset = Vector2.new(964, 324)
+VegaXAndroidUI.SearchButton.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.WindowSubTitle.Name = "WindowSubTitle"
+VegaXAndroidUI.WindowSubTitle.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.WindowSubTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowSubTitle.BackgroundTransparency = 1.000
+VegaXAndroidUI.WindowSubTitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.WindowSubTitle.BorderSizePixel = 0
+VegaXAndroidUI.WindowSubTitle.Position = UDim2.new(0, 7, 0, 72)
+VegaXAndroidUI.WindowSubTitle.Size = UDim2.new(0, 309, 0, 14)
+VegaXAndroidUI.WindowSubTitle.Font = Enum.Font.Gotham
+VegaXAndroidUI.WindowSubTitle.Text = "Powered by ScriptBlox, Aggregation System by Zyrex, Modified by Rudy."
+VegaXAndroidUI.WindowSubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowSubTitle.TextSize = 12.000
+VegaXAndroidUI.WindowSubTitle.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.WindowSubTitle.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.PaginationFrame.Name = "PaginationFrame"
+VegaXAndroidUI.PaginationFrame.Parent = VegaXAndroidUI.ScriptHubWindow
+VegaXAndroidUI.PaginationFrame.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.PaginationFrame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.PaginationFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.PaginationFrame.BorderSizePixel = 0
+VegaXAndroidUI.PaginationFrame.Position = UDim2.new(1, -5, 0, 91)
+VegaXAndroidUI.PaginationFrame.Size = UDim2.new(0, 100, 0, 40)
+
+VegaXAndroidUI.UICorner_20.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_20.Parent = VegaXAndroidUI.PaginationFrame
+
+VegaXAndroidUI.LeftPage.Name = "LeftPage"
+VegaXAndroidUI.LeftPage.Parent = VegaXAndroidUI.PaginationFrame
+VegaXAndroidUI.LeftPage.BackgroundTransparency = 1.000
+VegaXAndroidUI.LeftPage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.LeftPage.LayoutOrder = 5
+VegaXAndroidUI.LeftPage.Rotation = 180.000
+VegaXAndroidUI.LeftPage.Size = UDim2.new(0, 25, 1, 0)
+VegaXAndroidUI.LeftPage.ZIndex = 2
+VegaXAndroidUI.LeftPage.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.LeftPage.ImageRectOffset = Vector2.new(764, 244)
+VegaXAndroidUI.LeftPage.ImageRectSize = Vector2.new(36, 36)
+VegaXAndroidUI.LeftPage.ScaleType = Enum.ScaleType.Fit
+
+VegaXAndroidUI.RightPage.Name = "RightPage"
+VegaXAndroidUI.RightPage.Parent = VegaXAndroidUI.PaginationFrame
+VegaXAndroidUI.RightPage.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.RightPage.BackgroundTransparency = 1.000
+VegaXAndroidUI.RightPage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.RightPage.LayoutOrder = 5
+VegaXAndroidUI.RightPage.Position = UDim2.new(1, 0, 0, 0)
+VegaXAndroidUI.RightPage.Size = UDim2.new(0, 25, 1, 0)
+VegaXAndroidUI.RightPage.ZIndex = 2
+VegaXAndroidUI.RightPage.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.RightPage.ImageRectOffset = Vector2.new(764, 244)
+VegaXAndroidUI.RightPage.ImageRectSize = Vector2.new(36, 36)
+VegaXAndroidUI.RightPage.ScaleType = Enum.ScaleType.Fit
+
+VegaXAndroidUI.PageLabel.Name = "PageLabel"
+VegaXAndroidUI.PageLabel.Parent = VegaXAndroidUI.PaginationFrame
+VegaXAndroidUI.PageLabel.AnchorPoint = Vector2.new(0.5, 0)
+VegaXAndroidUI.PageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.PageLabel.BackgroundTransparency = 1.000
+VegaXAndroidUI.PageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.PageLabel.BorderSizePixel = 0
+VegaXAndroidUI.PageLabel.Position = UDim2.new(0.5, 0, 0, 0)
+VegaXAndroidUI.PageLabel.Size = UDim2.new(1, -50, 1, 0)
+VegaXAndroidUI.PageLabel.Font = Enum.Font.Gotham
+VegaXAndroidUI.PageLabel.Text = "1"
+VegaXAndroidUI.PageLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.PageLabel.TextSize = 14.000
+
+VegaXAndroidUI.SidebarFrame.Name = "SidebarFrame"
+VegaXAndroidUI.SidebarFrame.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.SidebarFrame.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.SidebarFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VegaXAndroidUI.SidebarFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SidebarFrame.BorderSizePixel = 0
+VegaXAndroidUI.SidebarFrame.Position = UDim2.new(0, -200, 0.5, 0)
+VegaXAndroidUI.SidebarFrame.Size = UDim2.new(0, 200, 1, 0)
+
+VegaXAndroidUI.Banner.Name = "Banner"
+VegaXAndroidUI.Banner.Parent = VegaXAndroidUI.SidebarFrame
+VegaXAndroidUI.Banner.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Banner.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Banner.BorderSizePixel = 0
+VegaXAndroidUI.Banner.Position = UDim2.new(0, 0, 0, -60)
+VegaXAndroidUI.Banner.Size = UDim2.new(1, 0, 0, 210)
+
+VegaXAndroidUI.HappyGuy.Name = "HappyGuy"
+VegaXAndroidUI.HappyGuy.Parent = VegaXAndroidUI.Banner
+VegaXAndroidUI.HappyGuy.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.HappyGuy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.HappyGuy.BackgroundTransparency = 1.000
+VegaXAndroidUI.HappyGuy.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.HappyGuy.BorderSizePixel = 0
+VegaXAndroidUI.HappyGuy.Position = UDim2.new(0.5, 0, 1, 0)
+VegaXAndroidUI.HappyGuy.Size = UDim2.new(1, 0, 1, -110)
+VegaXAndroidUI.HappyGuy.Image = "http://www.roblox.com/asset/?id=13329667664"
+VegaXAndroidUI.HappyGuy.ImageTransparency = 0.500
+VegaXAndroidUI.HappyGuy.ScaleType = Enum.ScaleType.Fit
+
+VegaXAndroidUI.VegaXLogo_2.Name = "VegaXLogo"
+VegaXAndroidUI.VegaXLogo_2.Parent = VegaXAndroidUI.Banner
+VegaXAndroidUI.VegaXLogo_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.VegaXLogo_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXLogo_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXLogo_2.BorderSizePixel = 0
+VegaXAndroidUI.VegaXLogo_2.Position = UDim2.new(0, 10, 0, 70)
+VegaXAndroidUI.VegaXLogo_2.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.VegaXLogo_2.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.TitleLabel.Name = "TitleLabel"
+VegaXAndroidUI.TitleLabel.Parent = VegaXAndroidUI.Banner
+VegaXAndroidUI.TitleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel.BackgroundTransparency = 1.000
+VegaXAndroidUI.TitleLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TitleLabel.BorderSizePixel = 0
+VegaXAndroidUI.TitleLabel.Position = UDim2.new(0, 40, 0, 70)
+VegaXAndroidUI.TitleLabel.Size = UDim2.new(0, 150, 0, 25)
+VegaXAndroidUI.TitleLabel.Font = Enum.Font.GothamBold
+VegaXAndroidUI.TitleLabel.Text = "Vega X 4.0.6"
+VegaXAndroidUI.TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel.TextSize = 12.000
+VegaXAndroidUI.TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.ScrollingFrame_3.Parent = VegaXAndroidUI.SidebarFrame
+VegaXAndroidUI.ScrollingFrame_3.Active = true
+VegaXAndroidUI.ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ScrollingFrame_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.ScrollingFrame_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScrollingFrame_3.BorderSizePixel = 0
+VegaXAndroidUI.ScrollingFrame_3.Position = UDim2.new(0, 0, 0, 150)
+VegaXAndroidUI.ScrollingFrame_3.Size = UDim2.new(1, 0, 1, -150)
+VegaXAndroidUI.ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 1.5, 0)
+VegaXAndroidUI.ScrollingFrame_3.ScrollBarThickness = 0
+
+VegaXAndroidUI.UIListLayout_3.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout_3.Padding = UDim.new(0, 2)
+
+VegaXAndroidUI.UsernamePlace.Name = "UsernamePlace"
+VegaXAndroidUI.UsernamePlace.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.UsernamePlace.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.UsernamePlace.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.UsernamePlace.BorderSizePixel = 0
+VegaXAndroidUI.UsernamePlace.Position = UDim2.new(0, 0, 1, -10)
+VegaXAndroidUI.UsernamePlace.Size = UDim2.new(1, 0, 0, 62)
+
+VegaXAndroidUI.Title_7.Name = "Title"
+VegaXAndroidUI.Title_7.Parent = VegaXAndroidUI.UsernamePlace
+VegaXAndroidUI.Title_7.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_7.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_7.BorderSizePixel = 0
+VegaXAndroidUI.Title_7.Position = UDim2.new(0, 62, 0.5, 0)
+VegaXAndroidUI.Title_7.Size = UDim2.new(0.639999986, 0, 1, -20)
+VegaXAndroidUI.Title_7.Font = Enum.Font.Gotham
+VegaXAndroidUI.Title_7.Text = "Hello!"
+VegaXAndroidUI.Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_7.TextSize = 14.000
+VegaXAndroidUI.Title_7.TextWrapped = true
+VegaXAndroidUI.Title_7.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.Icon.Name = "Icon"
+VegaXAndroidUI.Icon.Parent = VegaXAndroidUI.UsernamePlace
+VegaXAndroidUI.Icon.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Icon.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Icon.BorderSizePixel = 0
+VegaXAndroidUI.Icon.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.Icon.Size = UDim2.new(0, 42, 0, 42)
+
+VegaXAndroidUI.UICorner_21.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_21.Parent = VegaXAndroidUI.Icon
+
+VegaXAndroidUI.ProfileImage.Name = "ProfileImage"
+VegaXAndroidUI.ProfileImage.Parent = VegaXAndroidUI.Icon
+VegaXAndroidUI.ProfileImage.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ProfileImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ProfileImage.BackgroundTransparency = 1.000
+VegaXAndroidUI.ProfileImage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ProfileImage.BorderSizePixel = 0
+VegaXAndroidUI.ProfileImage.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ProfileImage.Size = UDim2.new(1, 0, 1, 0)
+
+VegaXAndroidUI.UICorner_22.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_22.Parent = VegaXAndroidUI.ProfileImage
+
+VegaXAndroidUI.Choice1.Name = "Choice1"
+VegaXAndroidUI.Choice1.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.Choice1.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.Choice1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Choice1.BorderSizePixel = 0
+VegaXAndroidUI.Choice1.Size = UDim2.new(1, 0, 0, 100)
+
+VegaXAndroidUI.Title_8.Name = "Title"
+VegaXAndroidUI.Title_8.Parent = VegaXAndroidUI.Choice1
+VegaXAndroidUI.Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_8.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_8.BorderSizePixel = 0
+VegaXAndroidUI.Title_8.Position = UDim2.new(0, 62, 0, 10)
+VegaXAndroidUI.Title_8.Size = UDim2.new(0.529999971, 0, 0.209999993, 20)
+VegaXAndroidUI.Title_8.Font = Enum.Font.Gotham
+VegaXAndroidUI.Title_8.Text = "Executor"
+VegaXAndroidUI.Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_8.TextSize = 14.000
+VegaXAndroidUI.Title_8.TextWrapped = true
+VegaXAndroidUI.Title_8.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.C1EB.Name = "C1EB"
+VegaXAndroidUI.C1EB.Parent = VegaXAndroidUI.Choice1
+VegaXAndroidUI.C1EB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.C1EB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.C1EB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.C1EB.BorderSizePixel = 0
+VegaXAndroidUI.C1EB.Position = UDim2.new(0.5, 0, 1, -10)
+VegaXAndroidUI.C1EB.Size = UDim2.new(1, -20, 0, 30)
+VegaXAndroidUI.C1EB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.C1EB.Text = "Open"
+VegaXAndroidUI.C1EB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.C1EB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_23.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_23.Parent = VegaXAndroidUI.C1EB
+
+VegaXAndroidUI.Icon_2.Name = "Icon"
+VegaXAndroidUI.Icon_2.Parent = VegaXAndroidUI.Choice1
+VegaXAndroidUI.Icon_2.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Icon_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Icon_2.BorderSizePixel = 0
+VegaXAndroidUI.Icon_2.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.Icon_2.Size = UDim2.new(0, 42, 0, 42)
+
+VegaXAndroidUI.UICorner_24.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_24.Parent = VegaXAndroidUI.Icon_2
+
+VegaXAndroidUI.ImageLabel_2.Parent = VegaXAndroidUI.Icon_2
+VegaXAndroidUI.ImageLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_2.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_2.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+VegaXAndroidUI.ImageLabel_2.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.ImageLabel_2.ImageRectOffset = Vector2.new(764, 244)
+VegaXAndroidUI.ImageLabel_2.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.Choice2.Name = "Choice2"
+VegaXAndroidUI.Choice2.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.Choice2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.Choice2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Choice2.BorderSizePixel = 0
+VegaXAndroidUI.Choice2.Size = UDim2.new(1, 0, 0, 100)
+
+VegaXAndroidUI.Title_9.Name = "Title"
+VegaXAndroidUI.Title_9.Parent = VegaXAndroidUI.Choice2
+VegaXAndroidUI.Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_9.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_9.BorderSizePixel = 0
+VegaXAndroidUI.Title_9.Position = UDim2.new(0, 62, 0, 10)
+VegaXAndroidUI.Title_9.Size = UDim2.new(0.529999971, 0, 0.209999993, 20)
+VegaXAndroidUI.Title_9.Font = Enum.Font.Gotham
+VegaXAndroidUI.Title_9.Text = "Script Hub"
+VegaXAndroidUI.Title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_9.TextSize = 14.000
+VegaXAndroidUI.Title_9.TextWrapped = true
+VegaXAndroidUI.Title_9.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.C2EB.Name = "C2EB"
+VegaXAndroidUI.C2EB.Parent = VegaXAndroidUI.Choice2
+VegaXAndroidUI.C2EB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.C2EB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.C2EB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.C2EB.BorderSizePixel = 0
+VegaXAndroidUI.C2EB.Position = UDim2.new(0.5, 0, 1, -10)
+VegaXAndroidUI.C2EB.Size = UDim2.new(1, -20, 0, 30)
+VegaXAndroidUI.C2EB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.C2EB.Text = "Open"
+VegaXAndroidUI.C2EB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.C2EB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_25.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_25.Parent = VegaXAndroidUI.C2EB
+
+VegaXAndroidUI.Icon_3.Name = "Icon"
+VegaXAndroidUI.Icon_3.Parent = VegaXAndroidUI.Choice2
+VegaXAndroidUI.Icon_3.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Icon_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Icon_3.BorderSizePixel = 0
+VegaXAndroidUI.Icon_3.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.Icon_3.Size = UDim2.new(0, 42, 0, 42)
+
+VegaXAndroidUI.UICorner_26.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_26.Parent = VegaXAndroidUI.Icon_3
+
+VegaXAndroidUI.ImageLabel_3.Parent = VegaXAndroidUI.Icon_3
+VegaXAndroidUI.ImageLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_3.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_3.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+VegaXAndroidUI.ImageLabel_3.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.ImageLabel_3.ImageRectOffset = Vector2.new(804, 404)
+VegaXAndroidUI.ImageLabel_3.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.Choice3.Name = "Choice3"
+VegaXAndroidUI.Choice3.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.Choice3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.Choice3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Choice3.BorderSizePixel = 0
+VegaXAndroidUI.Choice3.Size = UDim2.new(1, 0, 0, 100)
+
+VegaXAndroidUI.Title_10.Name = "Title"
+VegaXAndroidUI.Title_10.Parent = VegaXAndroidUI.Choice3
+VegaXAndroidUI.Title_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_10.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_10.BorderSizePixel = 0
+VegaXAndroidUI.Title_10.Position = UDim2.new(0, 62, 0, 10)
+VegaXAndroidUI.Title_10.Size = UDim2.new(0.529999971, 0, 0.209999993, 20)
+VegaXAndroidUI.Title_10.Font = Enum.Font.Gotham
+VegaXAndroidUI.Title_10.Text = "Script List"
+VegaXAndroidUI.Title_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_10.TextSize = 14.000
+VegaXAndroidUI.Title_10.TextWrapped = true
+VegaXAndroidUI.Title_10.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.C3EB.Name = "C3EB"
+VegaXAndroidUI.C3EB.Parent = VegaXAndroidUI.Choice3
+VegaXAndroidUI.C3EB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.C3EB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.C3EB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.C3EB.BorderSizePixel = 0
+VegaXAndroidUI.C3EB.Position = UDim2.new(0.5, 0, 1, -10)
+VegaXAndroidUI.C3EB.Size = UDim2.new(1, -20, 0, 30)
+VegaXAndroidUI.C3EB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.C3EB.Text = "Open"
+VegaXAndroidUI.C3EB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.C3EB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_27.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_27.Parent = VegaXAndroidUI.C3EB
+
+VegaXAndroidUI.Icon_4.Name = "Icon"
+VegaXAndroidUI.Icon_4.Parent = VegaXAndroidUI.Choice3
+VegaXAndroidUI.Icon_4.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Icon_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Icon_4.BorderSizePixel = 0
+VegaXAndroidUI.Icon_4.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.Icon_4.Size = UDim2.new(0, 42, 0, 42)
+
+VegaXAndroidUI.UICorner_28.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_28.Parent = VegaXAndroidUI.Icon_4
+
+VegaXAndroidUI.ImageLabel_4.Parent = VegaXAndroidUI.Icon_4
+VegaXAndroidUI.ImageLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_4.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_4.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+VegaXAndroidUI.ImageLabel_4.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.ImageLabel_4.ImageRectOffset = Vector2.new(444, 524)
+VegaXAndroidUI.ImageLabel_4.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.Choice4.Name = "Choice4"
+VegaXAndroidUI.Choice4.Parent = VegaXAndroidUI.ScrollingFrame_3
+VegaXAndroidUI.Choice4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.Choice4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Choice4.BorderSizePixel = 0
+VegaXAndroidUI.Choice4.Size = UDim2.new(1, 0, 0, 100)
+
+VegaXAndroidUI.Title_11.Name = "Title"
+VegaXAndroidUI.Title_11.Parent = VegaXAndroidUI.Choice4
+VegaXAndroidUI.Title_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_11.BackgroundTransparency = 1.000
+VegaXAndroidUI.Title_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Title_11.BorderSizePixel = 0
+VegaXAndroidUI.Title_11.Position = UDim2.new(0, 62, 0, 10)
+VegaXAndroidUI.Title_11.Size = UDim2.new(0.529999971, 0, 0.209999993, 20)
+VegaXAndroidUI.Title_11.Font = Enum.Font.Gotham
+VegaXAndroidUI.Title_11.Text = "Settings"
+VegaXAndroidUI.Title_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Title_11.TextSize = 14.000
+VegaXAndroidUI.Title_11.TextWrapped = true
+VegaXAndroidUI.Title_11.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.C4EB.Name = "C4EB"
+VegaXAndroidUI.C4EB.Parent = VegaXAndroidUI.Choice4
+VegaXAndroidUI.C4EB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.C4EB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.C4EB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.C4EB.BorderSizePixel = 0
+VegaXAndroidUI.C4EB.Position = UDim2.new(0.5, 0, 1, -10)
+VegaXAndroidUI.C4EB.Size = UDim2.new(1, -20, 0, 30)
+VegaXAndroidUI.C4EB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.C4EB.Text = "Open"
+VegaXAndroidUI.C4EB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.C4EB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_29.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_29.Parent = VegaXAndroidUI.C4EB
+
+VegaXAndroidUI.Icon_5.Name = "Icon"
+VegaXAndroidUI.Icon_5.Parent = VegaXAndroidUI.Choice4
+VegaXAndroidUI.Icon_5.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.Icon_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.Icon_5.BorderSizePixel = 0
+VegaXAndroidUI.Icon_5.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.Icon_5.Size = UDim2.new(0, 42, 0, 42)
+
+VegaXAndroidUI.UICorner_30.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_30.Parent = VegaXAndroidUI.Icon_5
+
+VegaXAndroidUI.ImageLabel_5.Parent = VegaXAndroidUI.Icon_5
+VegaXAndroidUI.ImageLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_5.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_5.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_5.Size = UDim2.new(0.800000012, 0, 0.800000012, 0)
+VegaXAndroidUI.ImageLabel_5.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.ImageLabel_5.ImageRectOffset = Vector2.new(324, 124)
+VegaXAndroidUI.ImageLabel_5.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.VegaXMenuToggleFrame.Name = "VegaXMenuToggleFrame"
+VegaXAndroidUI.VegaXMenuToggleFrame.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.VegaXMenuToggleFrame.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.VegaXMenuToggleFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.VegaXMenuToggleFrame.BackgroundTransparency = 0.300
+VegaXAndroidUI.VegaXMenuToggleFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXMenuToggleFrame.BorderSizePixel = 0
+VegaXAndroidUI.VegaXMenuToggleFrame.ClipsDescendants = true
+VegaXAndroidUI.VegaXMenuToggleFrame.Position = UDim2.new(1, -15, 0, -46)
+VegaXAndroidUI.VegaXMenuToggleFrame.Size = UDim2.new(0, 80, 0, 44)
+VegaXAndroidUI.VegaXMenuToggleFrame.Visible = false
+VegaXAndroidUI.VegaXMenuToggleFrame.ZIndex = 10
+
+VegaXAndroidUI.UICorner_31.CornerRadius = UDim.new(0, 100)
+VegaXAndroidUI.UICorner_31.Parent = VegaXAndroidUI.VegaXMenuToggleFrame
+
+VegaXAndroidUI.VegaXMenuToggle.Name = "VegaXMenuToggle"
+VegaXAndroidUI.VegaXMenuToggle.Parent = VegaXAndroidUI.VegaXMenuToggleFrame
+VegaXAndroidUI.VegaXMenuToggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.VegaXMenuToggle.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXMenuToggle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXMenuToggle.BorderSizePixel = 0
+VegaXAndroidUI.VegaXMenuToggle.Position = UDim2.new(0, 7, 0, 7)
+VegaXAndroidUI.VegaXMenuToggle.Size = UDim2.new(0, 30, 0, 30)
+VegaXAndroidUI.VegaXMenuToggle.ZIndex = 11
+VegaXAndroidUI.VegaXMenuToggle.Font = Enum.Font.SourceSans
+VegaXAndroidUI.VegaXMenuToggle.Text = ""
+VegaXAndroidUI.VegaXMenuToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.VegaXMenuToggle.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_32.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_32.Parent = VegaXAndroidUI.VegaXMenuToggle
+
+VegaXAndroidUI.ImageLabel_6.Parent = VegaXAndroidUI.VegaXMenuToggle
+VegaXAndroidUI.ImageLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_6.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_6.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_6.Size = UDim2.new(1, 0, 1, 0)
+VegaXAndroidUI.ImageLabel_6.ZIndex = 11
+VegaXAndroidUI.ImageLabel_6.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.DragTouch.Name = "DragTouch"
+VegaXAndroidUI.DragTouch.Parent = VegaXAndroidUI.VegaXMenuToggleFrame
+VegaXAndroidUI.DragTouch.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.DragTouch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.DragTouch.BackgroundTransparency = 1.000
+VegaXAndroidUI.DragTouch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.DragTouch.BorderSizePixel = 0
+VegaXAndroidUI.DragTouch.Position = UDim2.new(1, -7, 0, 7)
+VegaXAndroidUI.DragTouch.Size = UDim2.new(0, 30, 0, 30)
+VegaXAndroidUI.DragTouch.ZIndex = 11
+VegaXAndroidUI.DragTouch.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.DragTouch.ImageRectOffset = Vector2.new(564, 364)
+VegaXAndroidUI.DragTouch.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.KeySystem.Name = "KeySystem"
+VegaXAndroidUI.KeySystem.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.KeySystem.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.KeySystem.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.KeySystem.BackgroundTransparency = 0.200
+VegaXAndroidUI.KeySystem.BorderColor3 = Color3.fromRGB(30, 30, 30)
+VegaXAndroidUI.KeySystem.BorderSizePixel = 0
+VegaXAndroidUI.KeySystem.Position = UDim2.new(0, 0, 2, -30)
+VegaXAndroidUI.KeySystem.Size = UDim2.new(1, 0, 1, 60)
+
+VegaXAndroidUI.CloseB_3.Name = "CloseB"
+VegaXAndroidUI.CloseB_3.Parent = VegaXAndroidUI.KeySystem
+VegaXAndroidUI.CloseB_3.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.CloseB_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.CloseB_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CloseB_3.BorderSizePixel = 0
+VegaXAndroidUI.CloseB_3.Position = UDim2.new(1, -5, 0, 45)
+VegaXAndroidUI.CloseB_3.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.CloseB_3.ZIndex = 2
+VegaXAndroidUI.CloseB_3.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.CloseB_3.ImageRectOffset = Vector2.new(884, 284)
+VegaXAndroidUI.CloseB_3.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.MainParent.Name = "MainParent"
+VegaXAndroidUI.MainParent.Parent = VegaXAndroidUI.KeySystem
+VegaXAndroidUI.MainParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.MainParent.BackgroundTransparency = 1.000
+VegaXAndroidUI.MainParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.MainParent.BorderSizePixel = 0
+VegaXAndroidUI.MainParent.Position = UDim2.new(0, 0, 0, 60)
+VegaXAndroidUI.MainParent.Size = UDim2.new(1, 0, 1, -60)
+
+VegaXAndroidUI.ButtonParent.Name = "ButtonParent"
+VegaXAndroidUI.ButtonParent.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.ButtonParent.AnchorPoint = Vector2.new(0, 1)
+VegaXAndroidUI.ButtonParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ButtonParent.BackgroundTransparency = 1.000
+VegaXAndroidUI.ButtonParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.ButtonParent.BorderSizePixel = 0
+VegaXAndroidUI.ButtonParent.LayoutOrder = 9
+VegaXAndroidUI.ButtonParent.Position = UDim2.new(0, 0, 1, -46)
+VegaXAndroidUI.ButtonParent.Size = UDim2.new(1, 0, 0, 40)
+
+VegaXAndroidUI.UIListLayout_4.Parent = VegaXAndroidUI.ButtonParent
+VegaXAndroidUI.UIListLayout_4.FillDirection = Enum.FillDirection.Horizontal
+VegaXAndroidUI.UIListLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout_4.VerticalAlignment = Enum.VerticalAlignment.Center
+VegaXAndroidUI.UIListLayout_4.Padding = UDim.new(0, 5)
+
+VegaXAndroidUI.ApproveKeyB.Name = "ApproveKeyB"
+VegaXAndroidUI.ApproveKeyB.Parent = VegaXAndroidUI.ButtonParent
+VegaXAndroidUI.ApproveKeyB.Active = false
+VegaXAndroidUI.ApproveKeyB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.ApproveKeyB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.ApproveKeyB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ApproveKeyB.BorderSizePixel = 0
+VegaXAndroidUI.ApproveKeyB.LayoutOrder = 1
+VegaXAndroidUI.ApproveKeyB.Position = UDim2.new(0.5, 0, 1, -46)
+VegaXAndroidUI.ApproveKeyB.Size = UDim2.new(0, 120, 0, 40)
+VegaXAndroidUI.ApproveKeyB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.ApproveKeyB.Text = "Check Key"
+VegaXAndroidUI.ApproveKeyB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ApproveKeyB.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_33.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_33.Parent = VegaXAndroidUI.ApproveKeyB
+
+VegaXAndroidUI.GetKeyB.Name = "GetKeyB"
+VegaXAndroidUI.GetKeyB.Parent = VegaXAndroidUI.ButtonParent
+VegaXAndroidUI.GetKeyB.Active = false
+VegaXAndroidUI.GetKeyB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.GetKeyB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.GetKeyB.BackgroundTransparency = 0.500
+VegaXAndroidUI.GetKeyB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.GetKeyB.BorderSizePixel = 0
+VegaXAndroidUI.GetKeyB.Position = UDim2.new(0.5, -125, 1, -46)
+VegaXAndroidUI.GetKeyB.Size = UDim2.new(0, 120, 0, 40)
+VegaXAndroidUI.GetKeyB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.GetKeyB.Text = "Get 2 Day Key"
+VegaXAndroidUI.GetKeyB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.GetKeyB.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_34.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_34.Parent = VegaXAndroidUI.GetKeyB
+
+VegaXAndroidUI.JoinDiscordB.Name = "JoinDiscordB"
+VegaXAndroidUI.JoinDiscordB.Parent = VegaXAndroidUI.ButtonParent
+VegaXAndroidUI.JoinDiscordB.Active = false
+VegaXAndroidUI.JoinDiscordB.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.JoinDiscordB.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.JoinDiscordB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.JoinDiscordB.BorderSizePixel = 0
+VegaXAndroidUI.JoinDiscordB.LayoutOrder = 2
+VegaXAndroidUI.JoinDiscordB.Position = UDim2.new(0.5, 125, 1, -46)
+VegaXAndroidUI.JoinDiscordB.Size = UDim2.new(0, 120, 0, 40)
+VegaXAndroidUI.JoinDiscordB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.JoinDiscordB.Text = "Join Discord"
+VegaXAndroidUI.JoinDiscordB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.JoinDiscordB.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_35.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_35.Parent = VegaXAndroidUI.JoinDiscordB
+
+VegaXAndroidUI.BannerParent.Name = "BannerParent"
+VegaXAndroidUI.BannerParent.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.BannerParent.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.BannerParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.BannerParent.BackgroundTransparency = 1.000
+VegaXAndroidUI.BannerParent.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.BannerParent.BorderSizePixel = 0
+VegaXAndroidUI.BannerParent.LayoutOrder = 7
+VegaXAndroidUI.BannerParent.Position = UDim2.new(0.5, 0, 0.5, -10)
+VegaXAndroidUI.BannerParent.Size = UDim2.new(1, -50, 1, -305)
+
+VegaXAndroidUI.MainBanner.Name = "MainBanner"
+VegaXAndroidUI.MainBanner.Parent = VegaXAndroidUI.BannerParent
+VegaXAndroidUI.MainBanner.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.MainBanner.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.MainBanner.BorderSizePixel = 0
+VegaXAndroidUI.MainBanner.ClipsDescendants = true
+VegaXAndroidUI.MainBanner.Size = UDim2.new(0.5, -5, 1, 0)
+
+VegaXAndroidUI.VegaXLogo_3.Name = "VegaXLogo"
+VegaXAndroidUI.VegaXLogo_3.Parent = VegaXAndroidUI.MainBanner
+VegaXAndroidUI.VegaXLogo_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.VegaXLogo_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXLogo_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXLogo_3.BorderSizePixel = 0
+VegaXAndroidUI.VegaXLogo_3.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.VegaXLogo_3.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.VegaXLogo_3.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.UICorner_36.Parent = VegaXAndroidUI.MainBanner
+
+VegaXAndroidUI.HappyGuy_2.Name = "HappyGuy"
+VegaXAndroidUI.HappyGuy_2.Parent = VegaXAndroidUI.MainBanner
+VegaXAndroidUI.HappyGuy_2.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.HappyGuy_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.HappyGuy_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.HappyGuy_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.HappyGuy_2.BorderSizePixel = 0
+VegaXAndroidUI.HappyGuy_2.Position = UDim2.new(0.5, 0, 1, 0)
+VegaXAndroidUI.HappyGuy_2.Size = UDim2.new(1, 0, 0.800000012, 0)
+VegaXAndroidUI.HappyGuy_2.Image = "http://www.roblox.com/asset/?id=13329667664"
+VegaXAndroidUI.HappyGuy_2.ImageTransparency = 0.500
+VegaXAndroidUI.HappyGuy_2.ScaleType = Enum.ScaleType.Fit
+
+VegaXAndroidUI.TitleLabel_2.Name = "TitleLabel"
+VegaXAndroidUI.TitleLabel_2.Parent = VegaXAndroidUI.MainBanner
+VegaXAndroidUI.TitleLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.TitleLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TitleLabel_2.BorderSizePixel = 0
+VegaXAndroidUI.TitleLabel_2.Position = UDim2.new(0, 40, 0, 10)
+VegaXAndroidUI.TitleLabel_2.Size = UDim2.new(0, 150, 0, 25)
+VegaXAndroidUI.TitleLabel_2.Font = Enum.Font.GothamBold
+VegaXAndroidUI.TitleLabel_2.Text = "Vega X 4.0"
+VegaXAndroidUI.TitleLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_2.TextSize = 12.000
+VegaXAndroidUI.TitleLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.PremiumBanner.Name = "PremiumBanner"
+VegaXAndroidUI.PremiumBanner.Parent = VegaXAndroidUI.BannerParent
+VegaXAndroidUI.PremiumBanner.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.PremiumBanner.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.PremiumBanner.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.PremiumBanner.BorderSizePixel = 0
+VegaXAndroidUI.PremiumBanner.ClipsDescendants = true
+VegaXAndroidUI.PremiumBanner.Position = UDim2.new(1, 0, 0, 0)
+VegaXAndroidUI.PremiumBanner.Size = UDim2.new(0.5, -5, 1, 0)
+
+VegaXAndroidUI.VegaXLogo_4.Name = "VegaXLogo"
+VegaXAndroidUI.VegaXLogo_4.Parent = VegaXAndroidUI.PremiumBanner
+VegaXAndroidUI.VegaXLogo_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.VegaXLogo_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXLogo_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXLogo_4.BorderSizePixel = 0
+VegaXAndroidUI.VegaXLogo_4.Position = UDim2.new(0, 10, 0, 10)
+VegaXAndroidUI.VegaXLogo_4.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.VegaXLogo_4.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.UICorner_37.Parent = VegaXAndroidUI.PremiumBanner
+
+VegaXAndroidUI.TitleLabel_3.Name = "TitleLabel"
+VegaXAndroidUI.TitleLabel_3.Parent = VegaXAndroidUI.PremiumBanner
+VegaXAndroidUI.TitleLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.TitleLabel_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TitleLabel_3.BorderSizePixel = 0
+VegaXAndroidUI.TitleLabel_3.Position = UDim2.new(0, 40, 0, 10)
+VegaXAndroidUI.TitleLabel_3.Size = UDim2.new(0, 150, 0, 25)
+VegaXAndroidUI.TitleLabel_3.Font = Enum.Font.GothamBold
+VegaXAndroidUI.TitleLabel_3.Text = "Want to skip the keys?"
+VegaXAndroidUI.TitleLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_3.TextSize = 12.000
+VegaXAndroidUI.TitleLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.TitleLabel_4.Name = "TitleLabel"
+VegaXAndroidUI.TitleLabel_4.Parent = VegaXAndroidUI.PremiumBanner
+VegaXAndroidUI.TitleLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.TitleLabel_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TitleLabel_4.BorderSizePixel = 0
+VegaXAndroidUI.TitleLabel_4.Position = UDim2.new(0, 10, 0, 39)
+VegaXAndroidUI.TitleLabel_4.Size = UDim2.new(1, -20, 1, -97)
+VegaXAndroidUI.TitleLabel_4.Font = Enum.Font.GothamBold
+VegaXAndroidUI.TitleLabel_4.Text = "Want to skip the keys?\\nGet Vega X Premium below!"
+VegaXAndroidUI.TitleLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TitleLabel_4.TextScaled = true
+VegaXAndroidUI.TitleLabel_4.TextSize = 12.000
+VegaXAndroidUI.TitleLabel_4.TextWrapped = true
+
+VegaXAndroidUI.CopyWebsiteURL.Name = "CopyWebsiteURL"
+VegaXAndroidUI.CopyWebsiteURL.Parent = VegaXAndroidUI.PremiumBanner
+VegaXAndroidUI.CopyWebsiteURL.Active = false
+VegaXAndroidUI.CopyWebsiteURL.AnchorPoint = Vector2.new(0.5, 0)
+VegaXAndroidUI.CopyWebsiteURL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.CopyWebsiteURL.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CopyWebsiteURL.BorderSizePixel = 0
+VegaXAndroidUI.CopyWebsiteURL.Position = UDim2.new(0.5, 0, 1, -50)
+VegaXAndroidUI.CopyWebsiteURL.Size = UDim2.new(1, -20, 0, 40)
+VegaXAndroidUI.CopyWebsiteURL.ZIndex = 101
+VegaXAndroidUI.CopyWebsiteURL.Font = Enum.Font.GothamBold
+VegaXAndroidUI.CopyWebsiteURL.Text = "Get Vega X Premium"
+VegaXAndroidUI.CopyWebsiteURL.TextColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.CopyWebsiteURL.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_38.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_38.Parent = VegaXAndroidUI.CopyWebsiteURL
+
+VegaXAndroidUI.UISizeConstraint.Parent = VegaXAndroidUI.BannerParent
+VegaXAndroidUI.UISizeConstraint.MaxSize = Vector2.new(9.99999979e+33, 200)
+
+VegaXAndroidUI.TextBox.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.TextBox.AnchorPoint = Vector2.new(0, 1)
+VegaXAndroidUI.TextBox.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+VegaXAndroidUI.TextBox.BackgroundTransparency = 0.200
+VegaXAndroidUI.TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TextBox.BorderSizePixel = 0
+VegaXAndroidUI.TextBox.LayoutOrder = 8
+VegaXAndroidUI.TextBox.Position = UDim2.new(0, 25, 1, -97)
+VegaXAndroidUI.TextBox.Size = UDim2.new(1, -50, 0, 50)
+VegaXAndroidUI.TextBox.ClearTextOnFocus = false
+VegaXAndroidUI.TextBox.Font = Enum.Font.Code
+VegaXAndroidUI.TextBox.MultiLine = true
+VegaXAndroidUI.TextBox.PlaceholderText = "Insert the Key Here!"
+VegaXAndroidUI.TextBox.Text = ""
+VegaXAndroidUI.TextBox.TextColor3 = Color3.fromRGB(220, 220, 220)
+VegaXAndroidUI.TextBox.TextSize = 16.000
+
+VegaXAndroidUI.UICorner_39.CornerRadius = UDim.new(0, 5)
+VegaXAndroidUI.UICorner_39.Parent = VegaXAndroidUI.TextBox
+
+VegaXAndroidUI.EULALabel.Name = "EULALabel"
+VegaXAndroidUI.EULALabel.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.EULALabel.AnchorPoint = Vector2.new(0, 1)
+VegaXAndroidUI.EULALabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.EULALabel.BackgroundTransparency = 1.000
+VegaXAndroidUI.EULALabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.EULALabel.BorderSizePixel = 0
+VegaXAndroidUI.EULALabel.LayoutOrder = 10
+VegaXAndroidUI.EULALabel.Position = UDim2.new(0, 7, 1, -15)
+VegaXAndroidUI.EULALabel.Size = UDim2.new(1, -14, 0, 21)
+VegaXAndroidUI.EULALabel.Font = Enum.Font.GothamBold
+VegaXAndroidUI.EULALabel.Text = "By pressing \"Get 2 Day Key\", you accept to the terms of the Pelican Key System EULA."
+VegaXAndroidUI.EULALabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.EULALabel.TextSize = 12.000
+
+VegaXAndroidUI.SubTitle_7.Name = "SubTitle"
+VegaXAndroidUI.SubTitle_7.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.SubTitle_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_7.BackgroundTransparency = 1.000
+VegaXAndroidUI.SubTitle_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.SubTitle_7.BorderSizePixel = 0
+VegaXAndroidUI.SubTitle_7.LayoutOrder = 2
+VegaXAndroidUI.SubTitle_7.Position = UDim2.new(0, 7, 0, 109)
+VegaXAndroidUI.SubTitle_7.Size = UDim2.new(1, -14, 0, 16)
+VegaXAndroidUI.SubTitle_7.Font = Enum.Font.Gotham
+VegaXAndroidUI.SubTitle_7.Text = "Press \"Get 2 Day Key\" to get started!"
+VegaXAndroidUI.SubTitle_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.SubTitle_7.TextSize = 14.000
+VegaXAndroidUI.SubTitle_7.TextWrapped = true
+VegaXAndroidUI.SubTitle_7.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.MainTitle.Name = "MainTitle"
+VegaXAndroidUI.MainTitle.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.MainTitle.BackgroundTransparency = 1.000
+VegaXAndroidUI.MainTitle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.MainTitle.BorderSizePixel = 0
+VegaXAndroidUI.MainTitle.LayoutOrder = 1
+VegaXAndroidUI.MainTitle.Position = UDim2.new(0, 7, 0, 88)
+VegaXAndroidUI.MainTitle.Size = UDim2.new(1, -14, 0, 21)
+VegaXAndroidUI.MainTitle.Font = Enum.Font.GothamBold
+VegaXAndroidUI.MainTitle.Text = "[Vega X] Key System"
+VegaXAndroidUI.MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.MainTitle.TextSize = 18.000
+VegaXAndroidUI.MainTitle.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UIListLayout_5.Parent = VegaXAndroidUI.MainParent
+VegaXAndroidUI.UIListLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout_5.VerticalAlignment = Enum.VerticalAlignment.Center
+VegaXAndroidUI.UIListLayout_5.Padding = UDim.new(0, 10)
+
+VegaXAndroidUI.KSMenuToggleFrame.Name = "KSMenuToggleFrame"
+VegaXAndroidUI.KSMenuToggleFrame.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.KSMenuToggleFrame.AnchorPoint = Vector2.new(1, 1)
+VegaXAndroidUI.KSMenuToggleFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.KSMenuToggleFrame.BackgroundTransparency = 0.300
+VegaXAndroidUI.KSMenuToggleFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.KSMenuToggleFrame.BorderSizePixel = 0
+VegaXAndroidUI.KSMenuToggleFrame.ClipsDescendants = true
+VegaXAndroidUI.KSMenuToggleFrame.Position = UDim2.new(1, -10, 1, -10)
+VegaXAndroidUI.KSMenuToggleFrame.Visible = false
+VegaXAndroidUI.KSMenuToggleFrame.ZIndex = 10
+
+VegaXAndroidUI.UICorner_40.CornerRadius = UDim.new(0, 100)
+VegaXAndroidUI.UICorner_40.Parent = VegaXAndroidUI.KSMenuToggleFrame
+
+VegaXAndroidUI.VegaXKSToggle.Name = "VegaXKSToggle"
+VegaXAndroidUI.VegaXKSToggle.Parent = VegaXAndroidUI.KSMenuToggleFrame
+VegaXAndroidUI.VegaXKSToggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.VegaXKSToggle.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXKSToggle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXKSToggle.BorderSizePixel = 0
+VegaXAndroidUI.VegaXKSToggle.Size = UDim2.new(0, 32, 0, 32)
+VegaXAndroidUI.VegaXKSToggle.ZIndex = 11
+VegaXAndroidUI.VegaXKSToggle.Font = Enum.Font.SourceSans
+VegaXAndroidUI.VegaXKSToggle.Text = ""
+VegaXAndroidUI.VegaXKSToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.VegaXKSToggle.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_41.CornerRadius = UDim.new(0, 10)
+VegaXAndroidUI.UICorner_41.Parent = VegaXAndroidUI.VegaXKSToggle
+
+VegaXAndroidUI.ImageLabel_7.Parent = VegaXAndroidUI.VegaXKSToggle
+VegaXAndroidUI.ImageLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ImageLabel_7.BackgroundTransparency = 1.000
+VegaXAndroidUI.ImageLabel_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ImageLabel_7.BorderSizePixel = 0
+VegaXAndroidUI.ImageLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.ImageLabel_7.Size = UDim2.new(0.699999988, 0, 0.699999988, 0)
+VegaXAndroidUI.ImageLabel_7.ZIndex = 11
+VegaXAndroidUI.ImageLabel_7.Image = "http://www.roblox.com/asset/?id=15861930865"
+
+VegaXAndroidUI.IntroFrame.Name = "IntroFrame"
+VegaXAndroidUI.IntroFrame.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.IntroFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.IntroFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.IntroFrame.BackgroundTransparency = 1.000
+VegaXAndroidUI.IntroFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.IntroFrame.BorderSizePixel = 0
+VegaXAndroidUI.IntroFrame.ClipsDescendants = true
+VegaXAndroidUI.IntroFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.IntroFrame.Size = UDim2.new(1, 0, 1, 0)
+
+VegaXAndroidUI.BackgroundFrame.Name = "BackgroundFrame"
+VegaXAndroidUI.BackgroundFrame.Parent = VegaXAndroidUI.IntroFrame
+VegaXAndroidUI.BackgroundFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.BackgroundFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.BackgroundFrame.BackgroundTransparency = 1.000
+VegaXAndroidUI.BackgroundFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.BackgroundFrame.BorderSizePixel = 0
+VegaXAndroidUI.BackgroundFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+VegaXAndroidUI.BackgroundFrame.Rotation = 45.000
+VegaXAndroidUI.BackgroundFrame.Size = UDim2.new(1.29999995, 0, 3, 0)
+
+VegaXAndroidUI.R1.Name = "R1"
+VegaXAndroidUI.R1.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R1.BackgroundTransparency = 1.000
+VegaXAndroidUI.R1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R1.BorderSizePixel = 0
+VegaXAndroidUI.R1.Size = UDim2.new(0.075000003, 0, 0, 0)
+
+VegaXAndroidUI.R2.Name = "R2"
+VegaXAndroidUI.R2.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R2.BackgroundColor3 = Color3.fromRGB(19, 6, 6)
+VegaXAndroidUI.R2.BackgroundTransparency = 1.000
+VegaXAndroidUI.R2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R2.BorderSizePixel = 0
+VegaXAndroidUI.R2.Position = UDim2.new(0.0500000007, 0, 0, 0)
+VegaXAndroidUI.R2.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R2.ZIndex = 2
+
+VegaXAndroidUI.R3.Name = "R3"
+VegaXAndroidUI.R3.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R3.BackgroundColor3 = Color3.fromRGB(39, 11, 11)
+VegaXAndroidUI.R3.BackgroundTransparency = 1.000
+VegaXAndroidUI.R3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R3.BorderSizePixel = 0
+VegaXAndroidUI.R3.Position = UDim2.new(0.100000001, 0, 0, 0)
+VegaXAndroidUI.R3.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R3.ZIndex = 3
+
+VegaXAndroidUI.R4.Name = "R4"
+VegaXAndroidUI.R4.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R4.BackgroundColor3 = Color3.fromRGB(58, 17, 17)
+VegaXAndroidUI.R4.BackgroundTransparency = 1.000
+VegaXAndroidUI.R4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R4.BorderSizePixel = 0
+VegaXAndroidUI.R4.Position = UDim2.new(0.150000006, 0, 0, 0)
+VegaXAndroidUI.R4.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R4.ZIndex = 4
+
+VegaXAndroidUI.R5.Name = "R5"
+VegaXAndroidUI.R5.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R5.BackgroundColor3 = Color3.fromRGB(78, 23, 23)
+VegaXAndroidUI.R5.BackgroundTransparency = 1.000
+VegaXAndroidUI.R5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R5.BorderSizePixel = 0
+VegaXAndroidUI.R5.Position = UDim2.new(0.200000003, 0, 0, 0)
+VegaXAndroidUI.R5.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R5.ZIndex = 5
+
+VegaXAndroidUI.R6.Name = "R6"
+VegaXAndroidUI.R6.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R6.BackgroundColor3 = Color3.fromRGB(117, 34, 34)
+VegaXAndroidUI.R6.BackgroundTransparency = 1.000
+VegaXAndroidUI.R6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R6.BorderSizePixel = 0
+VegaXAndroidUI.R6.Position = UDim2.new(0.25, 0, 0, 0)
+VegaXAndroidUI.R6.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R6.ZIndex = 6
+
+VegaXAndroidUI.R7.Name = "R7"
+VegaXAndroidUI.R7.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R7.BackgroundColor3 = Color3.fromRGB(137, 40, 40)
+VegaXAndroidUI.R7.BackgroundTransparency = 1.000
+VegaXAndroidUI.R7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R7.BorderSizePixel = 0
+VegaXAndroidUI.R7.Position = UDim2.new(0.300000012, 0, 0, 0)
+VegaXAndroidUI.R7.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R7.ZIndex = 7
+
+VegaXAndroidUI.R8.Name = "R8"
+VegaXAndroidUI.R8.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R8.BackgroundColor3 = Color3.fromRGB(156, 46, 46)
+VegaXAndroidUI.R8.BackgroundTransparency = 1.000
+VegaXAndroidUI.R8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R8.BorderSizePixel = 0
+VegaXAndroidUI.R8.Position = UDim2.new(0.349999994, 0, 0, 0)
+VegaXAndroidUI.R8.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R8.ZIndex = 8
+
+VegaXAndroidUI.R9.Name = "R9"
+VegaXAndroidUI.R9.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R9.BackgroundColor3 = Color3.fromRGB(176, 51, 51)
+VegaXAndroidUI.R9.BackgroundTransparency = 1.000
+VegaXAndroidUI.R9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R9.BorderSizePixel = 0
+VegaXAndroidUI.R9.Position = UDim2.new(0.400000006, 0, 0, 0)
+VegaXAndroidUI.R9.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R9.ZIndex = 9
+
+VegaXAndroidUI.R10.Name = "R10"
+VegaXAndroidUI.R10.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R10.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.R10.BackgroundTransparency = 1.000
+VegaXAndroidUI.R10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R10.BorderSizePixel = 0
+VegaXAndroidUI.R10.Position = UDim2.new(0.449999988, 0, 0, 0)
+VegaXAndroidUI.R10.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R10.ZIndex = 10
+
+VegaXAndroidUI.R11.Name = "R11"
+VegaXAndroidUI.R11.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R11.BackgroundColor3 = Color3.fromRGB(176, 51, 51)
+VegaXAndroidUI.R11.BackgroundTransparency = 1.000
+VegaXAndroidUI.R11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R11.BorderSizePixel = 0
+VegaXAndroidUI.R11.Position = UDim2.new(0.5, 0, 0, 0)
+VegaXAndroidUI.R11.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R11.ZIndex = 11
+
+VegaXAndroidUI.R12.Name = "R12"
+VegaXAndroidUI.R12.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R12.BackgroundColor3 = Color3.fromRGB(156, 46, 46)
+VegaXAndroidUI.R12.BackgroundTransparency = 1.000
+VegaXAndroidUI.R12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R12.BorderSizePixel = 0
+VegaXAndroidUI.R12.Position = UDim2.new(0.550000012, 0, 0, 0)
+VegaXAndroidUI.R12.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R12.ZIndex = 12
+
+VegaXAndroidUI.R13.Name = "R13"
+VegaXAndroidUI.R13.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R13.BackgroundColor3 = Color3.fromRGB(137, 40, 40)
+VegaXAndroidUI.R13.BackgroundTransparency = 1.000
+VegaXAndroidUI.R13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R13.BorderSizePixel = 0
+VegaXAndroidUI.R13.Position = UDim2.new(0.600000024, 0, 0, 0)
+VegaXAndroidUI.R13.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R13.ZIndex = 13
+
+VegaXAndroidUI.R14.Name = "R14"
+VegaXAndroidUI.R14.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R14.BackgroundColor3 = Color3.fromRGB(117, 34, 34)
+VegaXAndroidUI.R14.BackgroundTransparency = 1.000
+VegaXAndroidUI.R14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R14.BorderSizePixel = 0
+VegaXAndroidUI.R14.Position = UDim2.new(0.649999976, 0, 0, 0)
+VegaXAndroidUI.R14.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R14.ZIndex = 14
+
+VegaXAndroidUI.R15.Name = "R15"
+VegaXAndroidUI.R15.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R15.BackgroundColor3 = Color3.fromRGB(98, 29, 29)
+VegaXAndroidUI.R15.BackgroundTransparency = 1.000
+VegaXAndroidUI.R15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R15.BorderSizePixel = 0
+VegaXAndroidUI.R15.Position = UDim2.new(0.699999988, 0, 0, 0)
+VegaXAndroidUI.R15.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R15.ZIndex = 15
+
+VegaXAndroidUI.R16.Name = "R16"
+VegaXAndroidUI.R16.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R16.BackgroundColor3 = Color3.fromRGB(78, 23, 23)
+VegaXAndroidUI.R16.BackgroundTransparency = 1.000
+VegaXAndroidUI.R16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R16.BorderSizePixel = 0
+VegaXAndroidUI.R16.Position = UDim2.new(0.75, 0, 0, 0)
+VegaXAndroidUI.R16.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R16.ZIndex = 16
+
+VegaXAndroidUI.R17.Name = "R17"
+VegaXAndroidUI.R17.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R17.BackgroundColor3 = Color3.fromRGB(58, 17, 17)
+VegaXAndroidUI.R17.BackgroundTransparency = 1.000
+VegaXAndroidUI.R17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R17.BorderSizePixel = 0
+VegaXAndroidUI.R17.Position = UDim2.new(0.800000012, 0, 0, 0)
+VegaXAndroidUI.R17.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R17.ZIndex = 17
+
+VegaXAndroidUI.R18.Name = "R18"
+VegaXAndroidUI.R18.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R18.BackgroundColor3 = Color3.fromRGB(39, 11, 11)
+VegaXAndroidUI.R18.BackgroundTransparency = 1.000
+VegaXAndroidUI.R18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R18.BorderSizePixel = 0
+VegaXAndroidUI.R18.Position = UDim2.new(0.850000024, 0, 0, 0)
+VegaXAndroidUI.R18.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R18.ZIndex = 18
+
+VegaXAndroidUI.R19.Name = "R19"
+VegaXAndroidUI.R19.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R19.BackgroundColor3 = Color3.fromRGB(19, 6, 6)
+VegaXAndroidUI.R19.BackgroundTransparency = 1.000
+VegaXAndroidUI.R19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R19.BorderSizePixel = 0
+VegaXAndroidUI.R19.Position = UDim2.new(0.899999976, 0, 0, 0)
+VegaXAndroidUI.R19.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R19.ZIndex = 19
+
+VegaXAndroidUI.R20.Name = "R20"
+VegaXAndroidUI.R20.Parent = VegaXAndroidUI.BackgroundFrame
+VegaXAndroidUI.R20.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R20.BackgroundTransparency = 1.000
+VegaXAndroidUI.R20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.R20.BorderSizePixel = 0
+VegaXAndroidUI.R20.Position = UDim2.new(0.949999988, 0, 0, 0)
+VegaXAndroidUI.R20.Size = UDim2.new(0.075000003, 0, 0, 0)
+VegaXAndroidUI.R20.ZIndex = 20
+
+VegaXAndroidUI.VegaXLogo_5.Name = "VegaXLogo"
+VegaXAndroidUI.VegaXLogo_5.Parent = VegaXAndroidUI.IntroFrame
+VegaXAndroidUI.VegaXLogo_5.AnchorPoint = Vector2.new(0.5, 0.5)
+VegaXAndroidUI.VegaXLogo_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.VegaXLogo_5.BackgroundTransparency = 1.000
+VegaXAndroidUI.VegaXLogo_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.VegaXLogo_5.BorderSizePixel = 0
+VegaXAndroidUI.VegaXLogo_5.Position = UDim2.new(0.5, 0, 0.699999988, 0)
+VegaXAndroidUI.VegaXLogo_5.Size = UDim2.new(0, 100, 0, 100)
+VegaXAndroidUI.VegaXLogo_5.ZIndex = 21
+VegaXAndroidUI.VegaXLogo_5.Image = "http://www.roblox.com/asset/?id=15861930865"
+VegaXAndroidUI.VegaXLogo_5.ImageTransparency = 1.000
+
+VegaXAndroidUI.ScriptListWindow.Name = "ScriptListWindow"
+VegaXAndroidUI.ScriptListWindow.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.ScriptListWindow.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.ScriptListWindow.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VegaXAndroidUI.ScriptListWindow.BorderColor3 = Color3.fromRGB(30, 30, 30)
+VegaXAndroidUI.ScriptListWindow.BorderSizePixel = 0
+VegaXAndroidUI.ScriptListWindow.Position = UDim2.new(1, 200, 0.5, -30)
+VegaXAndroidUI.ScriptListWindow.Size = UDim2.new(1, -200, 1, 60)
+
+VegaXAndroidUI.WindowMainTitle_3.Name = "WindowMainTitle"
+VegaXAndroidUI.WindowMainTitle_3.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.WindowMainTitle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.WindowMainTitle_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.WindowMainTitle_3.BorderSizePixel = 0
+VegaXAndroidUI.WindowMainTitle_3.Position = UDim2.new(0, 7, 0, 52)
+VegaXAndroidUI.WindowMainTitle_3.Size = UDim2.new(0, 309, 0, 21)
+VegaXAndroidUI.WindowMainTitle_3.Font = Enum.Font.GothamBold
+VegaXAndroidUI.WindowMainTitle_3.Text = "Script List"
+VegaXAndroidUI.WindowMainTitle_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_3.TextSize = 18.000
+VegaXAndroidUI.WindowMainTitle_3.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.WindowMainTitle_3.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.CloseB_4.Name = "CloseB"
+VegaXAndroidUI.CloseB_4.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.CloseB_4.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.CloseB_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.CloseB_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CloseB_4.BorderSizePixel = 0
+VegaXAndroidUI.CloseB_4.LayoutOrder = 6
+VegaXAndroidUI.CloseB_4.Position = UDim2.new(1, -5, 0, 45)
+VegaXAndroidUI.CloseB_4.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.CloseB_4.ZIndex = 2
+VegaXAndroidUI.CloseB_4.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.CloseB_4.ImageRectOffset = Vector2.new(884, 284)
+VegaXAndroidUI.CloseB_4.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.ScriptListFrame.Name = "ScriptListFrame"
+VegaXAndroidUI.ScriptListFrame.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.ScriptListFrame.Active = true
+VegaXAndroidUI.ScriptListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ScriptListFrame.BackgroundTransparency = 1.000
+VegaXAndroidUI.ScriptListFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScriptListFrame.BorderSizePixel = 0
+VegaXAndroidUI.ScriptListFrame.Position = UDim2.new(0, 0, 0, 119)
+VegaXAndroidUI.ScriptListFrame.Size = UDim2.new(1, 0, 1, -119)
+VegaXAndroidUI.ScriptListFrame.CanvasSize = UDim2.new(0, 0, 1, 0)
+VegaXAndroidUI.ScriptListFrame.ScrollBarThickness = 0
+
+VegaXAndroidUI.UIListLayout_6.Parent = VegaXAndroidUI.ScriptListFrame
+VegaXAndroidUI.UIListLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Center
+VegaXAndroidUI.UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+VegaXAndroidUI.UIListLayout_6.Padding = UDim.new(0, 5)
+
+VegaXAndroidUI.AddB.Name = "AddB"
+VegaXAndroidUI.AddB.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.AddB.Active = false
+VegaXAndroidUI.AddB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.AddB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.AddB.BorderSizePixel = 0
+VegaXAndroidUI.AddB.Position = UDim2.new(0, 5, 0, 78)
+VegaXAndroidUI.AddB.Size = UDim2.new(0, 80, 0, 30)
+VegaXAndroidUI.AddB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.AddB.Text = "Add Script"
+VegaXAndroidUI.AddB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.AddB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_42.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_42.Parent = VegaXAndroidUI.AddB
+
+VegaXAndroidUI.CancelAddB.Name = "CancelAddB"
+VegaXAndroidUI.CancelAddB.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.CancelAddB.Active = false
+VegaXAndroidUI.CancelAddB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.CancelAddB.BackgroundTransparency = 0.500
+VegaXAndroidUI.CancelAddB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CancelAddB.BorderSizePixel = 0
+VegaXAndroidUI.CancelAddB.Position = UDim2.new(0, 90, 0, 78)
+VegaXAndroidUI.CancelAddB.Size = UDim2.new(0, 100, 0, 30)
+VegaXAndroidUI.CancelAddB.Visible = false
+VegaXAndroidUI.CancelAddB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.CancelAddB.Text = "Cancellation"
+VegaXAndroidUI.CancelAddB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.CancelAddB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_43.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_43.Parent = VegaXAndroidUI.CancelAddB
+
+VegaXAndroidUI.AddingFrame.Name = "AddingFrame"
+VegaXAndroidUI.AddingFrame.Parent = VegaXAndroidUI.ScriptListWindow
+VegaXAndroidUI.AddingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.AddingFrame.BackgroundTransparency = 1.000
+VegaXAndroidUI.AddingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.AddingFrame.BorderSizePixel = 0
+VegaXAndroidUI.AddingFrame.Position = UDim2.new(0, 0, 0, 119)
+VegaXAndroidUI.AddingFrame.Size = UDim2.new(1, 0, 1, -119)
+VegaXAndroidUI.AddingFrame.Visible = false
+
+VegaXAndroidUI.ScrollingBox.Name = "ScrollingBox"
+VegaXAndroidUI.ScrollingBox.Parent = VegaXAndroidUI.AddingFrame
+VegaXAndroidUI.ScrollingBox.Active = true
+VegaXAndroidUI.ScrollingBox.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.ScrollingBox.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+VegaXAndroidUI.ScrollingBox.BackgroundTransparency = 0.200
+VegaXAndroidUI.ScrollingBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScrollingBox.BorderSizePixel = 0
+VegaXAndroidUI.ScrollingBox.Position = UDim2.new(0.5, 0, 1, -5)
+VegaXAndroidUI.ScrollingBox.Size = UDim2.new(1, -10, 1, -60)
+VegaXAndroidUI.ScrollingBox.CanvasSize = UDim2.new(0, 0, 0, 0)
+VegaXAndroidUI.ScrollingBox.ScrollBarThickness = 2
+
+VegaXAndroidUI.TextBox_2.Parent = VegaXAndroidUI.ScrollingBox
+VegaXAndroidUI.TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TextBox_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.TextBox_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TextBox_2.Position = UDim2.new(0, 30, 0, 0)
+VegaXAndroidUI.TextBox_2.Size = UDim2.new(1, -30, 1, 0)
+VegaXAndroidUI.TextBox_2.ZIndex = 4
+VegaXAndroidUI.TextBox_2.ClearTextOnFocus = false
+VegaXAndroidUI.TextBox_2.Font = Enum.Font.Code
+VegaXAndroidUI.TextBox_2.MultiLine = true
+VegaXAndroidUI.TextBox_2.Text = ""
+VegaXAndroidUI.TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TextBox_2.TextSize = 16.000
+VegaXAndroidUI.TextBox_2.TextWrapped = true
+VegaXAndroidUI.TextBox_2.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.TextBox_2.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.Line.Name = "Line"
+VegaXAndroidUI.Line.Parent = VegaXAndroidUI.ScrollingBox
+VegaXAndroidUI.Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Line.BackgroundTransparency = 1.000
+VegaXAndroidUI.Line.BorderSizePixel = 0
+VegaXAndroidUI.Line.Size = UDim2.new(0, 27, 1, 0)
+VegaXAndroidUI.Line.ZIndex = 4
+VegaXAndroidUI.Line.Font = Enum.Font.Code
+VegaXAndroidUI.Line.Text = "1  "
+VegaXAndroidUI.Line.TextColor3 = Color3.fromRGB(203, 203, 203)
+VegaXAndroidUI.Line.TextSize = 16.000
+VegaXAndroidUI.Line.TextWrapped = true
+VegaXAndroidUI.Line.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_44.CornerRadius = UDim.new(0, 5)
+VegaXAndroidUI.UICorner_44.Parent = VegaXAndroidUI.ScrollingBox
+
+VegaXAndroidUI.NameInput.Name = "NameInput"
+VegaXAndroidUI.NameInput.Parent = VegaXAndroidUI.AddingFrame
+VegaXAndroidUI.NameInput.AnchorPoint = Vector2.new(0.5, 0)
+VegaXAndroidUI.NameInput.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+VegaXAndroidUI.NameInput.BackgroundTransparency = 0.200
+VegaXAndroidUI.NameInput.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VegaXAndroidUI.NameInput.BorderSizePixel = 0
+VegaXAndroidUI.NameInput.Position = UDim2.new(0.5, 0, 0, 0)
+VegaXAndroidUI.NameInput.Size = UDim2.new(1, -10, 0, 50)
+VegaXAndroidUI.NameInput.Font = Enum.Font.Gotham
+VegaXAndroidUI.NameInput.PlaceholderText = "Insert your preferred title here"
+VegaXAndroidUI.NameInput.Text = ""
+VegaXAndroidUI.NameInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.NameInput.TextSize = 14.000
+VegaXAndroidUI.NameInput.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.ExecutorWindow.Name = "ExecutorWindow"
+VegaXAndroidUI.ExecutorWindow.Parent = VegaXAndroidUI.VegaXAndroidUI
+VegaXAndroidUI.ExecutorWindow.AnchorPoint = Vector2.new(0, 0.5)
+VegaXAndroidUI.ExecutorWindow.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VegaXAndroidUI.ExecutorWindow.BackgroundTransparency = 0.400
+VegaXAndroidUI.ExecutorWindow.BorderColor3 = Color3.fromRGB(30, 30, 30)
+VegaXAndroidUI.ExecutorWindow.BorderSizePixel = 0
+VegaXAndroidUI.ExecutorWindow.Position = UDim2.new(1, 200, 0.5, -30)
+VegaXAndroidUI.ExecutorWindow.Size = UDim2.new(1, -200, 1, 60)
+
+VegaXAndroidUI.ExecuteB.Name = "ExecuteB"
+VegaXAndroidUI.ExecuteB.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.ExecuteB.Active = false
+VegaXAndroidUI.ExecuteB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.ExecuteB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ExecuteB.BorderSizePixel = 0
+VegaXAndroidUI.ExecuteB.Position = UDim2.new(0, 5, 0, 78)
+VegaXAndroidUI.ExecuteB.Size = UDim2.new(0, 80, 0, 30)
+VegaXAndroidUI.ExecuteB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.ExecuteB.Text = "Execute"
+VegaXAndroidUI.ExecuteB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ExecuteB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_45.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_45.Parent = VegaXAndroidUI.ExecuteB
+
+VegaXAndroidUI.PasteandExecuteB.Name = "PasteandExecuteB"
+VegaXAndroidUI.PasteandExecuteB.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.PasteandExecuteB.Active = false
+VegaXAndroidUI.PasteandExecuteB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.PasteandExecuteB.BackgroundTransparency = 0.300
+VegaXAndroidUI.PasteandExecuteB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.PasteandExecuteB.BorderSizePixel = 0
+VegaXAndroidUI.PasteandExecuteB.Position = UDim2.new(0, 90, 0, 78)
+VegaXAndroidUI.PasteandExecuteB.Size = UDim2.new(0, 140, 0, 30)
+VegaXAndroidUI.PasteandExecuteB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.PasteandExecuteB.Text = "Paste and Execute"
+VegaXAndroidUI.PasteandExecuteB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.PasteandExecuteB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_46.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_46.Parent = VegaXAndroidUI.PasteandExecuteB
+
+VegaXAndroidUI.CloseB_5.Name = "CloseB"
+VegaXAndroidUI.CloseB_5.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.CloseB_5.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.CloseB_5.BackgroundTransparency = 1.000
+VegaXAndroidUI.CloseB_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.CloseB_5.BorderSizePixel = 0
+VegaXAndroidUI.CloseB_5.LayoutOrder = 6
+VegaXAndroidUI.CloseB_5.Position = UDim2.new(1, -5, 0, 45)
+VegaXAndroidUI.CloseB_5.Size = UDim2.new(0, 25, 0, 25)
+VegaXAndroidUI.CloseB_5.ZIndex = 2
+VegaXAndroidUI.CloseB_5.Image = "rbxassetid://3926307971"
+VegaXAndroidUI.CloseB_5.ImageRectOffset = Vector2.new(884, 284)
+VegaXAndroidUI.CloseB_5.ImageRectSize = Vector2.new(36, 36)
+
+VegaXAndroidUI.ScrollingBox_2.Name = "ScrollingBox"
+VegaXAndroidUI.ScrollingBox_2.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.ScrollingBox_2.Active = true
+VegaXAndroidUI.ScrollingBox_2.AnchorPoint = Vector2.new(0.5, 1)
+VegaXAndroidUI.ScrollingBox_2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+VegaXAndroidUI.ScrollingBox_2.BackgroundTransparency = 0.200
+VegaXAndroidUI.ScrollingBox_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScrollingBox_2.BorderSizePixel = 0
+VegaXAndroidUI.ScrollingBox_2.Position = UDim2.new(0.5, 0, 1, -5)
+VegaXAndroidUI.ScrollingBox_2.Size = UDim2.new(1, -10, 1, -153)
+VegaXAndroidUI.ScrollingBox_2.CanvasSize = UDim2.new(0, 0, 0, 0)
+VegaXAndroidUI.ScrollingBox_2.ScrollBarThickness = 2
+
+VegaXAndroidUI.TextBox_3.Parent = VegaXAndroidUI.ScrollingBox_2
+VegaXAndroidUI.TextBox_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TextBox_3.BackgroundTransparency = 1.000
+VegaXAndroidUI.TextBox_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TextBox_3.Position = UDim2.new(0, 30, 0, 0)
+VegaXAndroidUI.TextBox_3.Size = UDim2.new(1, -30, 1, 0)
+VegaXAndroidUI.TextBox_3.ZIndex = 4
+VegaXAndroidUI.TextBox_3.ClearTextOnFocus = false
+VegaXAndroidUI.TextBox_3.Font = Enum.Font.Code
+VegaXAndroidUI.TextBox_3.MultiLine = true
+VegaXAndroidUI.TextBox_3.Text = ""
+VegaXAndroidUI.TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.TextBox_3.TextSize = 16.000
+VegaXAndroidUI.TextBox_3.TextWrapped = true
+VegaXAndroidUI.TextBox_3.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.TextBox_3.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.Line_2.Name = "Line"
+VegaXAndroidUI.Line_2.Parent = VegaXAndroidUI.ScrollingBox_2
+VegaXAndroidUI.Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.Line_2.BackgroundTransparency = 1.000
+VegaXAndroidUI.Line_2.BorderSizePixel = 0
+VegaXAndroidUI.Line_2.Size = UDim2.new(0, 27, 1, 0)
+VegaXAndroidUI.Line_2.ZIndex = 4
+VegaXAndroidUI.Line_2.Font = Enum.Font.Code
+VegaXAndroidUI.Line_2.Text = "1  "
+VegaXAndroidUI.Line_2.TextColor3 = Color3.fromRGB(203, 203, 203)
+VegaXAndroidUI.Line_2.TextSize = 16.000
+VegaXAndroidUI.Line_2.TextWrapped = true
+VegaXAndroidUI.Line_2.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.UICorner_47.CornerRadius = UDim.new(0, 5)
+VegaXAndroidUI.UICorner_47.Parent = VegaXAndroidUI.ScrollingBox_2
+
+VegaXAndroidUI.TabbingSystem.Name = "TabbingSystem"
+VegaXAndroidUI.TabbingSystem.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.TabbingSystem.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.TabbingSystem.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.TabbingSystem.Position = UDim2.new(0, 5, 0, 113)
+VegaXAndroidUI.TabbingSystem.Size = UDim2.new(0, 224, 0, 30)
+
+VegaXAndroidUI.ScriptPage.Name = "ScriptPage"
+VegaXAndroidUI.ScriptPage.Parent = VegaXAndroidUI.TabbingSystem
+VegaXAndroidUI.ScriptPage.BackgroundColor3 = Color3.fromRGB(24, 144, 255)
+VegaXAndroidUI.ScriptPage.BackgroundTransparency = 1.000
+VegaXAndroidUI.ScriptPage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ScriptPage.BorderSizePixel = 0
+VegaXAndroidUI.ScriptPage.Position = UDim2.new(0, 5, 0, 0)
+VegaXAndroidUI.ScriptPage.Size = UDim2.new(1, -70, 1, 0)
+VegaXAndroidUI.ScriptPage.Font = Enum.Font.Gotham
+VegaXAndroidUI.ScriptPage.Text = "Script 1"
+VegaXAndroidUI.ScriptPage.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ScriptPage.TextSize = 14.000
+VegaXAndroidUI.ScriptPage.TextWrapped = true
+VegaXAndroidUI.ScriptPage.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.NextPage.Name = "NextPage"
+VegaXAndroidUI.NextPage.Parent = VegaXAndroidUI.TabbingSystem
+VegaXAndroidUI.NextPage.Active = false
+VegaXAndroidUI.NextPage.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.NextPage.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.NextPage.BackgroundTransparency = 1.000
+VegaXAndroidUI.NextPage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.NextPage.BorderSizePixel = 0
+VegaXAndroidUI.NextPage.Position = UDim2.new(1, 0, 0, 0)
+VegaXAndroidUI.NextPage.Size = UDim2.new(0, 20, 0, 30)
+VegaXAndroidUI.NextPage.Font = Enum.Font.GothamBold
+VegaXAndroidUI.NextPage.Text = ">"
+VegaXAndroidUI.NextPage.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.NextPage.TextSize = 14.000
+
+VegaXAndroidUI.LastPage.Name = "LastPage"
+VegaXAndroidUI.LastPage.Parent = VegaXAndroidUI.TabbingSystem
+VegaXAndroidUI.LastPage.Active = false
+VegaXAndroidUI.LastPage.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.LastPage.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.LastPage.BackgroundTransparency = 1.000
+VegaXAndroidUI.LastPage.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.LastPage.BorderSizePixel = 0
+VegaXAndroidUI.LastPage.Position = UDim2.new(1, -20, 0, 0)
+VegaXAndroidUI.LastPage.Size = UDim2.new(0, 20, 0, 30)
+VegaXAndroidUI.LastPage.Font = Enum.Font.GothamBold
+VegaXAndroidUI.LastPage.Text = "<"
+VegaXAndroidUI.LastPage.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.LastPage.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_48.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_48.Parent = VegaXAndroidUI.TabbingSystem
+
+VegaXAndroidUI.EditTabName.Name = "EditTabName"
+VegaXAndroidUI.EditTabName.Parent = VegaXAndroidUI.TabbingSystem
+VegaXAndroidUI.EditTabName.AnchorPoint = Vector2.new(1, 0)
+VegaXAndroidUI.EditTabName.BackgroundTransparency = 1.000
+VegaXAndroidUI.EditTabName.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.EditTabName.Position = UDim2.new(1, -40, 0, 0)
+VegaXAndroidUI.EditTabName.Size = UDim2.new(0, 20, 0, 30)
+VegaXAndroidUI.EditTabName.ZIndex = 2
+VegaXAndroidUI.EditTabName.Image = "rbxassetid://3926305904"
+VegaXAndroidUI.EditTabName.ImageRectOffset = Vector2.new(924, 364)
+VegaXAndroidUI.EditTabName.ImageRectSize = Vector2.new(36, 36)
+VegaXAndroidUI.EditTabName.ScaleType = Enum.ScaleType.Fit
+
+VegaXAndroidUI.EditTabBox.Name = "EditTabBox"
+VegaXAndroidUI.EditTabBox.Parent = VegaXAndroidUI.TabbingSystem
+VegaXAndroidUI.EditTabBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.EditTabBox.BackgroundTransparency = 1.000
+VegaXAndroidUI.EditTabBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.EditTabBox.BorderSizePixel = 0
+VegaXAndroidUI.EditTabBox.Position = UDim2.new(0, 5, 0, 0)
+VegaXAndroidUI.EditTabBox.Size = UDim2.new(1, -70, 1, 0)
+VegaXAndroidUI.EditTabBox.Visible = false
+VegaXAndroidUI.EditTabBox.Font = Enum.Font.Gotham
+VegaXAndroidUI.EditTabBox.PlaceholderColor3 = Color3.fromRGB(230, 230, 230)
+VegaXAndroidUI.EditTabBox.PlaceholderText = "Place New Name Here"
+VegaXAndroidUI.EditTabBox.Text = ""
+VegaXAndroidUI.EditTabBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.EditTabBox.TextSize = 14.000
+VegaXAndroidUI.EditTabBox.TextWrapped = true
+VegaXAndroidUI.EditTabBox.TextXAlignment = Enum.TextXAlignment.Left
+
+VegaXAndroidUI.WindowMainTitle_4.Name = "WindowMainTitle"
+VegaXAndroidUI.WindowMainTitle_4.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.WindowMainTitle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_4.BackgroundTransparency = 1.000
+VegaXAndroidUI.WindowMainTitle_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.WindowMainTitle_4.BorderSizePixel = 0
+VegaXAndroidUI.WindowMainTitle_4.Position = UDim2.new(0, 7, 0, 52)
+VegaXAndroidUI.WindowMainTitle_4.Size = UDim2.new(0, 200, 0, 21)
+VegaXAndroidUI.WindowMainTitle_4.Font = Enum.Font.GothamBold
+VegaXAndroidUI.WindowMainTitle_4.Text = "Executor"
+VegaXAndroidUI.WindowMainTitle_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.WindowMainTitle_4.TextSize = 18.000
+VegaXAndroidUI.WindowMainTitle_4.TextXAlignment = Enum.TextXAlignment.Left
+VegaXAndroidUI.WindowMainTitle_4.TextYAlignment = Enum.TextYAlignment.Top
+
+VegaXAndroidUI.ClearB.Name = "ClearB"
+VegaXAndroidUI.ClearB.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.ClearB.Active = false
+VegaXAndroidUI.ClearB.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+VegaXAndroidUI.ClearB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.ClearB.BorderSizePixel = 0
+VegaXAndroidUI.ClearB.Position = UDim2.new(0, 325, 0, 78)
+VegaXAndroidUI.ClearB.Size = UDim2.new(0, 50, 0, 30)
+VegaXAndroidUI.ClearB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.ClearB.Text = "Clear"
+VegaXAndroidUI.ClearB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.ClearB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_49.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_49.Parent = VegaXAndroidUI.ClearB
+
+VegaXAndroidUI.DevModeB.Name = "DevModeB"
+VegaXAndroidUI.DevModeB.Parent = VegaXAndroidUI.ExecutorWindow
+VegaXAndroidUI.DevModeB.Active = false
+VegaXAndroidUI.DevModeB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+VegaXAndroidUI.DevModeB.BackgroundTransparency = 0.300
+VegaXAndroidUI.DevModeB.BorderColor3 = Color3.fromRGB(27, 42, 53)
+VegaXAndroidUI.DevModeB.BorderSizePixel = 0
+VegaXAndroidUI.DevModeB.Position = UDim2.new(0, 235, 0, 78)
+VegaXAndroidUI.DevModeB.Size = UDim2.new(0, 85, 0, 30)
+VegaXAndroidUI.DevModeB.Font = Enum.Font.GothamBold
+VegaXAndroidUI.DevModeB.Text = "Dev Mode"
+VegaXAndroidUI.DevModeB.TextColor3 = Color3.fromRGB(255, 255, 255)
+VegaXAndroidUI.DevModeB.TextSize = 14.000
+
+VegaXAndroidUI.UICorner_50.CornerRadius = UDim.new(0, 4)
+VegaXAndroidUI.UICorner_50.Parent = VegaXAndroidUI.DevModeB
+
+-- Scripts:
+
+local function IQGEZ_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.EverythingElse 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	local TweenService = game:GetService("TweenService")
+	local ExecutorWindowOpen = false
+	local ScriptHubWindowOpen = false
+	local ScriptListWindowOpen = false
+	local SettingsWindowOpen = false
+	
+	local OpenPosition = UDim2.new(0,200,0.5,-30)
+	local ClosedPosition = UDim2.new(1,200,0.5,-30)
+	
+	_G.MenuOpen = false
+	
+	script.Parent.VegaXMenuToggleFrame.VegaXMenuToggle.MouseButton1Click:connect(function()	
+		if _G.MenuOpen == false then
+			_G.MenuOpen = true
+			script.Parent.SidebarFrame:TweenPosition(UDim2.new(0,0,0.5,0), "Out", "Quint", 1, true)
+			
+			if ExecutorWindowOpen == true then
+				script.Parent.ExecutorWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			end
+			if ScriptHubWindowOpen == true then
+				script.Parent.ScriptHubWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			end
+			if ScriptListWindowOpen == true then
+				script.Parent.ScriptListWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			end
+			if SettingsWindowOpen == true then
+				script.Parent.SettingsWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			end
+		else
+			_G.MenuOpen = false
+			script.Parent.SidebarFrame:TweenPosition(UDim2.new(0,-200,0.5,0), "Out", "Quint", 1, true)
+			
+			script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		end
+	end)
+	
+	-- Menu Switching
+	
+	script.Parent.SidebarFrame.ScrollingFrame.Choice1.C1EB.MouseButton1Click:connect(function()
+		if ExecutorWindowOpen == false then
+			ExecutorWindowOpen = true
+			script.Parent.ExecutorWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			
+			ScriptHubWindowOpen = false
+			script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			ScriptListWindowOpen = false
+			script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			SettingsWindowOpen = false
+			script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			
+		else
+			ExecutorWindowOpen = false
+			script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		end
+	end)
+	
+	script.Parent.SidebarFrame.ScrollingFrame.Choice2.C2EB.MouseButton1Click:connect(function()
+		if ScriptHubWindowOpen == false then
+			ScriptHubWindowOpen = true
+			script.Parent.ScriptHubWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			
+			ExecutorWindowOpen = false
+			script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			ScriptListWindowOpen = false
+			script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			SettingsWindowOpen = false
+			script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		else
+			ScriptHubWindowOpen = false
+			script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		end
+	end)
+	
+	script.Parent.SidebarFrame.ScrollingFrame.Choice3.C3EB.MouseButton1Click:connect(function()
+		if ScriptListWindowOpen == false then
+			ScriptListWindowOpen = true
+			script.Parent.ScriptListWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+	
+			ExecutorWindowOpen = false
+			script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			ScriptHubWindowOpen = false
+			script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			SettingsWindowOpen = false
+			script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		else
+			ScriptListWindowOpen = false
+			script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		end
+	end)
+	
+	script.Parent.SidebarFrame.ScrollingFrame.Choice4.C4EB.MouseButton1Click:connect(function()
+		if SettingsWindowOpen == false then
+			SettingsWindowOpen = true
+			script.Parent.SettingsWindow:TweenPosition(OpenPosition, "Out", "Quint", 1, true)
+			
+			ExecutorWindowOpen = false
+			script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			ScriptHubWindowOpen = false
+			script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+			ScriptListWindowOpen = false
+			script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		else
+			SettingsWindowOpen = false
+			script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+		end
+	end)
+	
+	-- Executor Window
+	
+	script.Parent.ExecutorWindow.CloseB.MouseButton1Click:connect(function()
+		ExecutorWindowOpen = false
+		script.Parent.ExecutorWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+	end)
+	
+	script.Parent.ExecutorWindow.ExecuteB.MouseButton1Click:connect(function()
+		--print(script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text)
+		executecode(script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text)
+	end)
+	
+	script.Parent.ExecutorWindow.PasteandExecuteB.MouseButton1Click:connect(function()
+		executeclipboard()
+	end)
+	
+	-- Script Hub Window
+	
+	script.Parent.ScriptHubWindow.CloseB.MouseButton1Click:connect(function()
+		ScriptHubWindowOpen = false
+		script.Parent.ScriptHubWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+	end)
+	
+	-- Script List Window
+	
+	script.Parent.ScriptListWindow.CloseB.MouseButton1Click:connect(function()
+		ScriptListWindowOpen = false
+		script.Parent.ScriptListWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+	end)
+	
+	-- Settings Window
+	
+	script.Parent.SettingsWindow.CloseB.MouseButton1Click:connect(function()
+		SettingsWindowOpen = false
+		script.Parent.SettingsWindow:TweenPosition(ClosedPosition, "Out", "Quint", 1, true)
+	end)
+	
+end
+coroutine.wrap(IQGEZ_fake_script)()
+local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSystem 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	ChosenColor = "#C33939"
+	
+	function LoadColors()
+		script.Parent.SidebarFrame.Banner.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.SidebarFrame.ScrollingFrame.UsernamePlace.Icon.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.SidebarFrame.ScrollingFrame.Choice1.Icon.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.SidebarFrame.ScrollingFrame.Choice1.C1EB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.SidebarFrame.ScrollingFrame.Choice2.Icon.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.SidebarFrame.ScrollingFrame.Choice2.C2EB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.SidebarFrame.ScrollingFrame.Choice3.Icon.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.SidebarFrame.ScrollingFrame.Choice3.C3EB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.KeySystem.MainParent.BannerParent.MainBanner.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.KeySystem.MainParent.BannerParent.PremiumBanner.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.KeySystem.MainParent.ButtonParent.GetKeyB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.KeySystem.MainParent.ButtonParent.ApproveKeyB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.ExecutorWindow.TabbingSystem.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.ExecutorWindow.ExecuteB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.ExecutorWindow.PasteandExecuteB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+		script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	
+		script.Parent.SettingsWindow.ScrollingFrame.S1.AccentColorPreview.BackgroundColor3 = Color3.fromHex(ChosenColor)
+	end
+	
+	-- Set Color
+	
+	if not isfile("theme_vegax_color.txt") then
+		writefile("theme_vegax_color.txt", "#C33939")
+	else
+		
+		local success, err = pcall(function()
+			ChosenColor = readfile("theme_vegax_color.txt")
+			wait(1)
+			LoadColors()
+		end)
+	
+		if not success then
+			warn("无法读取文件: " ..err)
+		end
+		
+		--[[
+			local success, ChosenColor = pcall(readfile(), "theme_vegax_color.txt")
+	
+		if success then
+			LoadColors()
+		else
+			warn("无法读取文件: " ..ChosenColor)
+		end
+		]]
+	end
+	
+	
+	--if not isfile("theme_vegax_color.txt") then
+		--writefile("theme_vegax_color.txt", "#C33939")
+	--else
+		--ChosenColor = readfile("theme_vegax_color.txt")
+		--script.Parent.IntroFrame.ImageColor3 = Color3.fromHex(ChosenColor)
+		--LoadColors()
+	--end
+	
+	
+	-- Set FPS
+	local success, result = pcall(function()
+		if isfile("settings_fps.txt") == true then
+			setfpscap(tonumber(readfile("settings_fps.txt")))
+		end
+	end)
+	
+	if not success then
+		-- Handle the error, you can print a message or take other appropriate actions
+		print("无法读取文件:", result)
+	end
+	
+	
+	--if isfile("settings_fps.txt") == true then
+		--setfpscap(tonumber(readfile("settings_fps.txt")))
+	--end
+	
+	-- Set Inject Code
+	local success, result = pcall(function()
+		if isfile("injectcode.txt") then
+			script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = readfile("injectcode.txt")
+		end
+	end)
+	
+	if not success then
+		print("无法读取文件:", result)
+	end
+	
+	--if isfile("injectcode.txt") == true then
+		--script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = readfile("injectcode.txt")
+	--end
+	
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S1.SubmitAccent.MouseButton1Click:Connect(function()
+		writefile("theme_vegax_color.txt", script.Parent.SettingsWindow.ScrollingFrame.S1.AccentTextBox.Text)
+		ChosenColor = script.Parent.SettingsWindow.ScrollingFrame.S1.AccentTextBox.Text
+		LoadColors()
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S2.SubmitFPS.MouseButton1Click:Connect(function()
+		writefile("settings_fps.txt", script.Parent.SettingsWindow.ScrollingFrame.S2.FPSTextBox.Text)
+		setfpscap(tonumber(script.Parent.SettingsWindow.ScrollingFrame.S2.FPSTextBox.Text))
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S2.ResetFPS.MouseButton1Click:Connect(function()
+		writefile("settings_fps.txt", "60")
+		setfpscap(60)
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S3.SubmitCode.MouseButton1Click:Connect(function()
+		writefile("injectcode.txt", script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text)
+		DevConnect(script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text)
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S3.ResetCode.MouseButton1Click:Connect(function()
+		script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = ""
+		delfile("injectcode.txt")
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.S4.ToggleBTN.MouseButton1Click:Connect(function()
+	
+	end)
+end
+coroutine.wrap(DLQQEC_fake_script)()
+local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	ATime = 2
+	zidongjiaobenyunxinglujingzifuchuan = "Autoexec"
+	
+	-- Key System Pre-Requisities
+	
+	PandaAuth = loadstring(game:HttpGet('https://gitlab.com/marsqq/vegax4/-/raw/main/PandaLibraryBackup'))()
+	KSCanUse = true
+	BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
+	
+	
+	function Generate_Key()
+		return PandaAuth:GetKey("vegax");
+	end
+	
+	function ValidateKey(Key)
+		return PandaAuth:ValidateKey("vegax", tostring(Key))
+	end
+	
+	function CheckIfAutoexecExists()
+		local success, err = pcall(function()
+			if not arceus.isarceusfolder(zidongjiaobenyunxinglujingzifuchuan) then
+				arceus.makearceusfolder(zidongjiaobenyunxinglujingzifuchuan)
+			end
+		end)
+	
+		if not success then
+			print(zidongjiaobenyunxinglujingzifuchuan, err)
+		end
+	end
+	
+	
+	function LoadAutoexec()
+		local success, err = pcall(function()
+			if arceus.isarceusfolder(zidongjiaobenyunxinglujingzifuchuan) then
+				for _, scriptfile in pairs(arceus.listarceusfiles(zidongjiaobenyunxinglujingzifuchuan)) do
+					local code, readErr = arceus.readarceusfile(scriptfile)
+					if code then
+						executecode(arceus.readarceusfile(scriptfile))
+					else
+						print(zidongjiaobenyunxinglujingzifuchuan, readErr)
+					end
+				end
+			end
+		end)
+	
+		if not success then
+			print(zidongjiaobenyunxinglujingzifuchuan, err)
+		end
+	end
+	
+	
+	function LoadVegaXSystem()
+		LoadAutoexec()
+		script.Parent.KeySystem.Visible = false
+		script.Parent.VegaXMenuToggleFrame.Visible = true
+		_G.MenuOpen = true
+		script.Parent.SidebarFrame:TweenPosition(UDim2.new(0, 0, 0.5, 0), "Out", "Quint", 1, true)
+		getgenv().arceus = nil
+	end
+	
+	-- Multi-Language Key System Variables
+	KSSubTitleNotif1 = "The Key System Link has been pasted into your Clipboard, insert it into your Browser (Desktop Recommended)."
+	KSSubTitleNotif2 = "This key is not valid, go to our Discord Server if this is not correct."
+	KSSubTitleNotif3 = "The Discord Link has been pasted into your Clipboard, insert it into the Discord app."
+	KSSubTitleNotif4 = "This key is valid, enjoy Vega X!"
+	KSSubTitleNotif5 = "Copied Vega X Premium Website! Paste it into your web browser."
+	
+	-- Loading
+	
+	CheckIfAutoexecExists()
+	
+	if not isfile("vegax_key.txt") then
+		writefile("vegax_key.txt", "")
+	end
+	
+	script.Parent.VegaXMenuToggleFrame.Visible = false
+	
+	
+	repeat until game:IsLoaded()
+	for _,Key in pairs(script.Parent.IntroFrame.BackgroundFrame:GetChildren()) do
+		game:GetService("TweenService"):Create(Key, TweenInfo.new(ATime), {BackgroundTransparency = 0}):Play()
+		Key:TweenSize(UDim2.new(0.075,0,1,0), "Out", "Quad", ATime, true)
+		wait(0.05)
+	end
+	
+	wait(0.25)
+	
+	game:GetService("TweenService"):Create(script.Parent.IntroFrame.VegaXLogo, TweenInfo.new(1), {ImageTransparency = 0}):Play()
+	script.Parent.IntroFrame.VegaXLogo:TweenPosition(UDim2.new(0.5,0,0.5,0), "Out", "Quad", 1, true)
+	
+	wait(1.5)
+	
+	game:GetService("TweenService"):Create(script.Parent.IntroFrame.VegaXLogo, TweenInfo.new(1), {ImageTransparency = 1}):Play()
+	script.Parent.IntroFrame.VegaXLogo:TweenPosition(UDim2.new(0.5,0,0.3,0), "Out", "Quad", 1, true)
+	
+	for _,Key in pairs(script.Parent.IntroFrame.BackgroundFrame:GetChildren()) do
+		game:GetService("TweenService"):Create(Key, TweenInfo.new(ATime), {BackgroundTransparency = 1}):Play()
+		Key:TweenSize(UDim2.new(0.075,0,0,0), "Out", "Quad", ATime, true)
+		wait(0.05)
+	end
+	
+	wait(1)
+	
+	script.Parent.IntroFrame:Destroy()
+	
+	if tostring(arceus.getversion()) ~= "4.0.8" then
+		print("you have a car")
+		loadstring(game:HttpGet("https://gitlab.com/marsqq/vegax4/-/raw/main/ForceUpdater"))()
+	end
+	
+	local success, result = pcall(function()
+		if KSCanUse == true then
+			return ValidateKey(readfile("vegax_key.txt"))
+		else
+			return readfile("vegax_key.txt") == BKKeySystem
+		end
+	end)
+	
+	if success and result then
+		LoadVegaXSystem()
+	else
+		script.Parent.KeySystem:TweenPosition(UDim2.new(0, 0, 0.5, -30), "Out", "Quad", 1, true)
+	end
+	
+	
+	-- Key System Stuff --
+	script.Parent.KeySystem.CloseB.MouseButton1Click:connect(function()
+		script.Parent.KeySystem:TweenPosition(UDim2.new(0,0,2,-20), "Out", "Quint", 1, true)
+		wait(1)
+		script.Parent.KSMenuToggleFrame.Visible = true
+		script.Parent.KSMenuToggleFrame:TweenSize(UDim2.new(0,32,0,32), "Out", "Quint", 1, true)
+	end)
+	
+	script.Parent.KSMenuToggleFrame.VegaXKSToggle.MouseButton1Click:connect(function()
+		script.Parent.KSMenuToggleFrame:TweenSize(UDim2.new(0,0,0,0), "Out", "Quint", 1, true)
+		wait(1)
+		script.Parent.KSMenuToggleFrame.Visible = false
+		script.Parent.KeySystem:TweenPosition(UDim2.new(0,0,0.5,-20), "Out", "Quint", 1, true)
+	end)
+	
+	script.Parent.KeySystem.MainParent.ButtonParent.GetKeyB.MouseButton1Click:connect(function()
+		script.Parent.KeySystem.MainParent.SubTitle.FontFace.Weight = Enum.FontWeight.Bold
+		script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif1
+		if KSCanUse == true then
+			setclipboard(Generate_Key())
+		else
+			setclipboard("https://direct-link.net/82375/kV9ItBAOMJ3J")
+		end
+	end)
+	
+	local KeyIsValid = false
+	
+	script.Parent.KeySystem.MainParent.ButtonParent.ApproveKeyB.MouseButton1Click:connect(function()
+		script.Parent.KeySystem.MainParent.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
+		
+		if KSCanUse == false then
+			if script.Parent.KeySystem.MainParent.TextBox.Text == BKKeySystem then
+				KeyIsValid = true
+			end
+		elseif KSCanUse == true then
+			if ValidateKey(script.Parent.KeySystem.MainParent.TextBox.Text) then
+				KeyIsValid = true
+			end
+		end
+		
+		if KeyIsValid == true then
+			writefile("vegax_key.txt", script.Parent.KeySystem.MainParent.TextBox.Text)
+			script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif4
+	
+			script.Parent.KeySystem:TweenPosition(UDim2.new(0, 0, 2, -20), "Out", "Quad", 1, true)
+	
+			wait(1)
+	
+			LoadVegaXSystem()
+		else
+			script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif2
+		end
+	end)
+	
+	script.Parent.KeySystem.MainParent.ButtonParent.JoinDiscordB.MouseButton1Click:connect(function()
+		script.Parent.KeySystem.MainParent.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
+		script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif3
+		setclipboard("https://vegax.gg/discord.html")
+	end)
+	
+	script.Parent.KeySystem.MainParent.BannerParent.PremiumBanner.CopyWebsiteURL.MouseButton1Click:connect(function()
+		script.Parent.KeySystem.MainParent.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
+		script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif5
+		setclipboard("https://vegaexploits.com/")
+	end)
+	
+	
+end
+coroutine.wrap(DIVQTY_fake_script)()
+local function UNIZ_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.DevConnect 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	getgenv().DevConnect = function(devcode)
+		warn("(Panda-Pelican Development | HTTP Protocol [ Beta ])")
+		local No_Execute = "No_Data_Set_Here"
+		local IPv4 = base64.decode(devcode)
+		if IPv4 == "" or IPv4 == nil then
+			warn("[Unable to Start HTTP-Protocol] - Missing IP Address / Port")
+			return
+		end
+		task.spawn(function() 
+			script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromRGB(57, 195, 57)
+			while true do
+				wait(0.1)
+				local content = game:HttpGet("http://"..IPv4..":2023".."/readcontent")     
+				if content ~= No_Execute then
+					local success, result = pcall(function()
+						runcode(content)
+						local a = tostring(game:HttpGet("http://"..IPv4..":2023".."/clear"))
+					end)
+	
+					if not success then
+						-- Handle the exception here
+						warn("Error executing loaded code:", result)
+						local b = tostring(game:HttpGet("http://"..IPv4..":2023".."/clear"))
+					end        
+				end
+			end
+		end) 
+	end
+	
+	script.Parent.ExecutorWindow.DevModeB.MouseButton1Click:connect(function()
+		if isfile("injectcode.txt") == false then
+			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text = "The inject code for Dev Mode is not found, please open the Vega X Windows Client, get your inject code, and paste it in settings."
+		else
+			DevConnect(readfile("injectcode.txt"))
+		end
+	
+	end)
+end
+coroutine.wrap(UNIZ_fake_script)()
+local function EYXVU_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.UIDragging 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent.VegaXMenuToggleFrame
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.DragTouch.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(EYXVU_fake_script)()
+local function OUYX_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.ScrollingFrameAdjuster 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	-- Scrolling Frame Canvas Adjuster
+	-- Credits: https://devforum.roblox.com/t/have-uilistlayout-set-the-canvassize-property-of-scrollingframes-automatically/76287
+	
+	script.Parent.ScriptHubWindow.ScrollingFrame.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		script.Parent.ScriptHubWindow.ScrollingFrame.CanvasSize = UDim2.new(0,0,0,script.Parent.ScriptHubWindow.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
+	end)
+	
+	script.Parent.ScriptListWindow.ScriptListFrame.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		script.Parent.ScriptListWindow.ScriptListFrame.CanvasSize = UDim2.new(0,0,0,script.Parent.ScriptListWindow.ScriptListFrame.UIListLayout.AbsoluteContentSize.Y)
+	end)
+	
+	script.Parent.SettingsWindow.ScrollingFrame.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		script.Parent.SettingsWindow.ScrollingFrame.CanvasSize = UDim2.new(0,0,0,script.Parent.SettingsWindow.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
+	end)
+	
+	script.Parent.SidebarFrame.ScrollingFrame.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		script.Parent.SidebarFrame.ScrollingFrame.CanvasSize = UDim2.new(0,0,0,script.Parent.SidebarFrame.ScrollingFrame.UIListLayout.AbsoluteContentSize.Y)
+	end)
+	
+	
+end
+coroutine.wrap(OUYX_fake_script)()
+local function ZTXEEKO_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.ScriptList 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
+
+	local SLWindow = script.Parent.ScriptListWindow
+	
+	local vx_isfolder = clonefunction(arceus.isarceusfolder)
+	local vx_listfiles = clonefunction(arceus.listarceusfiles)
+	local vx_writefiles = clonefunction(arceus.writearceusfile)
+	local vx_readfiles = clonefunction(arceus.readarceusfile)
+	--local vx_isfile = clonefunction(arceus.isfile)
+	--local vx_delfiles = clonefunction(arceus.delfile)
+	
+	scriptlistfolder = "ScriptList"
+	
+	local success, err = pcall(function()
+		if not arceus.isarceusfolder(scriptlistfolder) then
+			arceus.makearceusfolder(scriptlistfolder)
+		end
+	end)
+	
+	if not success then
+		print(scriptlistfolder, err)
+	end
+	
+	
+	
+	function Create_ScriptList_Rectangle(txttitle, scripttext)
+		local S1 = Instance.new("Frame")
+		local Trash = Instance.new("ImageButton")
+		local UICorner = Instance.new("UICorner")
+		local UICorner_2 = Instance.new("UICorner")
+		local Title = Instance.new("TextLabel")
+		local Execute = Instance.new("ImageButton")
+		local UICorner_3 = Instance.new("UICorner")
+	
+		--Properties:
+	
+		S1.Name = "S1"
+		S1.Parent = SLWindow.ScriptListFrame
+		S1.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+		S1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		S1.BorderSizePixel = 0
+		S1.Size = UDim2.new(1, -10, 0, 60)
+	
+		Trash.Name = "Trash"
+		Trash.Parent = S1
+		Trash.AnchorPoint = Vector2.new(1, 0.5)
+		Trash.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Trash.BackgroundTransparency = 0.400
+		Trash.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		Trash.BorderSizePixel = 0
+		Trash.LayoutOrder = 10
+		Trash.Position = UDim2.new(1, -23, 0.5, 0)
+		Trash.Size = UDim2.new(0, 34, 0, 34)
+		Trash.ZIndex = 2
+		Trash.Image = "rbxassetid://3926305904"
+		Trash.ImageRectOffset = Vector2.new(644, 724)
+		Trash.ImageRectSize = Vector2.new(36, 36)
+		Trash.Visible = false
+		Trash.MouseButton1Click:Connect(function()
+			-- Something Here soon
+			--vx_delfiles(txttitle)
+			--S1:Destroy()
+		end)
+	
+		UICorner.CornerRadius = UDim.new(0, 10)
+		UICorner.Parent = Trash
+	
+		UICorner_2.CornerRadius = UDim.new(0, 10)
+		UICorner_2.Parent = S1
+	
+		Title.Name = "Title"
+		Title.Parent = S1
+		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Title.BackgroundTransparency = 1.000
+		Title.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		Title.BorderSizePixel = 0
+		Title.Position = UDim2.new(0, 25, 0, 0)
+		Title.Size = UDim2.new(1, -93, 1, 0)
+		Title.Font = Enum.Font.GothamBold
+		Title.Text = txttitle
+		Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Title.TextSize = 19.000
+		Title.TextXAlignment = Enum.TextXAlignment.Left
+	
+		Execute.Name = "Execute"
+		Execute.Parent = S1
+		Execute.AnchorPoint = Vector2.new(1, 0.5)
+		Execute.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Execute.BackgroundTransparency = 0.400
+		Execute.BorderColor3 = Color3.fromRGB(27, 42, 53)
+		Execute.BorderSizePixel = 0
+		Execute.LayoutOrder = 10
+		
+		-- Previously at Execute.Position = UDim2.new(1, -62, 0.5, 0)
+		Execute.Position = UDim2.new(1, -23, 0.5, 0)
+		Execute.Size = UDim2.new(0, 34, 0, 34)
+		Execute.ZIndex = 2
+		Execute.Image = "rbxassetid://3926307971"
+		Execute.ImageRectOffset = Vector2.new(764, 244)
+		Execute.ImageRectSize = Vector2.new(36, 36)
+		Execute.MouseButton1Click:Connect(function()
+			executecode(scripttext)
+		end)
+	
+		UICorner_3.CornerRadius = UDim.new(0, 10)
+		UICorner_3.Parent = Execute
+	
+	end
+	
+	-- Script List Creation
+	
+	local files = vx_listfiles(scriptlistfolder)
+	for _, file in ipairs(files) do
+		Create_ScriptList_Rectangle(file, vx_readfiles(file))
+	end
+	
+	SLWindow.AddB.MouseButton1Click:connect(function()	
+		if SLWindow.AddingFrame.Visible == false then
+			SLWindow.AddingFrame.Visible = true
+			SLWindow.ScriptListFrame.Visible = false
+			SLWindow.CancelAddB.Visible = true
+		else
+			if SLWindow.AddingFrame.NameInput.Text ~= "" then
+				vx_writefiles(scriptlistfolder .. "/" .. SLWindow.AddingFrame.NameInput.Text .. ".txt", SLWindow.AddingFrame.ScrollingBox.TextBox.Text)
+				Create_ScriptList_Rectangle(scriptlistfolder .. "/" .. SLWindow.AddingFrame.NameInput.Text .. ".txt", SLWindow.AddingFrame.ScrollingBox.TextBox.Text)
+				
+				SLWindow.AddingFrame.NameInput.Text = ""
+				SLWindow.AddingFrame.ScrollingBox.TextBox.Text = ""
+	
+				SLWindow.AddingFrame.Visible = false
+				SLWindow.ScriptListFrame.Visible = true
+				SLWindow.CancelAddB.Visible = false
+			end
+		end
+	end)
+	
+	SLWindow.CancelAddB.MouseButton1Click:connect(function()	
+		SLWindow.AddingFrame.NameInput.Text = ""
+		SLWindow.AddingFrame.ScrollingBox.TextBox.Text = ""
+	
+		SLWindow.AddingFrame.Visible = false
+		SLWindow.ScriptListFrame.Visible = true
+		SLWindow.CancelAddB.Visible = false
+	end)
+end
+coroutine.wrap(ZTXEEKO_fake_script)()
+local function CZOGRQ_fake_script() -- VegaXAndroidUI.ScriptHubWindow.ScriptBloxCode 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.ScriptHubWindow)
+
+	ChosenColor = "#1890ff"
+	local page = 1
+	local searchstring = "default"
+	
+	if isfile("theme_vegax_color.txt") == true then
+		ChosenColor = readfile("theme_vegax_color.txt")
+	end
+	
+	local httpService = game:GetService("HttpService");
+	local content = {};
+	
+	local scriptBlox = {
+		host = "https://scriptblox.com"
+	}
+	
+	function scriptBlox:GET(path)
+		local result = http_request({
+			Url = scriptBlox.host .. path,
+			Method = "GET"
+		})
+	
+		if result.Success then
+			local status, data = pcall(function()
+				return httpService:JSONDecode(result.Body)
+			end)
+	
+			if status and data and data.result and data.result.scripts then
+				return data.result.scripts
+			else
+				warn("Error decoding JSON:", data)
+			end
+		else
+			warn("HTTP request failed:", result.StatusCode, result.Body)
+		end
+	
+		-- Return a default value in case of error or missing data
+		return {
+			result = {
+				totalPages = 1,
+				scripts = {}
+			}
+		}
+	end
+	
+	
+	function scriptBlox:getScripts(searchQuery, page, maxResults)
+		local path = "/api/script/search?q=" .. searchQuery .. "&mode=free&max=" .. tostring(maxResults) .. "&page=" .. tostring(page);
+		local data = scriptBlox:GET(path);
+		
+		return data;
+	end
+	
+	function Create_Script_Rectangle(title, subtitle, gamingid, scripttext)
+		local S1 = Instance.new("Frame")
+		local Execute = Instance.new("ImageButton")
+		local UICorner = Instance.new("UICorner")
+		local UICorner_2 = Instance.new("UICorner")
+		local ImageLabel = Instance.new("ImageLabel")
+		local UICorner_3 = Instance.new("UICorner")
+		local SubTitle = Instance.new("TextLabel")
+		local Title = Instance.new("TextLabel")
+	
+		--Properties:
+	
+		S1.Name = "S1"
+		S1.Parent = script.Parent.ScrollingFrame
+		S1.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+		S1.BorderSizePixel = 0
+		S1.Size = UDim2.new(1, -10, 0, 80)
+	
+		Execute.Name = "Execute"
+		Execute.Parent = S1
+		Execute.AnchorPoint = Vector2.new(1, 0.5)
+		Execute.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+		Execute.BackgroundTransparency = 0.400
+		Execute.BorderSizePixel = 0
+		Execute.LayoutOrder = 10
+		Execute.Position = UDim2.new(1, -23, 0.5, 0)
+		Execute.Size = UDim2.new(0, 34, 0, 34)
+		Execute.ZIndex = 2
+		Execute.Image = "rbxassetid://3926307971"
+		Execute.ImageRectOffset = Vector2.new(764, 244)
+		Execute.ImageRectSize = Vector2.new(36, 36)
+		Execute.MouseButton1Click:Connect(function()
+			executecode(scripttext)
+		end)
+	
+		UICorner.CornerRadius = UDim.new(0, 10)
+		UICorner.Parent = Execute
+	
+		UICorner_2.CornerRadius = UDim.new(0, 10)
+		UICorner_2.Parent = S1
+	
+		ImageLabel.Parent = S1
+		ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ImageLabel.BackgroundTransparency = 1.000
+		ImageLabel.BorderSizePixel = 0
+		ImageLabel.Size = UDim2.new(1, 0, 1, 0)
+		ImageLabel.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..gamingid.."&fmt=png&wd=420&ht=420"
+		--ImageLabel.Image = getcustomasset(game:HttpGet(gamingid, true)) 
+		ImageLabel.ScaleType = Enum.ScaleType.Crop
+	
+		UICorner_3.CornerRadius = UDim.new(0, 10)
+		UICorner_3.Parent = ImageLabel
+	
+		SubTitle.Name = "SubTitle"
+		SubTitle.Parent = S1
+		SubTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SubTitle.BackgroundTransparency = 1.000
+		SubTitle.BorderSizePixel = 0
+		SubTitle.Position = UDim2.new(0, 25, 0.5, 0)
+		SubTitle.Size = UDim2.new(1, -93, 0.5, 0)
+		SubTitle.Font = Enum.Font.Gotham
+		SubTitle.Text = subtitle
+		SubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SubTitle.TextSize = 14.000
+		SubTitle.TextXAlignment = Enum.TextXAlignment.Left
+		SubTitle.TextYAlignment = Enum.TextYAlignment.Top
+	
+		Title.Name = "Title"
+		Title.Parent = S1
+		Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Title.BackgroundTransparency = 1.000
+		Title.BorderSizePixel = 0
+		Title.Position = UDim2.new(0, 25, 0, 0)
+		Title.Size = UDim2.new(1, -93, 0.5, 0)
+		Title.Font = Enum.Font.GothamBold
+		Title.Text = title
+		Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Title.TextSize = 19.000
+		Title.TextXAlignment = Enum.TextXAlignment.Left
+		Title.TextYAlignment = Enum.TextYAlignment.Bottom
+	
+		table.insert(content, S1);
+	end
+	
+	function Clear() -- Clears the script list
+		for _, element in pairs(content) do
+			element:Destroy();
+		end
+	
+		content = {};
+		--delfolder("ScriptBlox"); -- clearing cache
+	end
+	
+	function Handle_Results(results)
+		if results then
+			Clear()
+	
+			for _, scriptData in pairs(results) do
+				local gameData = scriptData.game
+				Create_Script_Rectangle(scriptData.title, gameData.name, gameData.gameId, scriptData.script)
+			end
+		else
+			error("Invalid JSON structure. Unable to process results.")
+		end
+	end
+	
+	
+	function Search(query) -- Searches using a query and parses the result into a script list
+		page = 1
+		script.Parent.PaginationFrame.PageLabel.Text = page
+		if query == "" then
+			searchstring = "default"
+		else
+			searchstring = httpService:UrlEncode(query)
+		end
+		
+		local searchResults = scriptBlox:getScripts(searchstring, 1, 20);
+		Handle_Results(searchResults);
+	end
+	
+	-- Front page
+	
+	local frontPage = scriptBlox:getScripts("default", 1, 20);
+	
+	Handle_Results(frontPage);
+	
+	script.Parent.SearchBox.FocusLost:connect(function()
+		script.Parent.PaginationFrame.PageLabel.Text = page
+		Search(script.Parent.SearchBox.Text)
+	end)
+	
+	script.Parent.PaginationFrame.LeftPage.MouseButton1Click:connect(function()	
+		if page ~= 1 then
+			page -= 1
+			Handle_Results(scriptBlox:getScripts(searchstring, page, 20));
+		end
+		script.Parent.PaginationFrame.PageLabel.Text = page
+	end)
+	
+	script.Parent.PaginationFrame.RightPage.MouseButton1Click:connect(function()
+		page += 1	
+		Handle_Results(scriptBlox:getScripts(searchstring, page, 20));
+		script.Parent.PaginationFrame.PageLabel.Text = page
+	end)
+end
+coroutine.wrap(CZOGRQ_fake_script)()
+local function HKNKKX_fake_script() -- VegaXAndroidUI.UsernamePlace.UsernameAttachment 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.UsernamePlace)
+
+	-- Username Setting
+	-- From: https://www.youtube.com/watch?v=e4nBaHjr5Hw
+	-- dunno how to make one myself l0l
+	
+	local plrAvatar, isReady = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size48x48)
+	
+	script.Parent.Title.Text = "Hello!\n"..game:GetService("Players").LocalPlayer.Name
+	script.Parent.Icon.ProfileImage.Image = plrAvatar
+end
+coroutine.wrap(HKNKKX_fake_script)()
+local function NBBHH_fake_script() -- VegaXAndroidUI.ScrollingBox.TextBoxCode 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.ScrollingBox)
+
+	local TextBox = script.Parent.TextBox
+	local LineWatcher = script.Parent.Line
+	local FontSize = TextBox.TextSize
+	local TopCount
+	-----
+	local function resize(iter, subtract, maxsize)
+	    for i = 1,iter do
+			maxsize.CanvasSize = UDim2.new(0,maxsize.CanvasSize.X.Offset,0,(iter * FontSize))
+			maxsize.CanvasPosition = Vector2.new(maxsize.CanvasPosition.X, (iter * FontSize))
+	    end
+	end
+	-----
+	TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+		local str = TextBox.Text
+	    local offset = 32
+		local textsize = TextBox.TextBounds.X + offset
+		script.Parent.CanvasSize = UDim2.new(0,textsize,0,script.Parent.CanvasSize.Y.Offset)
+		script.Parent.CanvasPosition = Vector2.new(textsize, script.Parent.CanvasPosition.Y)
+	    local _,count = str:gsub('\n','\n')
+	    local NewCount = count + 1
+		if not LineWatcher.Text:find(NewCount) then
+			TopCount = NewCount
+			for i = 1,TopCount do
+				local PreviousText = LineWatcher.Text
+				if not LineWatcher.Text:find(i) then
+					LineWatcher.Text = tostring(PreviousText..i..'\n')
+	            end
+	        end
+			resize(TopCount,false,script.Parent)
+		else if TopCount ~= NewCount and TopCount ~= nil then
+				LineWatcher.Text = ""
+				TopCount = NewCount
+				for i = 1,TopCount do
+					LineWatcher.Text = tostring(LineWatcher.Text..i..'\n')
+	            end
+				resize(TopCount,true,script.Parent)
+	        end
+	    end
+	end)
+end
+coroutine.wrap(NBBHH_fake_script)()
+local function SRNOIT_fake_script() -- VegaXAndroidUI.ExecutorWindow.ExecutorTabs 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.ExecutorWindow)
+
+	local scriptamt = 1
+	local listamt = 1
+	local scripts = {""}
+	local scriptsname = {"Script 1"}
+	
+	script.Parent.TabbingSystem.LastPage.MouseButton1Click:connect(function()
+		if scriptamt > 1 then
+			scripts[scriptamt] = script.Parent.ScrollingBox.TextBox.Text
+			scriptamt = scriptamt - 1
+			script.Parent.ScrollingBox.TextBox.Text = scripts[scriptamt]
+			script.Parent.TabbingSystem.ScriptPage.Text = scriptsname[scriptamt]
+		end
+	end)
+	
+	script.Parent.TabbingSystem.NextPage.MouseButton1Click:connect(function()
+	
+		-- Save Current Script Tab
+		scripts[scriptamt] = script.Parent.ScrollingBox.TextBox.Text
+		scriptamt = scriptamt + 1
+	
+		if scriptamt ~= listamt then
+			table.insert(scripts, "")
+			table.insert(scriptsname, "Script "..scriptamt)
+			listamt = listamt + 1
+		end
+	
+		script.Parent.ScrollingBox.TextBox.Text = scripts[scriptamt]
+		script.Parent.TabbingSystem.ScriptPage.Text = scriptsname[scriptamt]
+	end)
+	
+	script.Parent.TabbingSystem.EditTabName.MouseButton1Click:connect(function()
+		script.Parent.TabbingSystem.ScriptPage.Visible = false
+		script.Parent.TabbingSystem.EditTabBox.Visible = true
+	end)
+	
+	script.Parent.TabbingSystem.EditTabBox.FocusLost:connect(function()
+		scriptsname[scriptamt] = script.Parent.TabbingSystem.EditTabBox.Text
+		script.Parent.TabbingSystem.ScriptPage.Text = scriptsname[scriptamt]
+	
+		script.Parent.TabbingSystem.ScriptPage.Visible = true
+		script.Parent.TabbingSystem.EditTabBox.Visible = false
+	
+		script.Parent.TabbingSystem.EditTabBox.Text = ""
+	end)
+	
+	
+	script.Parent.ClearB.MouseButton1Click:connect(function()
+		script.Parent.ScrollingBox.TextBox.Text = ""
+	end)
+end
+coroutine.wrap(SRNOIT_fake_script)()
+local function GGFUDEE_fake_script() -- VegaXAndroidUI.ScrollingBox_2.TextBoxCode 
+	local script = Instance.new('LocalScript', VegaXAndroidUI.ScrollingBox_2)
+
+	local TextBox = script.Parent.TextBox
+	local LineWatcher = script.Parent.Line
+	local FontSize = TextBox.TextSize
+	local TopCount
+	-----
+	local function resize(iter, subtract, maxsize)
+	    for i = 1,iter do
+			maxsize.CanvasSize = UDim2.new(0,maxsize.CanvasSize.X.Offset,0,(iter * FontSize))
+			maxsize.CanvasPosition = Vector2.new(maxsize.CanvasPosition.X, (iter * FontSize))
+	    end
+	end
+	-----
+	TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+		local str = TextBox.Text
+	    local offset = 32
+		local textsize = TextBox.TextBounds.X + offset
+		script.Parent.CanvasSize = UDim2.new(0,textsize,0,script.Parent.CanvasSize.Y.Offset)
+		script.Parent.CanvasPosition = Vector2.new(textsize, script.Parent.CanvasPosition.Y)
+	    local _,count = str:gsub('\n','\n')
+	    local NewCount = count + 1
+		if not LineWatcher.Text:find(NewCount) then
+			TopCount = NewCount
+			for i = 1,TopCount do
+				local PreviousText = LineWatcher.Text
+				if not LineWatcher.Text:find(i) then
+					LineWatcher.Text = tostring(PreviousText..i..'\n')
+	            end
+	        end
+			resize(TopCount,false,script.Parent)
+		else if TopCount ~= NewCount and TopCount ~= nil then
+				LineWatcher.Text = ""
+				TopCount = NewCount
+				for i = 1,TopCount do
+					LineWatcher.Text = tostring(LineWatcher.Text..i..'\n')
+	            end
+				resize(TopCount,true,script.Parent)
+	        end
+	    end
+	end)
+end
+coroutine.wrap(GGFUDEE_fake_script)()
