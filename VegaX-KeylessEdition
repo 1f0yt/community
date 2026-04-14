@@ -2585,7 +2585,7 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	
 	-- Key System Pre-Requisities
 	
-	PandaAuth = loadstring(game:HttpGet('https://gitlab.com/marsqq/vegax4/-/raw/main/PandaLibraryBackup'))()
+	PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/PandaLibraryBackup'))()
 	KSCanUse = true
 	BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
 	
@@ -2687,7 +2687,7 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	
 	if tostring(arceus.getversion()) ~= "4.0.8" then
 		print("you have a car")
-		loadstring(game:HttpGet("https://gitlab.com/marsqq/vegax4/-/raw/main/ForceUpdater"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/ForceUpdater"))()
 	end
 	
 	local success, result = pcall(function()
