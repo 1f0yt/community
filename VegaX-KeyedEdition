@@ -2580,54 +2580,35 @@ coroutine.wrap(DLQQEC_fake_script)()
 local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading 
 	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
 
-	ATime = 2
-	zidongjiaobenyunxinglujingzifuchuan = "Autoexec"
+	local ATime = 2
+	local zidongjiaobenyunxinglujingzifuchuan = "Autoexec"
 	
-	-- Key System Pre-Requisities
-	PandaKey = loadstring(game:HttpGet("https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/refs/heads/main/PandaVSS_Script/V2LoaderLib.lua"))()
+	-- Key System Pre-Requisities (Updated as of May 25th, 2026)
+    local PandaV2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/refs/heads/main/PandaVSS_Script/V2LoaderLib.lua"))()
+    PandaV2.Configure("vegax")
+    local KSCanUse = true
+	local BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
 
-	PandaKey.Config({
-    	ServiceID = "vegax",
-    	URL = "https://new.pandadevelopment.net",
-    	AuthHWID = gethwid()
-	})
-
-	PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/PandaLibraryBackup'))()
-	KSCanUse = true
-	BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
-
-	function Generate_Key()
-    	local keyUrl = PandaKey.OpenGetKey()
+	local function Generate_Key()
+    	local keyUrl = PandaV2.GetKey()
     	return keyUrl
 	end
 
-	function ValidateKey(Key)
-    	local result = PandaKey.Validate(tostring(Key))
-    	if result.success then
-        	return true
-    	elseif PandaAuth:ValidateKey("vegax", tostring(Key)) then
-        	PandaKey.CustomNotification("warning", "This Key is authenticated on Old System, Consider Migrating your Key soon.")
-        	return true
-    	else
-        	return false
-    	end
+	local function ValidateKey(Key)
+        local ok, validated, result = pcall(PandaV2.Validate, tostring(Key))
+        -- Life of me tbh...
+        if not ok then
+            warn("[Panda] Library error: " .. tostring(validated))
+            return false
+        end
+        if not validated then
+            warn("[Panda] Auth failed: " .. tostring(result.Note))
+            return false
+        end
+        return true
 	end
 
-
-	-- PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/PandaLibraryBackup'))()
-	-- KSCanUse = true
-	-- BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
-	
-	
-	-- function Generate_Key()
-	-- 	return PandaAuth:GetKey("vegax");
-	-- end
-	
-	-- function ValidateKey(Key)
-	-- 	return PandaAuth:ValidateKey("vegax", tostring(Key))
-	-- end
-	
-	function CheckIfAutoexecExists()
+	local function CheckIfAutoexecExists()
 		local success, err = pcall(function()
 			if not arceus.isarceusfolder(zidongjiaobenyunxinglujingzifuchuan) then
 				arceus.makearceusfolder(zidongjiaobenyunxinglujingzifuchuan)
@@ -2641,13 +2622,13 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	
 
 	
-	function LoadAutoexec()
+	local function LoadAutoexec()
 		local success, err = pcall(function()
 			if arceus.isarceusfolder(zidongjiaobenyunxinglujingzifuchuan) then
 				for _, scriptfile in pairs(arceus.listarceusfiles(zidongjiaobenyunxinglujingzifuchuan)) do
 					local code, readErr = arceus.readarceusfile(scriptfile)
 					if code then
-						executecode(arceus.readarceusfile(scriptfile))
+						executecode(code)
 					else
 						print(zidongjiaobenyunxinglujingzifuchuan, readErr)
 					end
@@ -2661,7 +2642,7 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	end
 	
 	
-	function LoadVegaXSystem()
+	local function LoadVegaXSystem()
 		LoadAutoexec()
 		script.Parent.KeySystem.Visible = false
 		script.Parent.VegaXMenuToggleFrame.Visible = true
@@ -2671,11 +2652,11 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	end
 	
 	-- Multi-Language Key System Variables
-	KSSubTitleNotif1 = "The Key System Link has been pasted into your Clipboard, insert it into your Browser (Desktop Recommended)."
-	KSSubTitleNotif2 = "This key is not valid, go to our Discord Server if this is not correct."
-	KSSubTitleNotif3 = "The Discord Link has been pasted into your Clipboard, insert it into the Discord app."
-	KSSubTitleNotif4 = "This key is valid, enjoy Vega X!"
-	KSSubTitleNotif5 = "Copied Vega X Premium Website! Paste it into your web browser."
+	local KSSubTitleNotif1 = "The Key System Link has been pasted into your Clipboard, insert it into your Browser (Desktop Recommended)."
+	local KSSubTitleNotif2 = "This key is not valid, go to our Discord Server if this is not correct."
+	local KSSubTitleNotif3 = "The Discord Link has been pasted into your Clipboard, insert it into the Discord app."
+	local KSSubTitleNotif4 = "This key is valid, enjoy Vega X!"
+	local KSSubTitleNotif5 = "Copied Vega X Premium Website! Paste it into your web browser."
 	
 	-- Loading
 	
@@ -2688,7 +2669,7 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	script.Parent.VegaXMenuToggleFrame.Visible = false
 	
 	
-	repeat until game:IsLoaded()
+	if not game:IsLoaded() then game.Loaded:Wait() end
 	for _,Key in pairs(script.Parent.IntroFrame.BackgroundFrame:GetChildren()) do
 		game:GetService("TweenService"):Create(Key, TweenInfo.new(ATime), {BackgroundTransparency = 0}):Play()
 		Key:TweenSize(UDim2.new(0.075,0,1,0), "Out", "Quad", ATime, true)
@@ -2721,10 +2702,12 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	end
 	
 	local success, result = pcall(function()
+		local saved = readfile("vegax_key.txt")
+		if saved == "" then return false end
 		if KSCanUse == true then
-			return ValidateKey(readfile("vegax_key.txt"))
+			return ValidateKey(saved)
 		else
-			return readfile("vegax_key.txt") == BKKeySystem
+			return saved == BKKeySystem
 		end
 	end)
 	
@@ -2760,23 +2743,24 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 		end
 	end)
 	
-	local KeyIsValid = false
-	
 	script.Parent.KeySystem.MainParent.ButtonParent.ApproveKeyB.MouseButton1Click:connect(function()
 		script.Parent.KeySystem.MainParent.SubTitle.FontFace.Weight = Enum.FontWeight.Regular
-		
+		local KeyIsValid = false
+
+		local typedKey = script.Parent.KeySystem.MainParent.TextBox.Text:match("^%s*(.-)%s*$")
+
 		if KSCanUse == false then
-			if script.Parent.KeySystem.MainParent.TextBox.Text == BKKeySystem then
+			if typedKey == BKKeySystem then
 				KeyIsValid = true
 			end
 		elseif KSCanUse == true then
-			if ValidateKey(script.Parent.KeySystem.MainParent.TextBox.Text) then
+			if ValidateKey(typedKey) then
 				KeyIsValid = true
 			end
 		end
 		
 		if KeyIsValid == true then
-			writefile("vegax_key.txt", script.Parent.KeySystem.MainParent.TextBox.Text)
+			writefile("vegax_key.txt", typedKey)
 			script.Parent.KeySystem.MainParent.SubTitle.Text = KSSubTitleNotif4
 	
 			script.Parent.KeySystem:TweenPosition(UDim2.new(0, 0, 2, -20), "Out", "Quad", 1, true)
