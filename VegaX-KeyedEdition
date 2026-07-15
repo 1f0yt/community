@@ -1,6 +1,7 @@
 -- Gui to Lua
 -- Version: 3.2
 
+-- Vega X [7-15-2026] Precooked by SkieHacker @Panda-Pelican Development LLC
 -- Instances:
 
 local VegaXAndroidUI = {
@@ -531,7 +532,7 @@ VegaXAndroidUI.Title_4.BorderSizePixel = 0
 VegaXAndroidUI.Title_4.Position = UDim2.new(0, 25, 0, 0)
 VegaXAndroidUI.Title_4.Size = UDim2.new(0.5, 0, 0.5, 0)
 VegaXAndroidUI.Title_4.Font = Enum.Font.GothamBold
-VegaXAndroidUI.Title_4.Text = "Dev Mode"
+VegaXAndroidUI.Title_4.Text = "MCP Connect"
 VegaXAndroidUI.Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.Title_4.TextSize = 19.000
 VegaXAndroidUI.Title_4.TextXAlignment = Enum.TextXAlignment.Left
@@ -546,7 +547,7 @@ VegaXAndroidUI.SubTitle_4.BorderSizePixel = 0
 VegaXAndroidUI.SubTitle_4.Position = UDim2.new(0, 25, 0.5, 0)
 VegaXAndroidUI.SubTitle_4.Size = UDim2.new(0.5, 0, 0.5, 0)
 VegaXAndroidUI.SubTitle_4.Font = Enum.Font.Gotham
-VegaXAndroidUI.SubTitle_4.Text = "Allow Vega X Cross Platform Connection with the Windows UI."
+VegaXAndroidUI.SubTitle_4.Text = "Connect your executor to Panda MCP for AI-powered remote execution."
 VegaXAndroidUI.SubTitle_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.SubTitle_4.TextSize = 14.000
 VegaXAndroidUI.SubTitle_4.TextXAlignment = Enum.TextXAlignment.Left
@@ -584,7 +585,7 @@ VegaXAndroidUI.InjectCodeTextbox.Size = UDim2.new(0.200000003, 0, 0, 34)
 VegaXAndroidUI.InjectCodeTextbox.ClearTextOnFocus = false
 VegaXAndroidUI.InjectCodeTextbox.Font = Enum.Font.Gotham
 VegaXAndroidUI.InjectCodeTextbox.MultiLine = true
-VegaXAndroidUI.InjectCodeTextbox.PlaceholderText = "Inject Code"
+VegaXAndroidUI.InjectCodeTextbox.PlaceholderText = "Panda MCP API Key"
 VegaXAndroidUI.InjectCodeTextbox.Text = ""
 VegaXAndroidUI.InjectCodeTextbox.TextColor3 = Color3.fromRGB(220, 220, 220)
 VegaXAndroidUI.InjectCodeTextbox.TextSize = 16.000
@@ -615,7 +616,7 @@ VegaXAndroidUI.S4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 VegaXAndroidUI.S4.BorderColor3 = Color3.fromRGB(27, 42, 53)
 VegaXAndroidUI.S4.BorderSizePixel = 0
 VegaXAndroidUI.S4.Size = UDim2.new(1, -10, 0, 75)
-VegaXAndroidUI.S4.Visible = false
+VegaXAndroidUI.S4.Visible = true
 
 VegaXAndroidUI.Title_5.Name = "Title"
 VegaXAndroidUI.Title_5.Parent = VegaXAndroidUI.S4
@@ -626,7 +627,7 @@ VegaXAndroidUI.Title_5.BorderSizePixel = 0
 VegaXAndroidUI.Title_5.Position = UDim2.new(0, 25, 0, 0)
 VegaXAndroidUI.Title_5.Size = UDim2.new(0.5, 0, 0.5, 0)
 VegaXAndroidUI.Title_5.Font = Enum.Font.GothamBold
-VegaXAndroidUI.Title_5.Text = "禁用介绍动画"
+VegaXAndroidUI.Title_5.Text = "Anti-AFK"
 VegaXAndroidUI.Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.Title_5.TextSize = 19.000
 VegaXAndroidUI.Title_5.TextXAlignment = Enum.TextXAlignment.Left
@@ -641,7 +642,7 @@ VegaXAndroidUI.SubTitle_5.BorderSizePixel = 0
 VegaXAndroidUI.SubTitle_5.Position = UDim2.new(0, 25, 0.5, 0)
 VegaXAndroidUI.SubTitle_5.Size = UDim2.new(0.5, 0, 0.5, 0)
 VegaXAndroidUI.SubTitle_5.Font = Enum.Font.Gotham
-VegaXAndroidUI.SubTitle_5.Text = "立即跳转到 Vega X"
+VegaXAndroidUI.SubTitle_5.Text = "Prevent idle kick (OFF)"
 VegaXAndroidUI.SubTitle_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.SubTitle_5.TextSize = 14.000
 VegaXAndroidUI.SubTitle_5.TextXAlignment = Enum.TextXAlignment.Left
@@ -765,7 +766,7 @@ VegaXAndroidUI.SubTitle_6.BorderSizePixel = 0
 VegaXAndroidUI.SubTitle_6.Position = UDim2.new(0, 25, 0.5, 0)
 VegaXAndroidUI.SubTitle_6.Size = UDim2.new(1, -93, 0.5, 0)
 VegaXAndroidUI.SubTitle_6.Font = Enum.Font.Gotham
-VegaXAndroidUI.SubTitle_6.Text = "MM2 Aim Trainer 🎯 "
+VegaXAndroidUI.SubTitle_6.Text = "MM2 Aim Trainer ðŸŽ¯ "
 VegaXAndroidUI.SubTitle_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.SubTitle_6.TextSize = 14.000
 VegaXAndroidUI.SubTitle_6.TextXAlignment = Enum.TextXAlignment.Left
@@ -2284,7 +2285,7 @@ VegaXAndroidUI.DevModeB.BorderSizePixel = 0
 VegaXAndroidUI.DevModeB.Position = UDim2.new(0, 235, 0, 78)
 VegaXAndroidUI.DevModeB.Size = UDim2.new(0, 85, 0, 30)
 VegaXAndroidUI.DevModeB.Font = Enum.Font.GothamBold
-VegaXAndroidUI.DevModeB.Text = "Dev Mode"
+VegaXAndroidUI.DevModeB.Text = "MCP Connect"
 VegaXAndroidUI.DevModeB.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.DevModeB.TextSize = 14.000
 
@@ -2489,7 +2490,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		end)
 	
 		if not success then
-			warn("无法读取文件: " ..err)
+			warn("æ— æ³•è¯»å–æ–‡ä»¶: " ..err)
 		end
 		
 		--[[
@@ -2498,7 +2499,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		if success then
 			LoadColors()
 		else
-			warn("无法读取文件: " ..ChosenColor)
+			warn("æ— æ³•è¯»å–æ–‡ä»¶: " ..ChosenColor)
 		end
 		]]
 	end
@@ -2522,7 +2523,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 	
 	if not success then
 		-- Handle the error, you can print a message or take other appropriate actions
-		print("无法读取文件:", result)
+		print("æ— æ³•è¯»å–æ–‡ä»¶:", result)
 	end
 	
 	
@@ -2530,7 +2531,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		--setfpscap(tonumber(readfile("settings_fps.txt")))
 	--end
 	
-	-- Set Inject Code
+	-- Set MCP API Key
 	local success, result = pcall(function()
 		if isfile("injectcode.txt") then
 			script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = readfile("injectcode.txt")
@@ -2538,7 +2539,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 	end)
 	
 	if not success then
-		print("无法读取文件:", result)
+		print("æ— æ³•è¯»å–æ–‡ä»¶:", result)
 	end
 	
 	--if isfile("injectcode.txt") == true then
@@ -2564,7 +2565,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 	
 	script.Parent.SettingsWindow.ScrollingFrame.S3.SubmitCode.MouseButton1Click:Connect(function()
 		writefile("injectcode.txt", script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text)
-		DevConnect(script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text)
+		-- Key saved â€” click "MCP Connect" button in Executor window to see command
 	end)
 	
 	script.Parent.SettingsWindow.ScrollingFrame.S3.ResetCode.MouseButton1Click:Connect(function()
@@ -2572,10 +2573,39 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		delfile("injectcode.txt")
 	end)
 	
+	-- â”€â”€ Anti-AFK â”€â”€
+	-- Idle event fires ~10s before 20-min Roblox idle kick.
+	-- We re-trigger VirtualUser input only when the event fires â€”
+	-- zero polling overhead, works on all executors.
+	local Players = game:GetService("Players")
+	local VirtualUser = game:GetService("VirtualUser")
+	local afkOn = false
+	local afkConn = nil
+
+	local function startAntiAFK()
+		if afkConn then return end
+		afkOn = true
+		afkConn = Players.LocalPlayer.Idled:Connect(function()
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton2(Vector2.new())
+		end)
+		script.Parent.SettingsWindow.ScrollingFrame.S4.ToggleBTN.BackgroundColor3 = Color3.fromRGB(57, 195, 57)
+		script.Parent.SettingsWindow.ScrollingFrame.S4.SubTitle.Text = "Prevent idle kick (ON)"
+	end
+
+	local function stopAntiAFK()
+		afkOn = false
+		if afkConn then afkConn:Disconnect(); afkConn = nil end
+		script.Parent.SettingsWindow.ScrollingFrame.S4.ToggleBTN.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
+		script.Parent.SettingsWindow.ScrollingFrame.S4.SubTitle.Text = "Prevent idle kick (OFF)"
+	end
+
 	script.Parent.SettingsWindow.ScrollingFrame.S4.ToggleBTN.MouseButton1Click:Connect(function()
-	
+		if afkOn then stopAntiAFK() else startAntiAFK() end
 	end)
 end
+
+
 coroutine.wrap(DLQQEC_fake_script)()
 local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading 
 	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
@@ -2583,30 +2613,32 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	local ATime = 2
 	local zidongjiaobenyunxinglujingzifuchuan = "Autoexec"
 	
-	-- Key System Pre-Requisities (Updated as of May 25th, 2026)
-    local PandaV2 = loadstring(game:HttpGet("https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/refs/heads/main/PandaVSS_Script/V2LoaderLib.lua"))()
-    PandaV2.Configure("vegax")
-    local KSCanUse = true
-	local BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
+-- Key System Pre-Requisities (Updated as of July 14th, 2026)
+local PUSL = nil
+local libOk, libErr = pcall(function()
+	PUSL = loadstring(game:HttpGet("https://secure.pandauth.com/pv4/lib"))()
+end)
+local KSCanUse = (libOk and PUSL and PUSL.configure ~= nil)
+if KSCanUse then
+	PUSL.configure({ serviceId = "vegax", debug = false, kickOnDetect = false })
+else
+	warn("[Vega X] Failed to load Panda Auth library: " .. tostring(libErr or "unknown"))
+end
+local BKKeySystem = "vegax_2308e1bb31175chd3826f1a4e7fb3f5d87d8d6e6a532f518e716a134601456"
 
-	local function Generate_Key()
-    	local keyUrl = PandaV2.GetKey()
-    	return keyUrl
-	end
+local function Generate_Key()
+    return PUSL.getKeyUrl()
+end
 
-	local function ValidateKey(Key)
-        local ok, validated, result = pcall(PandaV2.Validate, tostring(Key))
-        -- Life of me tbh...
-        if not ok then
-            warn("[Panda] Library error: " .. tostring(validated))
-            return false
-        end
-        if not validated then
-            warn("[Panda] Auth failed: " .. tostring(result.Note))
-            return false
-        end
-        return true
-	end
+local function ValidateKey(Key)
+    local ok, result = pcall(PUSL.validate, PUSL, tostring(Key))
+    if not ok or not result or not result.success then
+        warn("[PUSL-V4] Auth failed: " .. ((result and result.error) or tostring(result) or "unknown"))
+        return false
+    end
+    return true
+end
+
 
 	local function CheckIfAutoexecExists()
 		local success, err = pcall(function()
@@ -2653,7 +2685,7 @@ local function DIVQTY_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.Loading
 	
 	-- Multi-Language Key System Variables
 	local KSSubTitleNotif1 = "The Key System Link has been pasted into your Clipboard, insert it into your Browser (Desktop Recommended)."
-	local KSSubTitleNotif2 = "This key is not valid, go to our Discord Server if this is not correct."
+	local KSSubTitleNotif2 = "This key is not valid. Get a new key or contact support."
 	local KSSubTitleNotif3 = "The Discord Link has been pasted into your Clipboard, insert it into the Discord app."
 	local KSSubTitleNotif4 = "This key is valid, enjoy Vega X!"
 	local KSSubTitleNotif5 = "Copied Vega X Premium Website! Paste it into your web browser."
@@ -2791,42 +2823,53 @@ coroutine.wrap(DIVQTY_fake_script)()
 local function UNIZ_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.DevConnect 
 	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
 
-	getgenv().DevConnect = function(devcode)
-		warn("(Panda-Pelican Development | HTTP Protocol [ Beta ])")
-		local No_Execute = "No_Data_Set_Here"
-		local IPv4 = base64.decode(devcode)
-		if IPv4 == "" or IPv4 == nil then
-			warn("[Unable to Start HTTP-Protocol] - Missing IP Address / Port")
-			return
-		end
-		task.spawn(function() 
-			script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromRGB(57, 195, 57)
-			while true do
-				wait(0.1)
-				local content = game:HttpGet("http://"..IPv4..":2023".."/readcontent")     
-				if content ~= No_Execute then
-					local success, result = pcall(function()
-						runcode(content)
-						local a = tostring(game:HttpGet("http://"..IPv4..":2023".."/clear"))
-					end)
-	
-					if not success then
-						-- Handle the exception here
-						warn("Error executing loaded code:", result)
-						local b = tostring(game:HttpGet("http://"..IPv4..":2023".."/clear"))
-					end        
-				end
+	-- â”€â”€ Panda MCP Connect â”€â”€
+	-- Replaces old HTTP polling Dev Mode with Panda MCP remote execution.
+	-- Executor (Delta) maintains the MCP WebSocket bridge. This panel shows
+	-- connection info so the developer can use Claude Code (or any MCP client)
+	-- to push scripts remotely via run_luau.
+
+	-- â”€â”€ Panda MCP Connect â”€â”€
+	-- Executor (Delta) connects to Panda MCP (mcp.pandauth.com) automatically
+	-- via its own WebSocket. This panel shows the Claude Code command to link
+	-- your AI to this executor â€” no local server, no polling, no fake bridge.
+
+	local mcpApiKey = nil
+
+	-- Load saved key if present
+	pcall(function()
+		if isfile("injectcode.txt") then
+			local saved = readfile("injectcode.txt")
+			if saved and saved ~= "" and saved:match("^[%w]+$") then
+				mcpApiKey = saved
 			end
-		end) 
-	end
-	
-	script.Parent.ExecutorWindow.DevModeB.MouseButton1Click:connect(function()
-		if isfile("injectcode.txt") == false then
-			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text = "The inject code for Dev Mode is not found, please open the Vega X Windows Client, get your inject code, and paste it in settings."
-		else
-			DevConnect(readfile("injectcode.txt"))
 		end
-	
+	end)
+
+	getgenv().GetMCPCommand = function()
+		local key = mcpApiKey or "YOUR_API_KEY"
+		return "claude mcp add --transport http panda-mcp "
+			.. "https://mcp.pandauth.com/mcp?api_key=" .. key
+	end
+
+	script.Parent.ExecutorWindow.DevModeB.MouseButton1Click:connect(function()
+		if mcpApiKey then
+			script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromRGB(57, 195, 57)
+			script.Parent.ExecutorWindow.DevModeB.Text = "MCP Ready"
+			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text =
+				"[ Panda MCP Connect ]\n\n" ..
+				"Executor connects to Panda MCP automatically.\n" ..
+				"Run this command on your PC to link Claude Code:\n\n" ..
+				GetMCPCommand() .. "\n\n" ..
+				"Then ask Claude for example:\n" ..
+				'  "run this on my Delta client"\n' ..
+				'  "execute this script on the connected executor"'
+		else
+			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text =
+				"[ Panda MCP Connect ]\n\n" ..
+				"Paste your Panda MCP API key in Settings > MCP Connect.\n\n" ..
+				"Get your key at: https://pandauth.com/dashboard/mcp"
+		end
 	end)
 end
 coroutine.wrap(UNIZ_fake_script)()
