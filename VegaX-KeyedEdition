@@ -2631,7 +2631,10 @@ local function Generate_Key()
 end
 
 local function ValidateKey(Key)
-    local ok, result = pcall(PUSL.validate, PUSL, tostring(Key))
+    -- PUSL.validate is a dot-function taking the key string: PUSL.validate(key).
+    -- Passing PUSL as the first arg makes the library validate itself, so every
+    -- key fails. Call it with the key only.
+    local ok, result = pcall(PUSL.validate, tostring(Key))
     if not ok or not result or not result.success then
         warn("[PUSL-V4] Auth failed: " .. ((result and result.error) or tostring(result) or "unknown"))
         return false
@@ -2728,9 +2731,14 @@ end
 	
 	script.Parent.IntroFrame:Destroy()
 	
-	if tostring(arceus.getversion()) ~= "4.0.8" then
-		print("you have a car")
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/ForceUpdater"))()
+	-- Arceus-only auto-updater. `arceus` is nil on every other executor, so
+	-- calling arceus.getversion() unguarded threw and killed this whole
+	-- coroutine before the key system below could run. Guard it.
+	if arceus and type(arceus.getversion) == "function" then
+		local okv, ver = pcall(arceus.getversion)
+		if okv and tostring(ver) ~= "4.0.8" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/refs/heads/main/ForceUpdater"))()
+		end
 	end
 	
 	local success, result = pcall(function()
