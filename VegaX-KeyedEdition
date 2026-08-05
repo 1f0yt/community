@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
-
--- Vega X [7-15-2026] Precooked by SkieHacker @Panda-Pelican Development LLC
+-- Vega X [8-4-2026] Update
 -- Instances:
 
 local VegaXAndroidUI = {
@@ -37,16 +34,6 @@ local VegaXAndroidUI = {
 	UICorner_8 = Instance.new("UICorner"),
 	ResetFPS = Instance.new("ImageButton"),
 	UICorner_9 = Instance.new("UICorner"),
-	S3 = Instance.new("Frame"),
-	Title_4 = Instance.new("TextLabel"),
-	SubTitle_4 = Instance.new("TextLabel"),
-	UICorner_10 = Instance.new("UICorner"),
-	SubmitCode = Instance.new("ImageButton"),
-	UICorner_11 = Instance.new("UICorner"),
-	InjectCodeTextbox = Instance.new("TextBox"),
-	UICorner_12 = Instance.new("UICorner"),
-	ResetCode = Instance.new("ImageButton"),
-	UICorner_13 = Instance.new("UICorner"),
 	S4 = Instance.new("Frame"),
 	Title_5 = Instance.new("TextLabel"),
 	SubTitle_5 = Instance.new("TextLabel"),
@@ -216,8 +203,6 @@ local VegaXAndroidUI = {
 	WindowMainTitle_4 = Instance.new("TextLabel"),
 	ClearB = Instance.new("TextButton"),
 	UICorner_49 = Instance.new("UICorner"),
-	DevModeB = Instance.new("TextButton"),
-	UICorner_50 = Instance.new("UICorner"),
 }
 
 --Properties:
@@ -516,100 +501,6 @@ VegaXAndroidUI.ResetFPS.ImageRectSize = Vector2.new(36, 36)
 VegaXAndroidUI.UICorner_9.CornerRadius = UDim.new(0, 10)
 VegaXAndroidUI.UICorner_9.Parent = VegaXAndroidUI.ResetFPS
 
-VegaXAndroidUI.S3.Name = "S3"
-VegaXAndroidUI.S3.Parent = VegaXAndroidUI.ScrollingFrame
-VegaXAndroidUI.S3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-VegaXAndroidUI.S3.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.S3.BorderSizePixel = 0
-VegaXAndroidUI.S3.Size = UDim2.new(1, -10, 0, 75)
-
-VegaXAndroidUI.Title_4.Name = "Title"
-VegaXAndroidUI.Title_4.Parent = VegaXAndroidUI.S3
-VegaXAndroidUI.Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VegaXAndroidUI.Title_4.BackgroundTransparency = 1.000
-VegaXAndroidUI.Title_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.Title_4.BorderSizePixel = 0
-VegaXAndroidUI.Title_4.Position = UDim2.new(0, 25, 0, 0)
-VegaXAndroidUI.Title_4.Size = UDim2.new(0.5, 0, 0.5, 0)
-VegaXAndroidUI.Title_4.Font = Enum.Font.GothamBold
-VegaXAndroidUI.Title_4.Text = "MCP Connect"
-VegaXAndroidUI.Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-VegaXAndroidUI.Title_4.TextSize = 19.000
-VegaXAndroidUI.Title_4.TextXAlignment = Enum.TextXAlignment.Left
-VegaXAndroidUI.Title_4.TextYAlignment = Enum.TextYAlignment.Bottom
-
-VegaXAndroidUI.SubTitle_4.Name = "SubTitle"
-VegaXAndroidUI.SubTitle_4.Parent = VegaXAndroidUI.S3
-VegaXAndroidUI.SubTitle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VegaXAndroidUI.SubTitle_4.BackgroundTransparency = 1.000
-VegaXAndroidUI.SubTitle_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.SubTitle_4.BorderSizePixel = 0
-VegaXAndroidUI.SubTitle_4.Position = UDim2.new(0, 25, 0.5, 0)
-VegaXAndroidUI.SubTitle_4.Size = UDim2.new(0.5, 0, 0.5, 0)
-VegaXAndroidUI.SubTitle_4.Font = Enum.Font.Gotham
-VegaXAndroidUI.SubTitle_4.Text = "Connect your executor to Panda MCP for AI-powered remote execution."
-VegaXAndroidUI.SubTitle_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-VegaXAndroidUI.SubTitle_4.TextSize = 14.000
-VegaXAndroidUI.SubTitle_4.TextXAlignment = Enum.TextXAlignment.Left
-VegaXAndroidUI.SubTitle_4.TextYAlignment = Enum.TextYAlignment.Top
-
-VegaXAndroidUI.UICorner_10.CornerRadius = UDim.new(0, 10)
-VegaXAndroidUI.UICorner_10.Parent = VegaXAndroidUI.S3
-
-VegaXAndroidUI.SubmitCode.Name = "SubmitCode"
-VegaXAndroidUI.SubmitCode.Parent = VegaXAndroidUI.S3
-VegaXAndroidUI.SubmitCode.AnchorPoint = Vector2.new(1, 0.5)
-VegaXAndroidUI.SubmitCode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
-VegaXAndroidUI.SubmitCode.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.SubmitCode.BorderSizePixel = 0
-VegaXAndroidUI.SubmitCode.LayoutOrder = 10
-VegaXAndroidUI.SubmitCode.Position = UDim2.new(1, -59, 0.5, 0)
-VegaXAndroidUI.SubmitCode.Size = UDim2.new(0, 34, 0, 34)
-VegaXAndroidUI.SubmitCode.ZIndex = 2
-VegaXAndroidUI.SubmitCode.Image = "rbxassetid://3926305904"
-VegaXAndroidUI.SubmitCode.ImageRectOffset = Vector2.new(124, 924)
-VegaXAndroidUI.SubmitCode.ImageRectSize = Vector2.new(36, 36)
-
-VegaXAndroidUI.UICorner_11.CornerRadius = UDim.new(0, 10)
-VegaXAndroidUI.UICorner_11.Parent = VegaXAndroidUI.SubmitCode
-
-VegaXAndroidUI.InjectCodeTextbox.Name = "InjectCodeTextbox"
-VegaXAndroidUI.InjectCodeTextbox.Parent = VegaXAndroidUI.S3
-VegaXAndroidUI.InjectCodeTextbox.AnchorPoint = Vector2.new(1, 0.5)
-VegaXAndroidUI.InjectCodeTextbox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-VegaXAndroidUI.InjectCodeTextbox.BackgroundTransparency = 0.200
-VegaXAndroidUI.InjectCodeTextbox.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.InjectCodeTextbox.BorderSizePixel = 0
-VegaXAndroidUI.InjectCodeTextbox.Position = UDim2.new(1, -98, 0.5, 0)
-VegaXAndroidUI.InjectCodeTextbox.Size = UDim2.new(0.200000003, 0, 0, 34)
-VegaXAndroidUI.InjectCodeTextbox.ClearTextOnFocus = false
-VegaXAndroidUI.InjectCodeTextbox.Font = Enum.Font.Gotham
-VegaXAndroidUI.InjectCodeTextbox.MultiLine = true
-VegaXAndroidUI.InjectCodeTextbox.PlaceholderText = "Panda MCP API Key"
-VegaXAndroidUI.InjectCodeTextbox.Text = ""
-VegaXAndroidUI.InjectCodeTextbox.TextColor3 = Color3.fromRGB(220, 220, 220)
-VegaXAndroidUI.InjectCodeTextbox.TextSize = 16.000
-
-VegaXAndroidUI.UICorner_12.CornerRadius = UDim.new(0, 10)
-VegaXAndroidUI.UICorner_12.Parent = VegaXAndroidUI.InjectCodeTextbox
-
-VegaXAndroidUI.ResetCode.Name = "ResetCode"
-VegaXAndroidUI.ResetCode.Parent = VegaXAndroidUI.S3
-VegaXAndroidUI.ResetCode.AnchorPoint = Vector2.new(1, 0.5)
-VegaXAndroidUI.ResetCode.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
-VegaXAndroidUI.ResetCode.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.ResetCode.BorderSizePixel = 0
-VegaXAndroidUI.ResetCode.LayoutOrder = 10
-VegaXAndroidUI.ResetCode.Position = UDim2.new(1, -20, 0.5, 0)
-VegaXAndroidUI.ResetCode.Size = UDim2.new(0, 34, 0, 34)
-VegaXAndroidUI.ResetCode.ZIndex = 2
-VegaXAndroidUI.ResetCode.Image = "rbxassetid://3926305904"
-VegaXAndroidUI.ResetCode.ImageRectOffset = Vector2.new(644, 724)
-VegaXAndroidUI.ResetCode.ImageRectSize = Vector2.new(36, 36)
-
-VegaXAndroidUI.UICorner_13.CornerRadius = UDim.new(0, 10)
-VegaXAndroidUI.UICorner_13.Parent = VegaXAndroidUI.ResetCode
-
 VegaXAndroidUI.S4.Name = "S4"
 VegaXAndroidUI.S4.Parent = VegaXAndroidUI.ScrollingFrame
 VegaXAndroidUI.S4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
@@ -766,7 +657,7 @@ VegaXAndroidUI.SubTitle_6.BorderSizePixel = 0
 VegaXAndroidUI.SubTitle_6.Position = UDim2.new(0, 25, 0.5, 0)
 VegaXAndroidUI.SubTitle_6.Size = UDim2.new(1, -93, 0.5, 0)
 VegaXAndroidUI.SubTitle_6.Font = Enum.Font.Gotham
-VegaXAndroidUI.SubTitle_6.Text = "MM2 Aim Trainer ðŸŽ¯ "
+VegaXAndroidUI.SubTitle_6.Text = "MM2 Aim Trainer 🎯 "
 VegaXAndroidUI.SubTitle_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 VegaXAndroidUI.SubTitle_6.TextSize = 14.000
 VegaXAndroidUI.SubTitle_6.TextXAlignment = Enum.TextXAlignment.Left
@@ -2265,7 +2156,7 @@ VegaXAndroidUI.ClearB.Active = false
 VegaXAndroidUI.ClearB.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 VegaXAndroidUI.ClearB.BorderColor3 = Color3.fromRGB(27, 42, 53)
 VegaXAndroidUI.ClearB.BorderSizePixel = 0
-VegaXAndroidUI.ClearB.Position = UDim2.new(0, 325, 0, 78)
+VegaXAndroidUI.ClearB.Position = UDim2.new(0, 235, 0, 78)
 VegaXAndroidUI.ClearB.Size = UDim2.new(0, 50, 0, 30)
 VegaXAndroidUI.ClearB.Font = Enum.Font.GothamBold
 VegaXAndroidUI.ClearB.Text = "Clear"
@@ -2274,23 +2165,6 @@ VegaXAndroidUI.ClearB.TextSize = 14.000
 
 VegaXAndroidUI.UICorner_49.CornerRadius = UDim.new(0, 4)
 VegaXAndroidUI.UICorner_49.Parent = VegaXAndroidUI.ClearB
-
-VegaXAndroidUI.DevModeB.Name = "DevModeB"
-VegaXAndroidUI.DevModeB.Parent = VegaXAndroidUI.ExecutorWindow
-VegaXAndroidUI.DevModeB.Active = false
-VegaXAndroidUI.DevModeB.BackgroundColor3 = Color3.fromRGB(195, 57, 57)
-VegaXAndroidUI.DevModeB.BackgroundTransparency = 0.300
-VegaXAndroidUI.DevModeB.BorderColor3 = Color3.fromRGB(27, 42, 53)
-VegaXAndroidUI.DevModeB.BorderSizePixel = 0
-VegaXAndroidUI.DevModeB.Position = UDim2.new(0, 235, 0, 78)
-VegaXAndroidUI.DevModeB.Size = UDim2.new(0, 85, 0, 30)
-VegaXAndroidUI.DevModeB.Font = Enum.Font.GothamBold
-VegaXAndroidUI.DevModeB.Text = "MCP Connect"
-VegaXAndroidUI.DevModeB.TextColor3 = Color3.fromRGB(255, 255, 255)
-VegaXAndroidUI.DevModeB.TextSize = 14.000
-
-VegaXAndroidUI.UICorner_50.CornerRadius = UDim.new(0, 4)
-VegaXAndroidUI.UICorner_50.Parent = VegaXAndroidUI.DevModeB
 
 -- Scripts:
 
@@ -2472,7 +2346,6 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		script.Parent.ExecutorWindow.TabbingSystem.BackgroundColor3 = Color3.fromHex(ChosenColor)
 		script.Parent.ExecutorWindow.ExecuteB.BackgroundColor3 = Color3.fromHex(ChosenColor)
 		script.Parent.ExecutorWindow.PasteandExecuteB.BackgroundColor3 = Color3.fromHex(ChosenColor)
-		script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromHex(ChosenColor)
 	
 		script.Parent.SettingsWindow.ScrollingFrame.S1.AccentColorPreview.BackgroundColor3 = Color3.fromHex(ChosenColor)
 	end
@@ -2490,7 +2363,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		end)
 	
 		if not success then
-			warn("æ— æ³•è¯»å–æ–‡ä»¶: " ..err)
+			warn("无法读取文件: " ..err)
 		end
 		
 		--[[
@@ -2499,7 +2372,7 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		if success then
 			LoadColors()
 		else
-			warn("æ— æ³•è¯»å–æ–‡ä»¶: " ..ChosenColor)
+			warn("无法读取文件: " ..ChosenColor)
 		end
 		]]
 	end
@@ -2523,29 +2396,13 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 	
 	if not success then
 		-- Handle the error, you can print a message or take other appropriate actions
-		print("æ— æ³•è¯»å–æ–‡ä»¶:", result)
+		print("无法读取文件:", result)
 	end
 	
 	
 	--if isfile("settings_fps.txt") == true then
 		--setfpscap(tonumber(readfile("settings_fps.txt")))
 	--end
-	
-	-- Set MCP API Key
-	local success, result = pcall(function()
-		if isfile("injectcode.txt") then
-			script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = readfile("injectcode.txt")
-		end
-	end)
-	
-	if not success then
-		print("æ— æ³•è¯»å–æ–‡ä»¶:", result)
-	end
-	
-	--if isfile("injectcode.txt") == true then
-		--script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = readfile("injectcode.txt")
-	--end
-	
 	
 	script.Parent.SettingsWindow.ScrollingFrame.S1.SubmitAccent.MouseButton1Click:Connect(function()
 		writefile("theme_vegax_color.txt", script.Parent.SettingsWindow.ScrollingFrame.S1.AccentTextBox.Text)
@@ -2563,19 +2420,9 @@ local function DLQQEC_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.SettingsSys
 		setfpscap(60)
 	end)
 	
-	script.Parent.SettingsWindow.ScrollingFrame.S3.SubmitCode.MouseButton1Click:Connect(function()
-		writefile("injectcode.txt", script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text)
-		-- Key saved â€” click "MCP Connect" button in Executor window to see command
-	end)
-	
-	script.Parent.SettingsWindow.ScrollingFrame.S3.ResetCode.MouseButton1Click:Connect(function()
-		script.Parent.SettingsWindow.ScrollingFrame.S3.InjectCodeTextbox.Text = ""
-		delfile("injectcode.txt")
-	end)
-	
-	-- â”€â”€ Anti-AFK â”€â”€
+	-- ── Anti-AFK ──
 	-- Idle event fires ~10s before 20-min Roblox idle kick.
-	-- We re-trigger VirtualUser input only when the event fires â€”
+	-- We re-trigger VirtualUser input only when the event fires —
 	-- zero polling overhead, works on all executors.
 	local Players = game:GetService("Players")
 	local VirtualUser = game:GetService("VirtualUser")
@@ -2828,59 +2675,6 @@ end
 	
 end
 coroutine.wrap(DIVQTY_fake_script)()
-local function UNIZ_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.DevConnect 
-	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
-
-	-- â”€â”€ Panda MCP Connect â”€â”€
-	-- Replaces old HTTP polling Dev Mode with Panda MCP remote execution.
-	-- Executor (Delta) maintains the MCP WebSocket bridge. This panel shows
-	-- connection info so the developer can use Claude Code (or any MCP client)
-	-- to push scripts remotely via run_luau.
-
-	-- â”€â”€ Panda MCP Connect â”€â”€
-	-- Executor (Delta) connects to Panda MCP (mcp.pandauth.com) automatically
-	-- via its own WebSocket. This panel shows the Claude Code command to link
-	-- your AI to this executor â€” no local server, no polling, no fake bridge.
-
-	local mcpApiKey = nil
-
-	-- Load saved key if present
-	pcall(function()
-		if isfile("injectcode.txt") then
-			local saved = readfile("injectcode.txt")
-			if saved and saved ~= "" and saved:match("^[%w]+$") then
-				mcpApiKey = saved
-			end
-		end
-	end)
-
-	getgenv().GetMCPCommand = function()
-		local key = mcpApiKey or "YOUR_API_KEY"
-		return "claude mcp add --transport http panda-mcp "
-			.. "https://mcp.pandauth.com/mcp?api_key=" .. key
-	end
-
-	script.Parent.ExecutorWindow.DevModeB.MouseButton1Click:connect(function()
-		if mcpApiKey then
-			script.Parent.ExecutorWindow.DevModeB.BackgroundColor3 = Color3.fromRGB(57, 195, 57)
-			script.Parent.ExecutorWindow.DevModeB.Text = "MCP Ready"
-			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text =
-				"[ Panda MCP Connect ]\n\n" ..
-				"Executor connects to Panda MCP automatically.\n" ..
-				"Run this command on your PC to link Claude Code:\n\n" ..
-				GetMCPCommand() .. "\n\n" ..
-				"Then ask Claude for example:\n" ..
-				'  "run this on my Delta client"\n' ..
-				'  "execute this script on the connected executor"'
-		else
-			script.Parent.ExecutorWindow.ScrollingBox.TextBox.Text =
-				"[ Panda MCP Connect ]\n\n" ..
-				"Paste your Panda MCP API key in Settings > MCP Connect.\n\n" ..
-				"Get your key at: https://pandauth.com/dashboard/mcp"
-		end
-	end)
-end
-coroutine.wrap(UNIZ_fake_script)()
 local function EYXVU_fake_script() -- VegaXAndroidUI.VegaXAndroidUI.UIDragging 
 	local script = Instance.new('LocalScript', VegaXAndroidUI.VegaXAndroidUI)
 
